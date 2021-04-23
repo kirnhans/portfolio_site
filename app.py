@@ -1,15 +1,16 @@
 # from: https://medium.com/swlh/baking-static-sites-with-python-and-jinja-330fe29bbe08
 import os, shutil
 from jinja2 import Template, Environment, FileSystemLoader
+from markdown import markdown
 
 
-standards_dict = { 1: ("Know students and how they learn", "static/standard1.txt"),
-2: ("Know the content and how to teach it", "static/standard2.txt"),
-3: ("Plan for and implement effective teaching and learning", "static/standard3.txt"),
-4: ("Create and maintain supportive and safe learning environments", "static/standard4.txt"),
-5: ("Assess, provide feedback and report on student learning", "static/standard5.txt"),
-6: ("Engage in professional learning", "static/standard6.txt"),
-7: ("Engage professionally with colleagues, parents/carers and the community", "static/standard7.txt"),
+standards_dict = { 1: ("Know students and how they learn", "templates/static/standard1.txt"),
+2: ("Know the content and how to teach it", "templates/static/standard2.txt"),
+3: ("Plan for and implement effective teaching and learning", "templates/static/standard3.txt"),
+4: ("Create and maintain supportive and safe learning environments", "templates/static/standard4.txt"),
+5: ("Assess, provide feedback and report on student learning", "templates/static/standard5.txt"),
+6: ("Engage in professional learning", "templates/static/standard6.txt"),
+7: ("Engage professionally with colleagues, parents/carers and the community", "templates/static/standard7.txt"),
 }
 
 class SiteGenerator(object):
@@ -17,7 +18,8 @@ class SiteGenerator(object):
         self.env = Environment(loader=FileSystemLoader('templates'))
         self.empty_public()
         self.copy_static()
-        self.render_page()
+        self.render_standards_page()
+        self.render_intro_page()
 
     def empty_public(self):
         """ Ensure the public directory is empty before generating. """
@@ -34,16 +36,37 @@ class SiteGenerator(object):
         except:
             print("Error copying static files.")
 
-    def render_page(self):
-        print("Rendering page to static file.")
+    def render_standards_page(self):
+        print("Rendering standards pages to static file.")
         template = self.env.get_template('standard_template.html')
         for num in standards_dict:
-            (head, essay) = standards_dict[num]
+            (head, essay_path) = standards_dict[num]
+            essay_text = "This is an idea waiting to be explored in my journey as a teacher."
+            if os.path.exists(essay_path):
+                essay_text = open(essay_path, "r").read()
             with open(os.path.join("public", f"standard{num}.html"), 'w+') as file:
                 html = template.render(standard_num=num, standard_head=head,
-                    standard_essay=essay)
+                    standard_essay=markdown(essay_text))
                 file.write(html)
 
+# should I abstract the rendering from this and standards into a second function they can both call
+    # def render_intro_page(self):
+    #     print("Rendering intro pages to static file.")
+    #     template = self.env.get_template('base.html')
+    #     intro_path = os.path.join("templates", os.path.join("static", "intro.txt"))
+    #     intro_text = ""
+    #     if (os.path.exists(intro_path)):
+    #         intro_text = open(intro_path, "r").read()
+    #     with open(os.path.join("public", "intro.html"), 'w+') as file:
+    #         html = template.render(text=markdown(intro_text))
+    #         file.write(html)
+
+    def render_intro_page(self):
+        print("Rendering intro pages to static file.")
+        template = self.env.get_template('intro_template.html')
+        with open(os.path.join("public", "intro.html"), 'w+') as file:
+            html = template.render()
+            file.write(html)
 
 if __name__ == "__main__":
     SiteGenerator()

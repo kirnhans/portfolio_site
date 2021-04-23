@@ -1,0 +1,2 @@
+# don't include the generated files in public
+/public/*
