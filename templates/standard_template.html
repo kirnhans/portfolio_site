@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
 {% block title %} Standard {{standard_num}} {% endblock %}
+{% block head %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="static/standards.js"></script>
+{% endblock %}
+
 {% block body %}
 <!-- todo: Slider from Teacher to Developer -->
 <!-- tabs from from https://phoenixweb.com.au/rounded-manila-folder-style-menu-tabs-using-css-triangles/  -->
 <nav class="menu_main_nav_area">
-  <ul>
+  <ul id="menu_nav_ul">
     <li>
       <a href=".">Standard 1</a>
       <div class="curved-tabs curved-tabs-l curved-tabs-1"></div>

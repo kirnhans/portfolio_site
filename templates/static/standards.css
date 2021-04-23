@@ -22,6 +22,7 @@ p {
 	font-family: Calibri;
 }
 
+/* https://blogs.ntu.edu.sg/ntulibrary/2018/09/12/how-to-align-images-on-your-website/*/
 .intro_pic {
   float: right;
   margin-right: 15px;
