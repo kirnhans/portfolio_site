@@ -19,6 +19,15 @@ h2 {
 	color:#000000;
 }
 
+p {
+	font-family: Calibri;
+}
+
+.content {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
 .below-nav {
 /* padding: https://stackoverflow.com/questions/26402156/put-div-below-navigation-bar-and-dont-overlap-content*/
 	padding-top: 82px;
@@ -217,6 +226,7 @@ nav ul > li:nth-child(2n) .curved-tabs-r:after {
 nav ul > li:hover,
 nav ul > li:focus {
   z-index: 3;
+  color: #232a34;
 }
 
 nav ul > li:nth-child(4n) {
@@ -227,6 +237,9 @@ nav ul > li:nth-child(4n):hover, nav ul > li:nth-child(4n):focus {
   background: #f0d001;
 }
 
+a:hover, a:focus {
+  color: #232a34;
+}
 
 nav ul > li:nth-child(2n+1) {
   border-top-color: #95c93d;

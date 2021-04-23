@@ -1,28 +1,12 @@
-<!DOCTYPE html>
-<!-- favicon: https://pixahive.com/photo/pink-sacred-lotus-on-focus/, Creative Commons License -->
-<html>
-<head>
-<!-- HTML Codes by Quackit.com -->
-<title>
-Kirn Hans Portfolio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords" content="Portfolio, resume, kirn hans,">
-<meta name="description" content="Kirn Hans: teacher, developer, lifelong learner. ">
-<link rel="stylesheet" href="standards.css">
-<!-- favicon, code from https://favicon.io/favicon-converter/ -->
-<link rel="apple-touch-icon" sizes="180x180" href="lotus_favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="lotus_favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="lotus_favicon/favicon-16x16.png">
-<link rel="manifest" href="lotus_favicon/site.webmanifest">
-</head>
-<body>
-<h1><a href="./intro.html">Kirn Hans</a></h1>
+{% extends ‘base.html’ %}
+{% block title %} Standard {{standard_num}} {% endblock %}
+{% block body %}
 <!-- todo: Slider from Teacher to Developer -->
 <!-- tabs from from https://phoenixweb.com.au/rounded-manila-folder-style-menu-tabs-using-css-triangles/  -->
 <nav class="menu_main_nav_area">
   <ul>
     <li>
-      <a href="." class="current-tab">Standard 1</a>
+      <a href=".">Standard 1</a>
       <div class="curved-tabs curved-tabs-l curved-tabs-1"></div>
       <div class="curved-tabs curved-tabs-l curved-tabs-2"></div>
       <div class="curved-tabs curved-tabs-l curved-tabs-3"></div>
@@ -96,9 +80,8 @@ Kirn Hans Portfolio</title>
 <!-- </br></br></br><br><br> -->
 <div class="below-nav">
 <div class="manila">
-	<hr>
-<h2>Standard 1: Know students and how they learn</h2>
+    <hr>
+<h2>Standard {{standard_num}}: {{standard_text}} </h2>
 </div>
 </div>
-</body>
-</html>
+{% endblock %}
