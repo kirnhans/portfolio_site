@@ -1,4 +1,4 @@
-{% extends ‘base.html’ %}
+{% extends 'base.html' %}
 {% block title %} Standard {{standard_num}} {% endblock %}
 {% block body %}
 <!-- todo: Slider from Teacher to Developer -->
@@ -80,8 +80,11 @@
 <!-- </br></br></br><br><br> -->
 <div class="below-nav">
 <div class="manila">
-    <hr>
-<h2>Standard {{standard_num}}: {{standard_text}} </h2>
+<h2>Standard {{standard_num}}: {{standard_head}} </h2>
+
+<p>
+{{standard_essay}}
+</p>
 </div>
 </div>
 {% endblock %}

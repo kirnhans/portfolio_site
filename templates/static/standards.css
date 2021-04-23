@@ -6,13 +6,12 @@ body {
   	background-image: linear-gradient(to bottom right, white, skyblue);
 }
 h1 {
-	padding-left: 1em;
+  padding-left: 1em;
 	font-family:Calibri, sans-serif;
 	color:#000000;
 }
 
 h2 {
-	padding-left: 2em;
 	font-family:Georgia, serif;
 	font-style:normal;
 	font-weight:normal;
@@ -30,12 +29,14 @@ p {
 
 .below-nav {
 /* padding: https://stackoverflow.com/questions/26402156/put-div-below-navigation-bar-and-dont-overlap-content*/
-	padding-top: 82px;
+	padding-top: 90px;
 }
 
 .manila {
 /* color referenced from https://www.schemecolor.com/windows-10-folder-yellow-colors.php*/
 	background-color:#ffe9a2;
+  padding-left: 2em;
+  border-top: 4px solid #f8d775;
 }
 
 /* style from https://phoenixweb.com.au/rounded-manila-folder-style-menu-tabs-using-css-triangles/ */
@@ -79,12 +80,6 @@ nav ul > li a {
   color: #a6a6a6;
   text-decoration: none;
   display: block;
-}
-
-hr {
-	height: 4px;
-	background-color: #f8d775;
-	border-color: #f8d775;
 }
 
 nav ul > li .curved-tabs,
