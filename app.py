@@ -49,22 +49,10 @@ class SiteGenerator(object):
                     standard_essay=markdown(essay_text))
                 file.write(html)
 
-# should I abstract the rendering from this and standards into a second function they can both call
-    # def render_intro_page(self):
-    #     print("Rendering intro pages to static file.")
-    #     template = self.env.get_template('base.html')
-    #     intro_path = os.path.join("templates", os.path.join("static", "intro.txt"))
-    #     intro_text = ""
-    #     if (os.path.exists(intro_path)):
-    #         intro_text = open(intro_path, "r").read()
-    #     with open(os.path.join("public", "intro.html"), 'w+') as file:
-    #         html = template.render(text=markdown(intro_text))
-    #         file.write(html)
-
     def render_intro_page(self):
         print("Rendering intro pages to static file.")
         template = self.env.get_template('intro_template.html')
-        with open(os.path.join("public", "intro.html"), 'w+') as file:
+        with open(os.path.join("public", "index.html"), 'w+') as file:
             html = template.render()
             file.write(html)
 
