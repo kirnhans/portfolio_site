@@ -1,2 +1,3 @@
 # don't include the generated files in public
 /public/*
+/standard_mockup.html
