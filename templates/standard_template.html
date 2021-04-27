@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block title %} Standard {{standard_num}} {% endblock %}
 {% block head %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="static/standards.js"></script>
 {% endblock %}
@@ -8,7 +9,7 @@
 {% block body %}
 <!-- todo: Slider from Teacher to Developer -->
 <!-- tabs from from https://phoenixweb.com.au/rounded-manila-folder-style-menu-tabs-using-css-triangles/  -->
-<nav class="menu_main_nav_area">
+<nav class="menu_main_nav_area" id="menu_main_nav_area">
   <ul id="menu_nav_ul">
     <li>
       <a href="./standard1.html">Standard 1</a>
@@ -82,7 +83,12 @@
      </li>
   </ul>
 </nav>
-<!-- </br></br></br><br><br> -->
+
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="hamburger icon" onclick="clickHamburger()">
+    <i class="fa fa-bars"></i>
+  </a>
+
 <div class="below-nav">
 <div class="manila">
 <h2>Standard {{standard_num}}: {{standard_head}} </h2>
