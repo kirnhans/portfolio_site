@@ -1,14 +1,25 @@
+/*html {
+  display: flex;
+  margin: 0px;
+}*/
+
 body {
 	background-repeat:no-repeat;
 	background-position:top left;
 	background-attachment:fixed;
 	/* https://www.w3schools.com/css/css3_gradients.asp */
-  	background-image: linear-gradient(to bottom right, white, skyblue);
+  background-image: linear-gradient(to bottom right, white, hsl(195, 100%, 75%));
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  /*padding-inline-start: 1em;*/
 }
+
 h1 {
   padding-left: 1em;
 	font-family:Calibri, sans-serif;
 	color:#000000;
+  text-decoration: none;
 }
 
 h2 {
@@ -29,24 +40,77 @@ a {
 /* from https://www.w3schools.com/howto/howto_css_center-vertical.asp
 it should be illegal to make vertical centering this complicated */
 .centered {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-.horizontally-centered {
+.centered > a {
+  flex: 1;
+}
+
+.centered > img, svg {
+  flex: 3;
   margin: auto;
+  padding-top: 2em;
+}
+
+svg.bi-book {
+  width: 80px;
+  height: 80px;
+  /*fill: #f09b00;*/
+  fill: black;
+}
+
+.centered > img {
   width: 50%;
 }
 
-/* https://blogs.ntu.edu.sg/ntulibrary/2018/09/12/how-to-align-images-on-your-website/*/
+.intro {
+  padding-left: 0.5em;
+  background-color: #b2e9ff;
+}
+
+.horizontally-centered {
+  /*margin: auto;
+  width: 50%;*/
+  display: flex;
+  justify-content: flex-start;
+}
+
+.ffolder {
+  margin: 1em;
+  flex: 1;
+  max-width: 245px;
+}
+
 .intro_pic {
-  float: right;
+  margin-left: 15px;
   margin-right: 15px;
-  width: 20%;
+}
+
+
+/* https://blogs.ntu.edu.sg/ntulibrary/2018/09/12/how-to-align-images-on-your-website/*/
+/*mobile*/
+@media (min-width: 600px) {
+  .intro_pic {
+    float: right;
+    width: 200px; /*change this*/
+  }
+}
+
+@media (max-width: 600px) {
+  .intro_pic {
+    float: center;
+    height: 75vh;
+  }
+  .horizontally-centered, .footer {
+  flex-direction: column;
+  }
+
+  .horizontally-centered {
+    margin: auto;
+  }
 }
 
 .folder_pic {
@@ -65,6 +129,63 @@ it should be illegal to make vertical centering this complicated */
   border-top: 4px solid #f8d775;
 }
 
+
+
+.footer {
+  padding: 1em;
+  display: flex;
+}
+
+/*from https://codepen.io/Kerruba/pen/MXNoeG */
+:root {
+  --bhue: 195; 
+  --bsat: 100;
+  --blig: 110;
+  --light:hsl(var(--bhue), calc(var(--bsat)*1%), calc(var(--blig)*1% - 15%));
+  --dark:hsl(var(--bhue), calc(var(--bsat)*1%), calc(var(--blig)*1% - 20%));
+  --darkest:hsl(var(--bhue), calc(var(--bsat)*1%), calc(var(--blig)*1% - 35%));
+}
+
+
+.ribbon-color {
+  background: linear-gradient(90deg, var(--dark) 0%, var(--light) 10%, var(--dark) 20%, var(--darkest) 50%, var(--dark) 80%, var(--light) 90%, var(--dark) 100%); /* w3c */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  border-top: 1px solid var(--light);
+  border-bottom: 1px solid var(--dark);
+}
+
+div .contact-details {
+  border: 1px solid navy;
+  /*float: left;*/
+  display: block;
+  flex: 1;
+  margin: auto;
+}
+
+div .contact-details > ul {
+  font-family: Calibri;
+  padding: 1em;
+  padding-inline-start: 1em;
+  padding-inline-end: 1em;
+}
+
+div .contact-details a {
+  font-family: Calibri;
+}
+
+.contact-details > li  {
+  float: center;
+  display: block;
+  margin: auto;
+  border-bottom: 1px dashed navy;
+}
+
+.history-acknowledgment {
+  margin-left: 10%;
+  float: center;
+  flex: 2;
+}
+
 /*everything nav bar related below*/
 .current-tab {
   color: #232a34;
@@ -73,6 +194,7 @@ it should be illegal to make vertical centering this complicated */
 
 li a {
   font-family: Georgia;
+  text-shadow: white 0 2px 1px;
 }
 
 nav ul > li a:hover, nav ul > li a:focus {
@@ -103,6 +225,11 @@ nav ul > li a:hover, nav ul > li a:focus {
     color: #a6a6a6;
     text-decoration: none;
     display: inherit;
+    font-size: 150%;
+  }
+
+  p {
+    font-size: 125%;
   }
 
   .hamburger {
@@ -141,10 +268,10 @@ nav ul > li a:hover, nav ul > li a:focus {
     display: block;
   }
 
-  .below-nav {
-  /* padding: https://stackoverflow.com/questions/26402156/put-div-below-navigation-bar-and-dont-overlap-content*/
+ /* .below-nav {
+   padding: https://stackoverflow.com/questions/26402156/put-div-below-navigation-bar-and-dont-overlap-content
     padding-top: 90px;
-  }
+  }*/
   /* style from https://phoenixweb.com.au/rounded-manila-folder-style-menu-tabs-using-css-triangles/ */
   /* converted using https://sass.js.org/ */
   /* I've edited this to have the color scheme I want */

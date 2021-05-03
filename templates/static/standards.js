@@ -24,6 +24,9 @@ window.onresize = function() {
    console.log(em_width)
    var x = document.getElementById("menu_main_nav_area");
    if (em_width > 70) {
-    x.style.display = "block";
+        x.style.display = "block";
+   }
+   else {
+        x.style.display = "none";
    }
 };
