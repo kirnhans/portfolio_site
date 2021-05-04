@@ -72,10 +72,14 @@ svg.bi-book {
 }
 
 .horizontally-centered {
-  /*margin: auto;
-  width: 50%;*/
   display: flex;
   justify-content: flex-start;
+}
+@media (min-width: 500px) {
+  .horizontally-centered {
+    margin: auto;
+    width: 50%;
+  }
 }
 
 .ffolder {
@@ -126,6 +130,7 @@ svg.bi-book {
 /* color referenced from https://www.schemecolor.com/windows-10-folder-yellow-colors.php*/
 	background-color:#ffe9a2;
   padding-left: 2em;
+  padding-right: 2em;
   border-top: 4px solid #f8d775;
 }
 
