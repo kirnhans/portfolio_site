@@ -56,8 +56,8 @@ it should be illegal to make vertical centering this complicated */
 }
 
 svg.bi-book {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   /*fill: #f09b00;*/
   fill: black;
 }
@@ -263,6 +263,67 @@ nav ul > li a:hover, nav ul > li a:focus {
   }
 
 }
+
+/*https://www.javatpoint.com/how-to-make-a-dropdown-menu-in-html*/
+.dropbtn {  
+    background-color: #F1A402;  
+    color: black;  
+    padding: 10px;  
+    font-size: 16px; 
+    font-family: Calibri; 
+}  
+.dropdown {  
+    display: inline-block;  
+    position: relative;
+}  
+.dropdown-content {  
+    position: initial;  
+    background-color: #f8d775;  
+    min-width: 200px;  
+    display: none;  
+    z-index: 1;
+}  
+.dropdown-content a {  
+    color: black;  
+    padding: 5px 12px;  
+    text-decoration: none;  
+    display: block;  
+    font-size: 15px;
+}  
+  
+.dropdown:hover .dropdown-content {  
+    display: flex;
+    flex-direction: column;
+}  
+.dropdown:hover .dropbtn {  
+    background-color: #FFBD00;  
+}
+
+.dropdown-content > a:nth-child(2n+1) {
+  background-color: #ffe9a2;
+}
+
+.dropdown-content > a:nth-child(2n) {
+  background-color: #f8d775;
+}
+
+/*hattip*/
+.dropdown-content a:nth-child(6n+1):hover {  
+  background-color: #c768ff;  
+}
+
+.dropdown-content a:nth-child(4n+2):hover {
+  background-color: #7cb5ec;
+}
+
+.dropdown-content a:nth-child(4n):hover {
+  background-color: #f0d001;
+}
+
+.dropdown-content a:nth-child(2n+1):hover {
+  background-color: #95c93d;
+}
+
 
 /*desktop*/
 @media (min-width: 70em) {
