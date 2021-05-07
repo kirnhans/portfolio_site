@@ -52,7 +52,8 @@ it should be illegal to make vertical centering this complicated */
 .centered > img, svg {
   flex: 3;
   margin: auto;
-  padding-top: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 svg.bi-book {
@@ -88,11 +89,6 @@ svg.bi-book {
   max-width: 245px;
 }
 
-.intro_pic {
-  margin-left: 15px;
-  margin-right: 15px;
-}
-
 
 /* https://blogs.ntu.edu.sg/ntulibrary/2018/09/12/how-to-align-images-on-your-website/*/
 /*mobile*/
@@ -100,14 +96,24 @@ svg.bi-book {
   .intro_pic {
     float: right;
     width: 200px; /*change this*/
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 600px) {
+  .intro_pic {
+    margin-left: 10%;
   }
 }
 
 @media (max-width: 600px) {
   .intro_pic {
     float: center;
-    height: 75vh;
+    max-height: 75vh;
+    max-width: 90vw;
   }
+
   .horizontally-centered, .footer {
   flex-direction: column;
   }
@@ -299,6 +305,10 @@ nav ul > li a:hover, nav ul > li a:focus {
     background-color: #FFBD00;  
 }
 
+.dropdown-content > a:nth-child(n):hover {  
+  background-color: orange;  
+}
+
 .dropdown-content > a:nth-child(2n+1) {
   background-color: #ffe9a2;
 }
@@ -308,19 +318,19 @@ nav ul > li a:hover, nav ul > li a:focus {
 }
 
 /*hattip*/
-.dropdown-content a:nth-child(6n+1):hover {  
+ .dropdown-content a.standard_link:nth-child(6n+1):hover {  
   background-color: #c768ff;  
 }
 
-.dropdown-content a:nth-child(4n+2):hover {
+ .dropdown-content a.standard_link:nth-child(4n+2):hover {
   background-color: #7cb5ec;
 }
 
-.dropdown-content a:nth-child(4n):hover {
+ .dropdown-content a.standard_link:nth-child(4n):hover {
   background-color: #f0d001;
 }
 
-.dropdown-content a:nth-child(2n+1):hover {
+ .dropdown-content a.standard_link:nth-child(2n+1):hover {
   background-color: #95c93d;
 }
 
