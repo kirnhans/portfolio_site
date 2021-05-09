@@ -49,6 +49,10 @@ it should be illegal to make vertical centering this complicated */
   flex: 1;
 }
 
+h3 {
+  font-family: Cambria;
+}
+
 img {
   max-width: 50vw;
 }
