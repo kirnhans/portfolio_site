@@ -49,6 +49,10 @@ it should be illegal to make vertical centering this complicated */
   flex: 1;
 }
 
+img {
+  max-width: 50vw;
+}
+
 .centered > img, svg {
   flex: 3;
   margin: auto;
@@ -111,6 +115,10 @@ svg.bi-book {
   .intro_pic {
     float: center;
     max-height: 75vh;
+    max-width: 90vw;
+  }
+
+  img {
     max-width: 90vw;
   }
 

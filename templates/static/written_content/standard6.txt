@@ -1,4 +1,4 @@
-### 6.4.1 Demonstrate an understanding of the rationale for continued professional learning and implications for improved student learning
+### 6.4.1: Demonstrate an understanding of the rationale for continued professional learning and implications for improved student learning
 
   
 
@@ -14,7 +14,13 @@ Copious research shows that teacher’s learning improves student outcomes. (Mei
 
   
 
-This semester, I have learnt how many learning activities occur in the day-to-day of a teacher's work, an exciting contrast with my previous field. Learning can happen in many ways: individually, collaboratively, in a mentoring relationship, routinely, formally, etc. I reflect on several of these below.
+This semester, I have learnt how many learning activities occur in the day-to-day of a teacher's work, an exciting contrast with my previous field. Learning can happen in many ways: individually, collaboratively, in a mentoring relationship, routinely, formally, etc. I reflect on several of these below. I mentioned my experience of TeachMeets for Standard [3.4](https://kirnhans.com/standard3.html).
+ 
+<center>
+![PLF Guide Overview, 2021, 2021](static\images\PL_cycle.jpg)
+
+(*PLF Guide Overview*, 2021)
+</center>
 
   
 
@@ -26,9 +32,8 @@ In Autumn 2021, we collaborated in working groups, where I found myself frustrat
 
   
 
-I have both been mentored and mentored others. I found that, like feedback, advice was most helpful when it was targeted and actionable. As a teacher, I intend to solicit constructive feedback from my supervisor through specific questions, in order to maximise the improvements I can make. 
+I have both been mentored and mentored others. I found that, like feedback, advice was most helpful when it was targeted and actionable. As a teacher, I intend to solicit constructive feedback from my supervisor through specific questions, in order to maximise the improvements I can make. I also intend to participate in other feedback-based forms of collective learning, such as lesson studies and instructional rounds.
 
-  
   
 
 Learning expands a teacher’s toolkit. Much of the research I’ve read in my first M. Teach semester (some of which is cited in these essays) was written in the last twenty years. The field of teaching is growing like grass under our feet and we have a duty to grow with it.
@@ -40,7 +45,10 @@ Learning expands a teacher’s toolkit. Much of the research I’ve read in my f
 
 -   Csibra, G. and Gergely, G.. (2011). Natural pedagogy as evolutionary adaptation. *Phil. Trans. R. Soc.* B3661149–1157. [http://doi.org/10.1098/rstb.2010.0319](http://doi.org/10.1098/rstb.2010.0319)
     
--   Meiers, M. (2007). Teacher professional learning, teaching practice and student learning outcomes: Important issues. In *Handbook of teacher education* (pp. 409-414). Springer, Dordrecht.  
-    Salisu, A., & Ransom, E. N. (2014). The Role of Modeling towards Impacting Quality Education. International Letters of Social and Humanistic Sciences, 32, 54–61. https://doi.org/10.18052/www.scipress.com/ilshs.32.54
+-   Meiers, M. (2007). Teacher professional learning, teaching practice and student learning outcomes: Important issues. In *Handbook of teacher education* (pp. 409-414). Springer, Dordrecht.
+    
+-   *PLF Guide Overview*. (2021). Department of Defense Education Activity. [https://content.dodea.edu/teach\_learn/professional\_development/21/plf\_guide\_overview.html](https://content.dodea.edu/teach_learn/professional_development/21/plf_guide_overview.html)
+    
+-   Salisu, A., & Ransom, E. N. (2014). The Role of Modeling towards Impacting Quality Education. International Letters of Social and Humanistic Sciences, 32, 54–61. https://doi.org/10.18052/www.scipress.com/ilshs.32.54
     
 -   Shors, T., Anderson, M., Curlik, D., & Nokia, M. (2012). Use it or lose it: How neurogenesis keeps the brain fit for learning. Behavioural Brain Research, 227(2), 450–458. https://doi.org/10.1016/j.bbr.2011.04.023
