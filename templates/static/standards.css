@@ -8,12 +8,19 @@ body {
 	background-position:top left;
 	background-attachment:fixed;
 	/* https://www.w3schools.com/css/css3_gradients.asp */
+  /*For textures: https://www.transparenttextures.com/*/
   background-image: url("images/arches.png"), linear-gradient(to bottom right, white, hsl(195, 100%, 75%));
-/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   display: flex;
   flex-direction: column;
   margin: 0px;
-  /*padding-inline-start: 1em;*/
+  min-height: 100vh;
+  /*justify-content: space-between;*/
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -162,11 +169,11 @@ img.intro_pic {
   }
 }
 
-main.intro_content {
+.intro_content {
 	padding-left: 2em;
 }
 
-main > .horizontally-centered {
+.intro_content > .horizontally-centered {
   margin-top: 2em;
   margin-bottom: 2em;
 }
@@ -175,8 +182,7 @@ main > .horizontally-centered {
 /* color referenced from https://www.schemecolor.com/windows-10-folder-yellow-colors.php*/
 	/*background-color:#ffe9a2;*/
   background-color: #ffefad;
-  background-image: url("https://www.transparenttextures.com/patterns/ecailles.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  background-image: url("images/ecailles.png");
   padding-left: 2em;
   padding-right: 2em;
   border-top: 4px solid #f8d775;
@@ -336,10 +342,10 @@ nav ul > li a:hover, nav ul > li a:focus {
     text-decoration: none;
     font-size: 15px;
 }
-.lesson-plan a {
+/*.lesson-plan a {
   font-size: 13px;
 }
-
+*/
 .dropdown:hover .dropdown-content {
     display: flex;
     flex-direction: column;
