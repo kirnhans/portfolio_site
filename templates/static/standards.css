@@ -113,6 +113,7 @@ svg.bi-book {
 img.intro_pic {
   border: 1px solid #6666ff;
   box-shadow: 3px 3px rgba(0,0,0,0.2);
+  transform: rotate(2deg);
 }
 
 /* https://blogs.ntu.edu.sg/ntulibrary/2018/09/12/how-to-align-images-on-your-website/*/
@@ -136,6 +137,7 @@ img.intro_pic {
       top: 7px;
       transform: rotate(-20deg);
       width: 30px;
+      z-index: 2;
   }
 }
 
@@ -219,6 +221,7 @@ div .contact-details {
   display: block;
   flex: 1;
   margin: auto;
+  background-color: white;
 }
 
 div .contact-details > ul {
