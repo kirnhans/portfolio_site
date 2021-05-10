@@ -4,11 +4,12 @@
 }*/
 
 body {
-	background-repeat:no-repeat;
+	background-repeat:repeat;
 	background-position:top left;
 	background-attachment:fixed;
 	/* https://www.w3schools.com/css/css3_gradients.asp */
-  background-image: linear-gradient(to bottom right, white, hsl(195, 100%, 75%));
+  background-image: url("images/arches.png"), linear-gradient(to bottom right, white, hsl(195, 100%, 75%));
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   display: flex;
   flex-direction: column;
   margin: 0px;
@@ -72,22 +73,27 @@ svg.bi-book {
 }
 
 .centered > img {
-  width: 50%;
+  width: 63%;
 }
 
 .intro {
   padding-left: 0.5em;
   background-color: #b2e9ff;
+  padding-right: 2em;
+  border-bottom: 1px solid #ffffff;
+  box-shadow: -3px 4px 10px rgba(0,0,0,0.5);
+  margin-top: 16px;
 }
 
 .horizontally-centered {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 @media (min-width: 500px) {
   .horizontally-centered {
     margin: auto;
-    width: 50%;
+    width: 35%;
   }
 }
 
@@ -97,15 +103,32 @@ svg.bi-book {
   max-width: 245px;
 }
 
+img.intro_pic {
+  border: 1px solid #6666ff;
+  box-shadow: 3px 3px rgba(0,0,0,0.2);
+}
 
 /* https://blogs.ntu.edu.sg/ntulibrary/2018/09/12/how-to-align-images-on-your-website/*/
 /*mobile*/
 @media (min-width: 600px) {
-  .intro_pic {
+  img.intro_pic {
     float: right;
+    width: 200px; /*change this*/
+  }
+  div.intro_pic {
+    float: right;
+    position: relative;
     width: 200px; /*change this*/
     margin-left: 15px;
     margin-right: 15px;
+  }
+    #paperclip {
+      position: absolute;
+      /*right: 15.5vw;*/
+      left: -6px;
+      top: 7px;
+      transform: rotate(-20deg);
+      width: 30px;
   }
 }
 
@@ -126,6 +149,10 @@ svg.bi-book {
     max-width: 90vw;
   }
 
+  #paperclip {
+    display: none;
+  }
+
   .horizontally-centered, .footer {
   flex-direction: column;
   }
@@ -135,18 +162,21 @@ svg.bi-book {
   }
 }
 
-.folder_pic {
-  width: 60%;
+main.intro_content {
+	padding-left: 2em;
 }
 
-.content {
-	padding-left: 1em;
-	padding-right: 1em;
+main > .horizontally-centered {
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .manila {
 /* color referenced from https://www.schemecolor.com/windows-10-folder-yellow-colors.php*/
-	background-color:#ffe9a2;
+	/*background-color:#ffe9a2;*/
+  background-color: #ffefad;
+  background-image: url("https://www.transparenttextures.com/patterns/ecailles.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   padding-left: 2em;
   padding-right: 2em;
   border-top: 4px solid #f8d775;
@@ -283,42 +313,43 @@ nav ul > li a:hover, nav ul > li a:focus {
 }
 
 /*https://www.javatpoint.com/how-to-make-a-dropdown-menu-in-html*/
-.dropbtn {  
-    background-color: #F1A402;  
-    color: black;  
-    padding: 10px;  
+.dropbtn {
+    background-color: #F1A402;
+    color: black;
+    padding: 10px;
     font-size: 16px; 
     font-family: Calibri; 
-}  
-.dropdown {  
-    display: inline-block;  
+}
+.dropdown {
+    display: inline-block;
     position: relative;
-}  
-.dropdown-content {  
-    position: initial;  
-    background-color: #f8d775;  
-    min-width: 200px;  
-    display: none;  
+}
+.dropdown-content {
+    position: initial;
+    background-color: #f8d775;
+    display: none;
     z-index: 1;
-}  
-.dropdown-content a {  
-    color: black;  
-    padding: 5px 12px;  
-    text-decoration: none;  
-    display: block;  
+}
+.dropdown-content a {
+    color: black;
+    padding: 5px 12px;
+    text-decoration: none;
     font-size: 15px;
-}  
-  
-.dropdown:hover .dropdown-content {  
-    display: flex;
-    flex-direction: column;
-}  
-.dropdown:hover .dropbtn {  
-    background-color: #FFBD00;  
+}
+.lesson-plan a {
+  font-size: 13px;
 }
 
-.dropdown-content > a:nth-child(n):hover {  
-  background-color: orange;  
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+.dropdown:hover .dropbtn {
+    background-color: #FFBD00;
+}
+
+.dropdown-content > a:nth-child(n):hover {
+  background-color: orange;
 }
 
 .dropdown-content > a:nth-child(2n+1) {
@@ -330,8 +361,8 @@ nav ul > li a:hover, nav ul > li a:focus {
 }
 
 /*hattip*/
- .dropdown-content a.standard_link:nth-child(6n+1):hover {  
-  background-color: #c768ff;  
+ .dropdown-content a.standard_link:nth-child(6n+1):hover {
+  background-color: #c768ff;
 }
 
  .dropdown-content a.standard_link:nth-child(4n+2):hover {
