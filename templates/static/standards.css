@@ -96,7 +96,9 @@ svg.bi-book {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  align-content: center;
 }
+
 @media (min-width: 500px) {
   .horizontally-centered {
     margin: auto;
@@ -104,16 +106,17 @@ svg.bi-book {
   }
 }
 
-.ffolder {
+.ffolder-container {
   margin: 1em;
   flex: 1;
   max-width: 245px;
+  /*max-width: 40vmin;*/
+  /*max-height: 40vmin;*/
 }
 
 img.intro_pic {
   border: 1px solid #6666ff;
   box-shadow: 3px 3px rgba(0,0,0,0.2);
-  transform: rotate(2deg);
 }
 
 /* https://blogs.ntu.edu.sg/ntulibrary/2018/09/12/how-to-align-images-on-your-website/*/
@@ -121,18 +124,18 @@ img.intro_pic {
 @media (min-width: 600px) {
   img.intro_pic {
     float: right;
-    width: 200px; /*change this*/
+    width: 200px;
+    transform: rotate(2deg);
   }
   div.intro_pic {
     float: right;
     position: relative;
-    width: 200px; /*change this*/
+    width: 200px;
     margin-left: 15px;
     margin-right: 15px;
   }
     #paperclip {
       position: absolute;
-      /*right: 15.5vw;*/
       left: -6px;
       top: 7px;
       transform: rotate(-20deg);
@@ -147,9 +150,14 @@ img.intro_pic {
   }
 }
 
+@media (max-width: 200px) {
+  img.intro_pic {
+    width: 100%;
+  }
+}
+
 @media (max-width: 600px) {
-  .intro_pic {
-    float: center;
+  img.intro_pic {
     max-height: 75vh;
     max-width: 90vw;
   }
@@ -190,7 +198,55 @@ img.intro_pic {
   border-top: 4px solid #f8d775;
 }
 
+.left-manila, .right-manila {
+  display: none;
+  max-height: 500px;
+}
 
+/*main {
+  max-width: 1000px;
+}
+
+@media (min-width: 1000px) {
+  body {
+    align-items: center;
+  }
+}*/
+
+@media (min-width: 2000px) {
+  .below-nav {
+    display: flex;
+    flex-direction: row;
+  }
+  /*.manila {
+    flex: 3;
+  }*/
+.left-manila, .right-manila {
+  display: flex;
+  flex: 1;
+  max-width: 20vw;
+  margin: 50px;
+  margin-right: 10vw;
+  margin-left: 10vw;
+}
+
+.left-manila > img, .right-manila > img {
+  max-width: inherit;
+  height: auto;
+}
+}
+
+@media(max-width: 400px) {
+  .manila {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+  .intro-content {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  align-content: center;
+  }
+}
 
 .footer {
   padding: 1em;
@@ -254,7 +310,7 @@ div .contact-details a {
   font-weight: bold;
 }
 
-li a {
+#menu_nav_ul a {
   font-family: Georgia;
   text-shadow: white 0 2px 1px;
 }

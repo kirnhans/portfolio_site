@@ -2,15 +2,15 @@
 
   
 
-The nature of life is change and one of the greatest strengths of the human race is that we learn and adapt. (Csibra & Gergely, 2011). Learning also keeps the mind alive and quick. As the saying goes, "use it or lose it". (Shors et al., 2012).
+The nature of life is change and one of the greatest strengths of the human race is that we learn and adapt (Csibra & Gergely, 2011). Learning also keeps the mind alive and quick. As the saying goes, "use it or lose it" (Shors et al., 2012).
 
   
 
-As teachers, we can only convey beliefs that we hold ourselves. Modelling has long been recognised as an important teaching strategy. (Salisu & Ransom, 2014). To convey the importance of learning to students, we must cherish learning ourselves. I intend to model the freedom to say "I don’t know" and follow up with "but I’ll find out". Modelling a willingness to confront ignorance instead of hiding it is probably the most valuable skill I can impart to students.
+As teachers, we can only convey beliefs that we hold ourselves. Modelling has long been recognised as an important teaching strategy (Salisu & Ransom, 2014). To convey the importance of learning to students, we must cherish learning ourselves. I intend to model the freedom to say "I don’t know" and follow up with "but I’ll find out". Modelling a willingness to confront ignorance instead of hiding it is probably the most valuable skill I can impart to students.
 
   
 
-Copious research shows that teacher’s learning improves student outcomes. (Meiers, 2007). This study mentions the great impact teachers have on student outcomes in general, so it stands to reason a teacher’s improvement in their practice advantages their students. Honestly for me, that's the whole point: to keep growing with the students.  Professional learning is a way to ensure that our improvement is a continued process, accruing benefit to our students.
+Copious research shows that teacher’s learning improves student outcomes (Meiers, 2007). This study mentions the great impact teachers have on student outcomes in general, so it stands to reason a teacher’s improvement in their practice advantages their students. Honestly for me, that's the whole point: to keep growing with the students.  Professional learning is a way to ensure that our improvement is a continued process, accruing benefit to our students.
 
   
 
@@ -40,7 +40,6 @@ Learning expands a teacher’s toolkit. Much of the research I’ve read in my f
 
   
   
-
 **References**
 
 -   Csibra, G. and Gergely, G.. (2011). Natural pedagogy as evolutionary adaptation. *Phil. Trans. R. Soc.* B3661149–1157. [http://doi.org/10.1098/rstb.2010.0319](http://doi.org/10.1098/rstb.2010.0319)
@@ -49,6 +48,7 @@ Learning expands a teacher’s toolkit. Much of the research I’ve read in my f
     
 -   *PLF Guide Overview*. (2021). Department of Defense Education Activity. [https://content.dodea.edu/teach\_learn/professional\_development/21/plf\_guide\_overview.html](https://content.dodea.edu/teach_learn/professional_development/21/plf_guide_overview.html)
     
--   Salisu, A., & Ransom, E. N. (2014). The Role of Modeling towards Impacting Quality Education. International Letters of Social and Humanistic Sciences, 32, 54–61. https://doi.org/10.18052/www.scipress.com/ilshs.32.54
+-   Salisu, A., & Ransom, E. N. (2014). The Role of Modeling towards Impacting Quality Education. *International Letters of Social and Humanistic Sciences*, 32, 54–61. [www.scipress.com/ilshs.32.54](http://www.scipress.com/ilshs.32.54)
     
--   Shors, T., Anderson, M., Curlik, D., & Nokia, M. (2012). Use it or lose it: How neurogenesis keeps the brain fit for learning. Behavioural Brain Research, 227(2), 450–458. https://doi.org/10.1016/j.bbr.2011.04.023
+
+-   Shors, T., Anderson, M., Curlik, D., & Nokia, M. (2012). Use it or lose it: How neurogenesis keeps the brain fit for learning. *Behavioural Brain Research*, 227(2), 450–458. [https://doi.org/10.1016/j.bbr.2011.04.023](https://doi.org/10.1016/j.bbr.2011.04.023)

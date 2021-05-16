@@ -6,52 +6,57 @@
 {% endblock %}
 {% block body %}
 <div class="intro_content">
-<!-- todo add parent div for this to help alignment -->
-<div class = "intro_pic">
-<img src="static/images/paperclip2.png" id="paperclip">
-<img src="static/images/kirn_headshot.jpg" class="intro_pic">
-</div>
+    <!-- todo add parent div for this to help alignment -->
+    <div class = "intro_pic">
+        <img src="static/images/paperclip2.png" id="paperclip">
+        <img src="static/images/kirn_headshot.jpg" class="intro_pic">
+    </div>
 
-<div class="intro manila">
-{{intro_content}}
-</div>
+    <div class="intro manila">
+        {{intro_content}}
+    </div>
 
-<div class="horizontally-centered">
-	<div class="ffolder medium yellow">
-		<div class="dropdown">
-    <div class="centered">
-        <img src = "static/images/aitsl_logo.jpeg" class="folder_pic"><br>
-        <button class="dropbtn"> Graduate Teaching Standards</button>
-        <div class="dropdown-content">
-        <a href="./standard1.html" class = "standard_link"> Standard 1 </a>
-        <a href="./standard2.html" class = "standard_link"> Standard 2 </a>
-        <a href="./standard3.html" class = "standard_link"> Standard 3 </a>
-        <a href="./standard4.html" class = "standard_link"> Standard 4 </a>
-        <a href="./standard5.html" class = "standard_link"> Standard 5 </a>
-        <a href="./standard6.html" class = "standard_link"> Standard 6 </a>
-        <a href="./standard7.html" class = "standard_link"> Standard 7 </a>
+    <div class="horizontally-centered">
+        <div class="ffolder-container">    
+           <div class="ffolder medium yellow">
+              <div class="dropdown">
+                <div class="centered">
+                    <img src = "static/images/aitsl_logo.jpeg" class="folder_pic"><br>
+                    <button class="dropbtn"> Graduate Teaching Standards</button>
+                    <div class="dropdown-content">
+                        <a href="./standard1.html" class = "standard_link"> Standard 1 </a>
+                        <a href="./standard2.html" class = "standard_link"> Standard 2 </a>
+                        <a href="./standard3.html" class = "standard_link"> Standard 3 </a>
+                        <a href="./standard4.html" class = "standard_link"> Standard 4 </a>
+                        <a href="./standard5.html" class = "standard_link"> Standard 5 </a>
+                        <a href="./standard6.html" class = "standard_link"> Standard 6 </a>
+                        <a href="./standard7.html" class = "standard_link"> Standard 7 </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-	</div>
-  <div class="ffolder medium yellow">
-    <div class="dropdown">
-    <div class="centered">
-        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-book" viewBox="0 0 16 16">
-          <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-        </svg>
-        <button class="dropbtn"> Lesson Plans, etc. I've made </button>
-        <div class="dropdown-content lesson-plan">
-        <a href="static\pdfs\mtm1-lesson_plan.pdf"> Stage 5 Probability Lesson Plan </a>
-        <a href="static\pdfs\algebra_handout_reading_lesson_plan.pdf"> Algebra Handout Reading Essay and Lesson Plan </a>
-        <a href="static\pdfs\Outreach_strategies.pdf"> Community Outreach Strategies (Group Project) </a>
-        <a href="static\pdfs\student_bip.pdf"> Behavioural Intervention Plan (Group Project) </a>
-        <a href="static\pdfs\Proforma Part B filled.pdf"> Behavioural Intervention Plan (Individual Work) </a>
-      </div>
+
+        <div class="ffolder-container">
+            <div class="ffolder medium yellow">
+                <div class="dropdown">
+                    <div class="centered">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-book" viewBox="0 0 16 16">
+                          <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+                        </svg>
+                        <button class="dropbtn"> Lesson Plans, etc. I've made </button>
+                        <div class="dropdown-content lesson-plan">
+                            <a href="static\pdfs\mtm1-lesson_plan.pdf"> Stage 5 Probability Lesson Plan </a>
+                            <a href="static\pdfs\algebra_handout_reading_lesson_plan.pdf"> Algebra Handout Reading Essay and Lesson Plan </a>
+                            <a href="static\pdfs\Outreach_strategies.pdf"> Community Outreach Strategies (Group Project) </a>
+                            <a href="static\pdfs\student_bip.pdf"> Behavioural Intervention Plan (Group Project) </a>
+                            <a href="static\pdfs\Proforma Part B filled.pdf"> Behavioural Intervention Plan (Individual Work) </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  </div>
-</div>
 
 </div>
 {% endblock %}
