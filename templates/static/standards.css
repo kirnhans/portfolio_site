@@ -41,6 +41,43 @@ p {
 	font-family: Calibri;
 }
 
+.in-manila {
+  margin: auto;
+  max-width: 700px;
+}
+
+table {
+  border: 1px black solid;
+  background-color: white;
+  font-family: Calibri;
+}
+
+td.column-header {
+  font-weight: bold;
+  text-align: center;
+}
+
+tr > td:nth-child(1) {
+  border-right: 1px black dashed;
+  min-width: 110px;
+}
+
+td {
+  padding: 3px 10px;
+}
+
+tbody > tr:nth-child(1) >* {
+  border-bottom: 1.5px #02a702 solid;
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: #d7ee96;
+}
+
+tbody > tr:nth-child(even) {
+  background-color: white;
+}
+
 a {
   color: black;
 }
@@ -63,6 +100,12 @@ h3 {
 
 img {
   max-width: 50vw;
+}
+.in-manila img {
+  max-width: 75%;
+}
+center > p {
+  margin: 0;
 }
 
 .centered > img, svg {
@@ -170,7 +213,7 @@ img.intro_pic {
     display: none;
   }
 
-  .horizontally-centered, .footer {
+  .horizontally-centered, footer {
   flex-direction: column;
   }
 
@@ -198,9 +241,9 @@ img.intro_pic {
   border-top: 4px solid #f8d775;
 }
 
-.left-manila, .right-manila {
-  display: none;
-  max-height: 500px;
+.back-manila {
+  display: flex;
+  flex-direction: column;
 }
 
 /*main {
@@ -212,33 +255,59 @@ img.intro_pic {
     align-items: center;
   }
 }*/
+div.main {
+    display: flex;
+    flex-direction: column;
+}
 
-@media (min-width: 2000px) {
+@media (min-width: 1600px) {
+  div.main{
+    display: flex;
+    flex-direction: column;
+  }
+  #menu_main_nav_area {
+    margin: auto;
+  }
+  .main > h1 {
+    margin-left: auto;
+    margin-right: auto;
+  }
   .below-nav {
     display: flex;
     flex-direction: row;
   }
-  /*.manila {
-    flex: 3;
-  }*/
-.left-manila, .right-manila {
-  display: flex;
-  flex: 1;
-  max-width: 20vw;
-  margin: 50px;
-  margin-right: 10vw;
-  margin-left: 10vw;
+    .manila {
+      flex: 3;
+      display: block;
+        margin: auto;
+        max-width: 1000px;
+    /*overflow: hidden;*/
+    /*position: relative;*/
+    width: 100%;
+    }
+  .back-manila {
+    margin-left: 10%;
+    z-index: -1;
+    width: 80%;
+    max-height: 100%;
+  }
 }
 
-.left-manila > img, .right-manila > img {
-  max-width: inherit;
-  height: auto;
-}
+@media(min-width: 1800px) {
+  .manila {
+    border-left: 50px solid hsl(195, 100%, 90%);
+    border-right: 50px solid hsl(195, 100%, 90%);
+  }
+
+  .back-manila {
+    background-image: url("images/Kirn_photos.png");
+    background-repeat: repeat;
+  }
 }
 
 @media(max-width: 400px) {
   .manila {
-  padding-left: 0.5em;
+  padding-left: 0.8em;
   padding-right: 0.5em;
 }
   .intro-content {
@@ -248,19 +317,27 @@ img.intro_pic {
   }
 }
 
-.footer {
-  padding: 1em;
+footer {
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 1em;
+  padding-bottom: 1em;
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 /*from https://codepen.io/Kerruba/pen/MXNoeG */
 :root {
-  --bhue: 195; 
+  /*--bhue: 195; 
   --bsat: 100;
-  --blig: 110;
-  --light:hsl(var(--bhue), calc(var(--bsat)*1%), calc(var(--blig)*1% - 15%));
-  --dark:hsl(var(--bhue), calc(var(--bsat)*1%), calc(var(--blig)*1% - 20%));
-  --darkest:hsl(var(--bhue), calc(var(--bsat)*1%), calc(var(--blig)*1% - 35%));
+  --blig: 80;*/
+  --bhue: 190; 
+  --bsat: 100;
+  --blig: 60;
+  --light:hsl(var(--bhue), calc(var(--bsat)*1%), calc(var(--blig)*1%));
+  --dark:hsl(var(--bhue), calc(var(--bsat)*1%), calc(var(--blig)*1% - 5%));
+  --darkest:hsl(var(--bhue), calc(var(--bsat)*1%), calc(var(--blig)*1% - 20%));
 }
 
 
@@ -271,37 +348,33 @@ img.intro_pic {
   border-bottom: 1px solid var(--dark);
 }
 
-div .contact-details {
-  border: 1px solid navy;
-  /*float: left;*/
+footer address.contact-details {
+  border: 2px double navy;
   display: block;
   flex: 1;
-  margin: auto;
   background-color: white;
+  max-width: 200px;
 }
 
-div .contact-details > ul {
+footer .contact-details > ul {
   font-family: Calibri;
-  padding: 1em;
   padding-inline-start: 1em;
   padding-inline-end: 1em;
-}
-
-div .contact-details a {
-  font-family: Calibri;
+  font-style: normal;
 }
 
 .contact-details > li  {
   float: center;
   display: block;
   margin: auto;
-  border-bottom: 1px dashed navy;
+  border-bottom: 1px dashed #7777c7;
+  text-align: end;
 }
 
 .history-acknowledgment {
-  margin-left: 10%;
   float: center;
   flex: 2;
+  max-width: 400px;
 }
 
 /*everything nav bar related below*/

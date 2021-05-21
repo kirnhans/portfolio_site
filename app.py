@@ -51,11 +51,12 @@ class SiteGenerator(object):
                 file.write(html)
 
     def render_intro_page(self):
-        print("Rendering intro pages to static file.")
+        print("Rendering intro page to static file.")
         template = self.env.get_template('intro_template.html')
         intro_text = "Hi! I'm Kirn."
         intro_path = "templates/static/written_content/intro.txt"
         if os.path.exists(intro_path):
+            print(intro_path)
             intro_text = open(intro_path, "r").read()
         with open(os.path.join("public", "index.html"), 'w+') as file:
             html = template.render(intro_content=markdown(intro_text))
