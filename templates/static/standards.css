@@ -47,7 +47,9 @@ p {
 }
 
 table {
-  border: 1px black solid;
+  /*border: 1px black solid;*/
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px #000a;
   background-color: white;
   font-family: Calibri;
 }
@@ -499,6 +501,11 @@ nav ul > li a:hover, nav ul > li a:focus {
 }
 
 /*hattip*/
+/*ordered above so the 6n+1 will be more specific for 1 and 7*/
+ .dropdown-content a.standard_link:nth-child(2n+1):hover {
+  background-color: #95c93d;
+}
+
  .dropdown-content a.standard_link:nth-child(6n+1):hover {
   background-color: #c768ff;
 }
@@ -511,9 +518,6 @@ nav ul > li a:hover, nav ul > li a:focus {
   background-color: #f0d001;
 }
 
- .dropdown-content a.standard_link:nth-child(2n+1):hover {
-  background-color: #95c93d;
-}
 
 
 /*desktop*/
