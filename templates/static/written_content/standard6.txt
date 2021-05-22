@@ -4,7 +4,15 @@
 
 The nature of life is change and mankind’s strength lies in learning and adapting (Csibra & Gergely, 2011). Learning also keeps the mind alive and quick. As neuroscientists say, "use it or lose it".
 
-  
+ 
+<center>
+
+![PLF Guide Overview, 2021, 2021](static\images\PL_cycle.jpg)
+
+*(PLF Guide Overview, 2021)*
+
+</center>
+
 
 As teachers, we can only convey beliefs that we hold ourselves. I intend to model the freedom to say "I don't know" and follow up with "but I'll find out". Modelling a willingness to confront ignorance instead of hiding it is probably the most valuable skill I can impart to students.
 
@@ -15,18 +23,18 @@ Copious research shows that teacher's learning improves student outcomes. Meiers
   
 
 This semester, I have learnt how many learning activities occur in the day-to-day of a teacher's work, an exciting contrast with my previous field. Learning can happen in many ways: individually, collaboratively, in a mentoring relationship, routinely, formally, etc.
- 
-<center>
-![PLF Guide Overview, 2021, 2021](static\images\PL_cycle.jpg)
-
-(*PLF Guide Overview*, 2021)
-</center>
-
   
+<center>
+
+![A screenshot of the Diarium app](static\images\Diarium_screencap.png)
+
+*A screenshot of the Diarium app*
+
+</center>
 
 Individually, reflection is an important ingredient of learning. I’ve previously attempted to journal but it didn’t usually go well. This semester I:
 
--   Bought an attractive journal app (see below)
+-   Bought an attractive journal app (see above)
     
 -   Was more **flexible** in how I put my thoughts down
     
@@ -41,24 +49,23 @@ Individually, reflection is an important ingredient of learning. I’ve previous
     
 
 -   Wrote a formal reflection after teaching a question for my teaching methods class  
-    In this class, I also watched other student teachers. I was struck by several **innovative approaches** and came to value the approach of peer observation. 
-    
-<center>
-![A screenshot of the Diarium app](static\images\Diarium_screencap.png)
-
-*A screenshot of the Diarium app*
-</center>
-
+    In this class, I also watched other student teachers. I was struck by several **innovative approaches** and came to value the approach of peer observation.
 
 Overall, I plan to continue these useful and agile reflective practices.
 
   
 
-I also participated in working groups, where I found myself frustrated by communication difficulties. Some teammates were unresponsive and difficult to schedule with. By trying different communication styles, however, I realised that unspoken expectations were the source and presenting goals in a more accessible manner and asking clarifying questions were effective remedies. I am interested in joining structured working groups to benefit from the **diversity of thought**.
+I also participated in working groups, where I learnt to deal with communication difficulties (see diagram below). I am interested in joining structured working groups in the future to benefit from the **diversity of thought**.
 
   
+<center>
 
-Working group presentations comprised an in-class TeachMeet. I could see that TeachMeets are succinct, **packed with ideas** and excellent ways of invigorating one's thinking, really firing that drive to try something new. I look forward to attending TeachMeets in-service.
+![groupwork](static\images\working_groups.png)
+
+</center>
+  
+
+Each working group presented strategies at our in-class TeachMeet. I could see that TeachMeets are succinct, **packed with ideas** and excellent ways of invigorating one's thinking, really firing that drive to try something new. I look forward to attending TeachMeets in-service.
 
   
 

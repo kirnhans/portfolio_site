@@ -46,6 +46,10 @@ p {
   max-width: 700px;
 }
 
+.in-manila img[alt~="groupwork"] {
+  max-width: 100%;
+}
+
 table {
   /*border: 1px black solid;*/
   border-radius: 4px;
@@ -177,12 +181,12 @@ img.intro_pic {
     position: relative;
     width: 200px;
     margin-left: 15px;
-    margin-right: 15px;
+    margin-bottom: 5px;
   }
     #paperclip {
       position: absolute;
       left: -6px;
-      top: 7px;
+      top: -12px;
       transform: rotate(-20deg);
       width: 30px;
       z-index: 2;
@@ -219,13 +223,14 @@ img.intro_pic {
   flex-direction: column;
   }
 
+  .history-acknowledgment {
+    padding-top: 0.5em;
+    text-align: justify;
+  }
+
   .horizontally-centered {
     margin: auto;
   }
-}
-
-.intro_content {
-	padding-left: 2em;
 }
 
 .intro_content > .horizontally-centered {
@@ -262,6 +267,21 @@ div.main {
     flex-direction: column;
 }
 
+@media (min-width: 70em) and (max-width: 1600px){
+  .below-nav {
+      padding-right: 2em;
+  }
+
+  .below-nav .manila {
+    box-shadow: 3px 4px 10px rgb(0 0 0 / 50%);
+    border-radius: 0px 15px 15px 0px;
+  }
+
+  .intro_content .manila {
+    border-radius: 15px 0px 0px 15px;
+  }
+}
+
 @media (min-width: 1600px) {
   div.main{
     display: flex;
@@ -270,7 +290,7 @@ div.main {
   #menu_main_nav_area {
     margin: auto;
   }
-  .main > h1 {
+  h1 {
     margin-left: auto;
     margin-right: auto;
   }
@@ -278,15 +298,15 @@ div.main {
     display: flex;
     flex-direction: row;
   }
-    .manila {
-      flex: 3;
-      display: block;
-        margin: auto;
-        max-width: 1000px;
-    /*overflow: hidden;*/
-    /*position: relative;*/
-    width: 100%;
-    }
+  .manila {
+    flex: 3;
+    display: block;
+      margin: auto;
+      max-width: 1000px;
+  /*overflow: hidden;*/
+  /*position: relative;*/
+  width: 100%;
+  }
   .back-manila {
     margin-left: 10%;
     z-index: -1;
@@ -366,7 +386,6 @@ footer .contact-details > ul {
 }
 
 .contact-details > li  {
-  float: center;
   display: block;
   margin: auto;
   border-bottom: 1px dashed #7777c7;
@@ -374,7 +393,6 @@ footer .contact-details > ul {
 }
 
 .history-acknowledgment {
-  float: center;
   flex: 2;
   max-width: 400px;
 }
@@ -425,6 +443,10 @@ nav ul > li a:hover, nav ul > li a:focus {
     font-size: 125%;
   }
 
+  .intro_content {
+    padding-left: 0.8em;
+    padding-right: 0.5em
+  }
   .hamburger {
     display: block;
     padding-left: 2em;
@@ -527,6 +549,9 @@ nav ul > li a:hover, nav ul > li a:focus {
   }
   .menu_main_nav_area {
     display: block;
+  }
+  .intro_content {
+    padding-left: 2em;
   }
 
  /* .below-nav {

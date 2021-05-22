@@ -1,9 +1,11 @@
 ### 3.7.1: Describe a broad range of strategies for involving parents/carers in the educative process.
 
 <center>
+
 ![Parent Involvement Project, 2021](static\images\parent_involve_components.webp)
 
-(*Parent Involvement Project*, 2021)
+*(Parent Involvement Project, 2021)*
+
 </center>
   
 
@@ -40,12 +42,12 @@ Strategies can also involve direct communication, such as through newsletters, v
 <center>
 ![Wogan, 2018, 2021](static\images\6-types-of-parent-engagement-epstein-color-photo.jpg)
 
-(Wogan, 2018)
+*(Wogan, 2018)*
 </center>
   
 Developing the steps of the research needed was fascinating. Previously, I'd only been involved as a volunteer for outreach efforts and had never thought about how to design an approach. The resources we collected for our research will be useful when I am called upon to outline such strategies as a teacher.
 
-For more in-depth explanations of the strategies we devised, click [here](http://kirnhans.com/static/pdf/Outreach_strategies.pdf).
+For more in-depth explanations of the strategies we devised, click [here](static/pdfs/Outreach_strategies.pdf).
 
   
   
