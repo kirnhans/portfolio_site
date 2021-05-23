@@ -178,6 +178,15 @@ img.intro_pic {
     width: 200px;
     transform: rotate(2deg);
   }
+  .dropdown-content {
+    width: 190%;
+    margin-left: -45%;
+  }
+  .standards_folder .dropdown-content {
+    /*transform: translateY(-325px);*/
+    top: -137%;
+    position: absolute;
+  }
   div.intro_pic {
     float: right;
     position: relative;
@@ -229,6 +238,11 @@ img.intro_pic {
 
   .intro_content .manila {
     border-radius: 8px 8px 8px 8px;
+  }
+
+  .dropdown-content {
+    width: 150%;
+    margin-left: -25%;
   }
 
   .horizontally-centered, footer {
@@ -499,15 +513,10 @@ nav ul > li a:hover, nav ul > li a:focus {
     background-color: #f8d775;
     display: none;
     z-index: 1;
-    width: 200%;
-    margin-left: -50%;
     box-shadow: 3px 3px rgba(0,0,0,0.2);
 }
 .standards_folder .dropdown-content {
-  /*transform: translateY(-325px);*/
-  top: -137%;
-  position: absolute;
-  text-align: start;  
+  text-align: start;
   box-shadow: 3px -1px rgba(0,0,0,0.2);
 }
 
