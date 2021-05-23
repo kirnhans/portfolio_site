@@ -59,7 +59,8 @@ class SiteGenerator(object):
             print(intro_path)
             intro_text = open(intro_path, "r").read()
         with open(os.path.join("public", "index.html"), 'w+') as file:
-            html = template.render(intro_content=markdown(intro_text))
+            html = template.render(intro_content=markdown(intro_text),
+                standards_dict=standards_dict)
             file.write(html)
 
 

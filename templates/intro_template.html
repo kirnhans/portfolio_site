@@ -20,27 +20,23 @@
 
 <!-- change the width at which this gets columned -->
     <div class="horizontally-centered">
-        <div class="ffolder-container">    
+        <div class="ffolder-container standards_folder">    
            <div class="ffolder medium yellow">
               <div class="dropdown">
                 <div class="centered">
                     <img src = "static/images/aitsl_logo.jpeg" class="folder_pic"><br>
                     <button class="dropbtn"> Graduate Teaching Standards</button>
                     <div class="dropdown-content">
-                        <a href="./standard1.html" class = "standard_link"> Standard 1 </a>
-                        <a href="./standard2.html" class = "standard_link"> Standard 2 </a>
-                        <a href="./standard3.html" class = "standard_link"> Standard 3 </a>
-                        <a href="./standard4.html" class = "standard_link"> Standard 4 </a>
-                        <a href="./standard5.html" class = "standard_link"> Standard 5 </a>
-                        <a href="./standard6.html" class = "standard_link"> Standard 6 </a>
-                        <a href="./standard7.html" class = "standard_link"> Standard 7 </a>
+                        {% for num, data in standards_dict.items() -%}
+                        <a href="./standard{{num}}.html" class = "standard_link"> {{num}}. {{data[0]}} </a>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-        <div class="ffolder-container">
+        <div class="ffolder-container links_folder">
             <div class="ffolder medium yellow">
                 <div class="dropdown">
                     <div class="centered">
