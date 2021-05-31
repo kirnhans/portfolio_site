@@ -20,6 +20,7 @@ class SiteGenerator(object):
         self.copy_static()
         self.render_standards_page()
         self.render_intro_page()
+        self.render_dev_page()
 
     def empty_public(self):
         """ Ensure the public directory is empty before generating. """
@@ -61,6 +62,13 @@ class SiteGenerator(object):
         with open(os.path.join("public", "index.html"), 'w+') as file:
             html = template.render(intro_content=markdown(intro_text),
                 standards_dict=standards_dict)
+            file.write(html)
+
+    def render_dev_page(self):
+        print("Rendering dev page to static file.")
+        template = self.env.get_template('developer_template.html')
+        with open(os.path.join("public", "developer.html"), 'w+') as file:
+            html = template.render()
             file.write(html)
 
 
