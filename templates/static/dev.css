@@ -1,45 +1,28 @@
 #viewport
 {
-position:relative;
-left:0px;
-top:0px;
-width:460px;
-height:280px;
-border-style:solid;
-background-image:url('images/butterfly/clouds.jpg');
+	position:relative;
+	left:0px;
+	top:0px;
+	width:460px;
+	height:280px;
+	border-style:solid;
+	background-image:url('images/butterfly/clouds.jpg');
 }
+
 #body
 {
-position:absolute;
-visibility:visible;
+	position:absolute;
+	visibility:visible;
+	right: 54px;
+	bottom: 127px;
+	transform-origin: 45% 50%;
 }
+
 #w1
 {
-position:absolute;
-visibility:hidden;
-}
-#w2
-{
-position:absolute;
-visibility:hidden;
-}
-#w3
-{
-position:absolute;
-visibility:hidden;
-}
-#w4
-{
-position:absolute;
-visibility:hidden;
-}
-#w5
-{
-position:absolute;
-visibility:hidden;
-}
-#w6
-{
-position:absolute;
-visibility:hidden;
+	position:absolute;
+	visibility:visible;
+	right: 44px;
+   	bottom: 150px;
+   	transform-origin: left bottom;
 }
