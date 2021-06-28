@@ -14,7 +14,7 @@
 	position:absolute;
 	visibility:visible;
 	right: 54px;
-	bottom: 127px;
+	/*bottom: 127px;*/
 	transform-origin: 45% 50%;
 }
 
@@ -22,7 +22,7 @@
 {
 	position:absolute;
 	visibility:visible;
-	right: 44px;
-   	bottom: 150px;
+	/*right: 44px;
+   	bottom: 150px;*/
    	transform-origin: left bottom;
 }
