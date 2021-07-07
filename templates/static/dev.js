@@ -2,6 +2,7 @@ $('document').ready(function() {
     animate();
 });
 
+let landing_zones = ["100px,400px", /*globe*/] //change this
 let timer;
 
 function animate()
@@ -41,6 +42,21 @@ function animate()
 function butterfly_main() {
    // randomly choose where to fly
    // every [interval] landOnGlobe
+   WingFlaps();
+   let prev_i = landing_zones.length();
+   while (true) {
+      let i = getRandomArbitrary(0, landing_zones.length());
+      if (i === prev_i) {
+         continue; // don't "fly" to the same place twice in a row
+      }
+
+      let dest_coords = landing_zones[i].split(",");
+      flyTo(dest_coords[0], dest_coords[1]);
+      landOn(dest_coords[0], dest_coords[1]);
+      // todo: wait a few seconds
+
+      prev_i = i;
+   }
 }
 
 function WingFlaps() {
@@ -78,13 +94,14 @@ function flyTo(x, y) {
 
       body.style.right = new_loc[0];
       body.style.bottom = new_loc[1];
+      //todo: delay 1 ms
    }
 
    //return value: is the butterfly more or less where I said it would be?
    return ((x - body.style.right) < 5) && ((y - body.style.bottom) < 5)
 }
 
-function landOnGlobe() {
+function landOn(x,y) {
    let globeTop = ["300px, 400px"]; //change this
    // stop flying randomly
    // set this as a location of where to go
