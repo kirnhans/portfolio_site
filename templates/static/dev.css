@@ -3,18 +3,18 @@
 	position:relative;
 	left:0px;
 	top:0px;
-	width:460px;
-	height:280px;
+	width:1000px;
+	height:1000px;
 	border-style:solid;
 	background-image:url('images/butterfly/clouds.jpg');
 }
 
-#body
+#butterflybody
 {
 	position:absolute;
 	visibility:visible;
 	right: 54px;
-	/*bottom: 127px;*/
+	bottom: 127px;
 	transform-origin: 45% 50%;
 }
 
@@ -22,7 +22,7 @@
 {
 	position:absolute;
 	visibility:visible;
-	/*right: 44px;
-   	bottom: 150px;*/
+	/*right: 44px;*/
+   	/*bottom: 150px;*/
    	transform-origin: left bottom;
 }
