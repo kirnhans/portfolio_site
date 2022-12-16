@@ -1,15 +1,16 @@
 $('document').ready(function() {
    init();
 
-   // animate();
-   flyTo(300, 400);
-   // flyTo(100, 300);
+   flapWings();
+   flyToWrapper(300, 400);
+   flyToWrapper(100, 300);
 });
 
 let butterflybody;
 let wing;
 let landing_zones = ["100px,400px", /*globe*/] //change this
 let timer;
+const delay = ms => new Promise(res => setTimeout(res, ms));
 
 function init() {
    butterflybody = document.getElementById("butterflybody");
@@ -48,8 +49,16 @@ function syncUpWing() {
    wing.style.bottom = `${butterflybody_bottom + 23}px`;
 }
 
-/* Doing Thing functions*
-function animate()
+function flyToWrapper(x, y) {
+   // todo: add logic to turn body
+   // stretch goal: make flight an arc, not a straight line
+   window.requestAnimationFrame(function() {
+        flyTo(x,y);
+    });
+}
+
+/* Doing Thing functions*/
+function flapWings()
 {
    syncUpWing();
 
@@ -64,7 +73,7 @@ function animate()
    // monarchs flap their wings about 5 to 12 times a second
    // source: https://journeynorth.org/tm/monarch/FlightPoweredSlowMotion.html
    // let stepTime = getRandomArbitrary(83,200);
-   window.requestAnimationFrame(animate);
+   window.requestAnimationFrame(flapWings);
 }
 
 function butterfly_main() {
@@ -90,7 +99,7 @@ function butterfly_main() {
 function WingFlaps() {
    // scale image, cycle through time
    let stepTime = getRandomArbitrary(83,200);
-   timer = setTimeout("animate()",stepTime);
+   timer = setTimeout("flapWings()",stepTime);
 }
 
 function flyTo(x, y) {
@@ -103,37 +112,50 @@ function flyTo(x, y) {
 
    /* distance formula with x,y
    calculated in pixels */
+   console.log("x,y", x,y)
+   console.log("orign_loc", orig_loc[0], orig_loc[1]);
    let travel_distance = Math.hypot(x-orig_loc[0], y-orig_loc[1]);
    // console.log("orig_loc", orig_loc);
    // console.log(travel_distance)
-   
+   if (travel_distance < 3) {
+      console.log("travel_distance", travel_distance);
+      return;
+   }
+   console.log("travel_distance", travel_distance);
+
    /* divide by speed of butterfly per millisecond
    butterflies fly upto 37 miles per hour
    or 16.5 metres / second
-   So we'll say 100 pixels per millisecond?
+   So we'll say 10 pixels per millisecond?
    travel_time: in milliseconds, time from original location to x,y */
-   let travel_time = travel_distance / 100;
-   // console.log(travel_time);
+   let travel_time = travel_distance / 4;
+   console.log("travel_time", travel_time);
 
    /* loop
    set butterfly's position in next millisecond
    repeat until at position */
-   for (let i = 0.0; i < travel_time; i++) {
-      console.log("got here");
-      let step_factor = i / travel_time;
+   var new_loc
+   if (travel_time >= 1.0) {
+      let step_factor = 1.0 / travel_time;
+      new_loc = [orig_loc[0] + (x - orig_loc[0]) * step_factor,
+                  orig_loc[1] + (y - orig_loc[1]) * step_factor];
       console.log("step_factor", step_factor);
-      let new_loc = [orig_loc[0] + (x - orig_loc[0]) * step_factor,
-                     orig_loc[1] + (y - orig_loc[1]) * step_factor];
-
-      setButterflyBodyLoc(new_loc)
-      // butterflybody.style.right = new_loc[0];
-      // butterflybody.style.bottom = new_loc[1];
-      syncUpWing();
-      //todo: delay 1 ms
    }
+   else {
+      new_loc = [x, y];
+   }
+   setButterflyBodyLoc(new_loc)
+   syncUpWing();
+
+   let loc = getButterflyBodyLoc();
+   console.log("loc", loc[0], loc[1]);
+   console.log("x,y before animation", x,y);
+   window.requestAnimationFrame(function() {
+        flyTo(x,y);
+    });
 
    //return value: is the butterfly more or less where I said it would be?
-   return ((x - butterflybody.style.right) < 5) && ((y - butterflybody.style.bottom) < 5)
+   // return ((x - butterflybody.style.right) < 5) && ((y - butterflybody.style.bottom) < 5)
 }
 
 function landOn(x,y) {
