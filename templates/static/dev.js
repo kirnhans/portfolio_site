@@ -2,8 +2,10 @@ $('document').ready(function() {
    init();
 
    flapWings();
+   flightHandler();
+
    flyToWrapper(300, 400);
-   flyToWrapper(100, 300);
+   flyToWrapper(800, 300);
 });
 
 let butterflybody;
@@ -11,6 +13,8 @@ let wing;
 let landing_zones = ["100px,400px", /*globe*/] //change this
 let timer;
 const delay = ms => new Promise(res => setTimeout(res, ms));
+var current_flights = [];
+var wait = 0;
 
 function init() {
    butterflybody = document.getElementById("butterflybody");
@@ -25,8 +29,6 @@ function init() {
 
    wing = document.getElementById("w1");
    syncUpWing();
-
-   console.log()
 }
 
 /* Helper functions */
@@ -49,12 +51,30 @@ function syncUpWing() {
    wing.style.bottom = `${butterflybody_bottom + 23}px`;
 }
 
-function flyToWrapper(x, y) {
+function flyToWrapper(x,y) {
+   current_flights.push([x, y]);
+}
+
+function flightHandler() {
    // todo: add logic to turn body
    // stretch goal: make flight an arc, not a straight line
-   window.requestAnimationFrame(function() {
-        flyTo(x,y);
-    });
+   // window.requestAnimationFrame(function() {
+   //      flyTo(x,y);
+   //  });
+   if (wait > 0)
+      wait -= 1;
+   else {
+      if (current_flights.length > 0) {
+         flight_x = current_flights[0][0];
+         flight_y = current_flights[0][1];
+         if (flyTo(flight_x, flight_y)) {
+            current_flights.shift();
+            wait = 500;
+         }
+      }
+   }
+
+   window.requestAnimationFrame(flightHandler);
 }
 
 /* Doing Thing functions*/
@@ -112,25 +132,18 @@ function flyTo(x, y) {
 
    /* distance formula with x,y
    calculated in pixels */
-   console.log("x,y", x,y)
-   console.log("orign_loc", orig_loc[0], orig_loc[1]);
    let travel_distance = Math.hypot(x-orig_loc[0], y-orig_loc[1]);
-   // console.log("orig_loc", orig_loc);
-   // console.log(travel_distance)
-   if (travel_distance < 3) {
-      console.log("travel_distance", travel_distance);
-      return;
+   if (travel_distance == 0) {
+      return 1;
    }
-   console.log("travel_distance", travel_distance);
-
+   
    /* divide by speed of butterfly per millisecond
    butterflies fly upto 37 miles per hour
    or 16.5 metres / second
    So we'll say 10 pixels per millisecond?
    travel_time: in milliseconds, time from original location to x,y */
    let travel_time = travel_distance / 4;
-   console.log("travel_time", travel_time);
-
+   
    /* loop
    set butterfly's position in next millisecond
    repeat until at position */
@@ -139,20 +152,13 @@ function flyTo(x, y) {
       let step_factor = 1.0 / travel_time;
       new_loc = [orig_loc[0] + (x - orig_loc[0]) * step_factor,
                   orig_loc[1] + (y - orig_loc[1]) * step_factor];
-      console.log("step_factor", step_factor);
    }
    else {
       new_loc = [x, y];
    }
    setButterflyBodyLoc(new_loc)
    syncUpWing();
-
-   let loc = getButterflyBodyLoc();
-   console.log("loc", loc[0], loc[1]);
-   console.log("x,y before animation", x,y);
-   window.requestAnimationFrame(function() {
-        flyTo(x,y);
-    });
+   return 0;
 
    //return value: is the butterfly more or less where I said it would be?
    // return ((x - butterflybody.style.right) < 5) && ((y - butterflybody.style.bottom) < 5)
