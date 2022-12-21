@@ -5,7 +5,7 @@ $('document').ready(function() {
    flightHandler();
 
    flyToWrapper(300, 400);
-   flyToWrapper(800, 300);
+   // flyToWrapper(800, 300);
 });
 
 let butterflybody;
@@ -15,6 +15,9 @@ let timer;
 const delay = ms => new Promise(res => setTimeout(res, ms));
 var current_flights = [];
 var wait = 0;
+var butterfly_angle = 0;
+let btw_hypot; // body_to_wing_hypotenuse
+let btw_angle; // btw_angle
 
 function init() {
    butterflybody = document.getElementById("butterflybody");
@@ -26,6 +29,9 @@ function init() {
 
    butterflybody.style.right = `${butterflybody_right}px`;
    butterflybody.style.bottom = `${butterflybody_bottom}px`;
+
+   btw_hypot = Math.hypot(10, 23);
+   btw_angle = Math.atan(23 / 10);
 
    wing = document.getElementById("w1");
    syncUpWing();
@@ -43,14 +49,53 @@ function setButterflyBodyLoc(new_loc) {
    butterflybody.style.bottom = `${new_loc[1]}px`;
 }
 
+function radToDeg(angle) {
+   return 180 / Math.PI * angle;
+}
+
+function degToRad(angle) {
+   return Math.PI / 180 * angle;
+}
+
 function syncUpWing() {
    let butterflybody_right = parseInt($(butterflybody).css('right'), 10 /* base*/);
    let butterflybody_bottom = parseInt($(butterflybody).css('bottom'), 10 /* base*/);
    
-   wing.style.right = `${butterflybody_right - 10}px`;
-   wing.style.bottom = `${butterflybody_bottom + 23}px`;
+   let theta = btw_angle + degToRad(butterfly_angle);
+
+   wing.style.right = `${butterflybody_right - btw_hypot * Math.cos(theta)}px`;
+   wing.style.bottom = `${butterflybody_bottom + btw_hypot * Math.sin(theta)}px`;
 }
 
+//javascript you get a brownie for handling numbers
+function findAngleToPointAt(orig_x, orig_y, dest_x, dest_y) {
+   let x_dist = dest_x - orig_x;
+   let y_dist = dest_y - orig_y;
+   let arctan = radToDeg(Math.atan(y_dist / x_dist)); // want angle in degrees
+
+   console.log("x_dist", x_dist);
+   console.log("y_dist", y_dist);
+   // redundant cases but I want to check my maths first
+   if (x_dist > 0 && y_dist > 0) {
+      butterfly_angle = 180 + arctan;
+      // goddamnit, butterfly needs to be flipped too, not just rotated
+      // if it's only rotated like this, it'll be upside down
+   }
+   else if (x_dist < 0 && y_dist < 0) {
+      butterfly_angle = - arctan;
+   }
+   else if (x_dist < 0 && y_dist > 0) {
+      butterfly_angle = - arctan;
+   }
+   else if (x_dist > 0 && y_dist < 0) {
+      butterfly_angle = 180 - arctan;
+   }
+   else {
+      butterfly_angle = 180 - arctan;
+   }
+}
+
+// flight
 function flyToWrapper(x,y) {
    current_flights.push([x, y]);
 }
@@ -61,8 +106,10 @@ function flightHandler() {
    // window.requestAnimationFrame(function() {
    //      flyTo(x,y);
    //  });
-   if (wait > 0)
+   if (wait > 0){
       wait -= 1;
+      butterfly_angle = 0;
+   }
    else {
       if (current_flights.length > 0) {
          flight_x = current_flights[0][0];
@@ -78,16 +125,16 @@ function flightHandler() {
 }
 
 /* Doing Thing functions*/
-function flapWings()
-{
+function flapWings() {
    syncUpWing();
 
    const time = new Date().getTime();
    const sine = Math.sin(time/300);
 
-   wing.style.transform = `rotate(${Math.round(sine*2)}deg) scaleY(${sine})`;
+   var current_rotation = butterfly_angle;
+   wing.style.transform = `rotate(${butterfly_angle + Math.round(sine*2)}deg) scaleY(${sine})`;
    // wing.style.transformOrigin = "left bottom";
-   butterflybody.style.transform = `rotate(${Math.round(sine*2)}deg) translateY(${sine*2}px)`;
+   butterflybody.style.transform = `rotate(${butterfly_angle + Math.round(sine*2)}deg) translateY(${sine*2}px)`;
    // butterflybody.style.transformOrigin = "45% 50%";
 
    // monarchs flap their wings about 5 to 12 times a second
@@ -129,6 +176,8 @@ function flyTo(x, y) {
    orig_loc: current location, defined by the right and bottom most pixels
    of the body of the butterfly, since these stay more fixed than the wings */
    let orig_loc = getButterflyBodyLoc();
+
+   // findAngleToPointAt(orig_loc[0], orig_loc[1], x, y);
 
    /* distance formula with x,y
    calculated in pixels */
