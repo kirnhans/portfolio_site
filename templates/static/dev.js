@@ -4,9 +4,30 @@ $('document').ready(function() {
    flapWings();
    flightHandler();
 
-   flyToWrapper(300, 400);
-   // flyToWrapper(800, 300);
+   // flyToWrapper(900, 900);    
+   flyToWrapper(100, 300);
+   flyToWrapper(900, 900);
 });
+
+
+function butterfly_main() {
+   // randomly choose where to fly
+   // every [interval] landOnGlobe
+   let prev_i = -1; // impossible value, just so we have one
+   while (true) {
+      let i = getRandomArbitrary(0, landing_zones.length());
+      if (i === prev_i) {
+         continue; // don't "fly" to the same place twice in a row
+      }
+
+      let dest_coords = landing_zones[i].split(",");
+      flyTo(dest_coords[0], dest_coords[1]);
+      landOn(dest_coords[0], dest_coords[1]);
+      // todo: wait a few seconds
+
+      prev_i = i;
+   }
+}
 
 let butterflybody;
 let wing;
@@ -14,10 +35,8 @@ let landing_zones = ["100px,400px", /*globe*/] //change this
 let timer;
 const delay = ms => new Promise(res => setTimeout(res, ms));
 var current_flights = [];
-var wait = 0;
-var butterfly_angle = 0;
-let btw_hypot; // body_to_wing_hypotenuse
-let btw_angle; // btw_angle
+var wait = 1;
+var butterfly_is_flipped = false;
 
 function init() {
    butterflybody = document.getElementById("butterflybody");
@@ -30,10 +49,7 @@ function init() {
    butterflybody.style.right = `${butterflybody_right}px`;
    butterflybody.style.bottom = `${butterflybody_bottom}px`;
 
-   btw_hypot = Math.hypot(10, 23);
-   btw_angle = Math.atan(23 / 10);
-
-   wing = document.getElementById("w1");
+   wing = document.getElementById("butterflywing");
    syncUpWing();
 }
 
@@ -61,39 +77,17 @@ function syncUpWing() {
    let butterflybody_right = parseInt($(butterflybody).css('right'), 10 /* base*/);
    let butterflybody_bottom = parseInt($(butterflybody).css('bottom'), 10 /* base*/);
    
-   let theta = btw_angle + degToRad(butterfly_angle);
-
-   wing.style.right = `${butterflybody_right - btw_hypot * Math.cos(theta)}px`;
-   wing.style.bottom = `${butterflybody_bottom + btw_hypot * Math.sin(theta)}px`;
-}
-
-//javascript you get a brownie for handling numbers
-function findAngleToPointAt(orig_x, orig_y, dest_x, dest_y) {
-   let x_dist = dest_x - orig_x;
-   let y_dist = dest_y - orig_y;
-   let arctan = radToDeg(Math.atan(y_dist / x_dist)); // want angle in degrees
-
-   console.log("x_dist", x_dist);
-   console.log("y_dist", y_dist);
-   // redundant cases but I want to check my maths first
-   if (x_dist > 0 && y_dist > 0) {
-      butterfly_angle = 180 + arctan;
-      // goddamnit, butterfly needs to be flipped too, not just rotated
-      // if it's only rotated like this, it'll be upside down
-   }
-   else if (x_dist < 0 && y_dist < 0) {
-      butterfly_angle = - arctan;
-   }
-   else if (x_dist < 0 && y_dist > 0) {
-      butterfly_angle = - arctan;
-   }
-   else if (x_dist > 0 && y_dist < 0) {
-      butterfly_angle = 180 - arctan;
+   if (butterfly_is_flipped) {
+      wing.style.right = `${butterflybody_right - 195}px`; //what
+      wing.style.bottom = `${butterflybody_bottom + 23}px`;  
    }
    else {
-      butterfly_angle = 180 - arctan;
+      wing.style.right = `${butterflybody_right - 10}px`; 
+      wing.style.bottom = `${butterflybody_bottom + 23}px`;     
    }
+   
 }
+
 
 // flight
 function flyToWrapper(x,y) {
@@ -106,17 +100,29 @@ function flightHandler() {
    // window.requestAnimationFrame(function() {
    //      flyTo(x,y);
    //  });
+   if (wait == 1) {
+      //time to do a spinny if we've got to rotate
+      if (current_flights.length > 0) {
+         dest_x = current_flights[0][0];
+         ShouldButterflyFlip(dest_x);
+         if (butterfly_is_flipped) {
+            SpinButterfly();
+         }
+      }
+   }
+   
    if (wait > 0){
       wait -= 1;
-      butterfly_angle = 0;
    }
    else {
       if (current_flights.length > 0) {
-         flight_x = current_flights[0][0];
-         flight_y = current_flights[0][1];
-         if (flyTo(flight_x, flight_y)) {
-            current_flights.shift();
-            wait = 500;
+         // set course
+         dest_x = current_flights[0][0];
+         dest_y = current_flights[0][1];
+
+         if (flyTo(dest_x, dest_y)) { // we are done with flight
+            current_flights.shift(); // get rid of first elem
+            wait = 200;
          }
       }
    }
@@ -131,11 +137,16 @@ function flapWings() {
    const time = new Date().getTime();
    const sine = Math.sin(time/300);
 
-   var current_rotation = butterfly_angle;
-   wing.style.transform = `rotate(${butterfly_angle + Math.round(sine*2)}deg) scaleY(${sine})`;
-   // wing.style.transformOrigin = "left bottom";
-   butterflybody.style.transform = `rotate(${butterfly_angle + Math.round(sine*2)}deg) translateY(${sine*2}px)`;
-   // butterflybody.style.transformOrigin = "45% 50%";
+   if (butterfly_is_flipped) {
+      wing.style.transform = `rotate(${-Math.round(sine*2)}deg) scaleY(${sine})`;
+      butterflybody.style.transform = `rotate(${-Math.round(sine*2)}deg) translateY(${sine*2}px)`;
+   }
+   else {
+      wing.style.transform = `rotate(${Math.round(sine*2)}deg) scaleY(${sine})`;
+      butterflybody.style.transform = `rotate(${Math.round(sine*2)}deg) translateY(${sine*2}px)`;
+   }
+
+   flipButterflyMaybe();
 
    // monarchs flap their wings about 5 to 12 times a second
    // source: https://journeynorth.org/tm/monarch/FlightPoweredSlowMotion.html
@@ -143,48 +154,44 @@ function flapWings() {
    window.requestAnimationFrame(flapWings);
 }
 
-function butterfly_main() {
-   // randomly choose where to fly
-   // every [interval] landOnGlobe
-   WingFlaps();
-   let prev_i = -1; // impossible value, just so we have one
-   while (true) {
-      let i = getRandomArbitrary(0, landing_zones.length());
-      if (i === prev_i) {
-         continue; // don't "fly" to the same place twice in a row
-      }
-
-      let dest_coords = landing_zones[i].split(",");
-      flyTo(dest_coords[0], dest_coords[1]);
-      landOn(dest_coords[0], dest_coords[1]);
-      // todo: wait a few seconds
-
-      prev_i = i;
+function ShouldButterflyFlip(dest_x) {
+   let current_loc = getButterflyBodyLoc();
+   if (dest_x > current_loc[0]) { // pixels, start count from bottom-right
+      butterfly_is_flipped = true;
+   }
+   else {
+      butterfly_is_flipped = false;
    }
 }
 
-function WingFlaps() {
-   // scale image, cycle through time
-   let stepTime = getRandomArbitrary(83,200);
-   timer = setTimeout("flapWings()",stepTime);
+function SpinButterfly() {
+   //TODO: sick flips
+}
+
+function flipButterflyMaybe() {
+   if (butterfly_is_flipped) {
+      wing.style.transform = wing.style.transform + ` scaleX(-1)`;
+      butterflybody.style.transform = butterflybody.style.transform + `scaleX(-1)`;
+   }
+
 }
 
 function flyTo(x, y) {
-   const butterflybody = document.getElementById("butterflybody");
+   // const butterflybody = document.getElementById("butterflybody");
 
    /* get current position
    orig_loc: current location, defined by the right and bottom most pixels
    of the body of the butterfly, since these stay more fixed than the wings */
    let orig_loc = getButterflyBodyLoc();
 
-   // findAngleToPointAt(orig_loc[0], orig_loc[1], x, y);
-
+   
    /* distance formula with x,y
    calculated in pixels */
    let travel_distance = Math.hypot(x-orig_loc[0], y-orig_loc[1]);
    if (travel_distance == 0) {
       return 1;
    }
+
    
    /* divide by speed of butterfly per millisecond
    butterflies fly upto 37 miles per hour
@@ -228,6 +235,10 @@ function landOn(x,y) {
 function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
 }
+
+
+
+/* ~~ dump zone ahead ~~~*/
 
 // This function is where I dump code instead of leaving it in other functions
 // wanna keep it in case I need the logic
