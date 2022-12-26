@@ -11,6 +11,8 @@ Kirn Hans {% block title %}{% endblock %}</title>
 <meta property="og:image" content="https://kirnhans.com/static/images/kirn_headshot.jpg" />
 
 <link rel="stylesheet" href="static/standards.css">
+<!-- todo ^ move stuff from standards.css to base.css -->
+<link rel="stylesheet" href="static/base.css">
 <!-- favicon, code from https://favicon.io/favicon-converter/ -->
 <!-- favicon image: https://pixahive.com/photo/pink-sacred-lotus-on-focus/, Creative Commons License -->
 <link rel="apple-touch-icon" sizes="180x180" href="static/images/lotus_favicon/apple-touch-icon.png">
@@ -20,8 +22,19 @@ Kirn Hans {% block title %}{% endblock %}</title>
 {% block head %}{% endblock %}
 </head>
 <body>
-<h1><a href="./index.html">Kirn Hans</a></h1>
+<h1><a href="./index.html">Kirn Hans</a>
 <!-- todo: Slider from Teacher to Developer -->
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider round">
+    <span class="slider-title">
+    {% block slider %}
+    {% endblock %}
+  </span>
+  </span>
+</label>
+</h1>
+
 <main>
 {% block body %}
 {% endblock %}

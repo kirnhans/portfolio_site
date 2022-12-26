@@ -3,31 +3,10 @@
   margin: 0px;
 }*/
 
-body {
-	background-repeat:repeat;
-	background-position:top left;
-	background-attachment:fixed;
-	/* https://www.w3schools.com/css/css3_gradients.asp */
-  /*For textures: https://www.transparenttextures.com/*/
-  background-image: url("images/arches.png"), linear-gradient(to bottom right, white, hsl(195, 100%, 75%));
-  display: flex;
-  flex-direction: column;
-  margin: 0px;
-  min-height: 100vh;
-  /*justify-content: space-between;*/
-}
-
 main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-}
-
-h1 {
-  padding-left: 1em;
-	font-family:Calibri, sans-serif;
-	color:#000000;
-  text-decoration: none;
 }
 
 h2 {

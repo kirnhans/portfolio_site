@@ -78,7 +78,7 @@ function syncUpWing() {
    let butterflybody_bottom = parseInt($(butterflybody).css('bottom'), 10 /* base*/);
    
    if (butterfly_is_flipped) {
-      wing.style.right = `${butterflybody_right - 195}px`; //what
+      wing.style.right = `${butterflybody_right - 195}px`; // TODO: maybe tweak these more later
       wing.style.bottom = `${butterflybody_bottom + 23}px`;  
    }
    else {
