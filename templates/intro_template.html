@@ -1,11 +1,19 @@
 {% extends 'base.html' %}
 {% block title %}: Teacher {% endblock %}
 {% block head %}
+<script src="static/intro.js"></script>
 <!-- source: http://jlizanab.github.io/FFolders/ -->
 <link href="static/FFolders-master/css/ffolders.min.css" rel="stylesheet">
 {% endblock %}
 
-{% block slider %} Teacher {% endblock %}
+{% block slider_link %} "./developer.html" {% endblock %}
+{% block slider_name %} Teacher {% endblock %}
+<script type="text/javascript">
+    //might be blocked by modern js
+    document.getElementById("slider_button").onclick = function () {
+        location.href = "./developer.html";
+    };
+</script>
 
 {% block body %}
 <div class="intro_content">

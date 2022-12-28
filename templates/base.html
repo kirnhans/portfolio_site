@@ -19,20 +19,23 @@ Kirn Hans {% block title %}{% endblock %}</title>
 <link rel="icon" type="image/png" sizes="32x32" href="static/images/lotus_favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="static/images/lotus_favicon/favicon-16x16.png">
 <link rel="manifest" href="static/images/lotus_favicon/site.webmanifest">
+
+<!-- this must come before the head block, because everything needs JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 {% block head %}{% endblock %}
 </head>
 <body>
-<h1><a href="./index.html">Kirn Hans</a>
-<!-- todo: Slider from Teacher to Developer -->
-<label class="switch">
-  <input type="checkbox">
-  <span class="slider round">
-    <span class="slider-title">
-    {% block slider %}
-    {% endblock %}
-  </span>
-  </span>
-</label>
+  <h1><a href="./index.html">Kirn Hans</a>
+    <!-- todo: Slider from Teacher to Developer -->
+    <label class="switch">
+      <input id="slider_button" type="checkbox">
+      <span class="slider round">
+        <span class="slider-title">
+          {% block slider_name %}
+          {% endblock %}
+        </span>
+      </span>
+    </label>
 </h1>
 
 <main>

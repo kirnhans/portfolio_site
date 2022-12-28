@@ -9,7 +9,16 @@ $('document').ready(function() {
     var li_element = ul_element.children[standard_num-1];
     var a_element = li_element.getElementsByTagName("a")[0];
     a_element.classList.add("current-tab");
+
+    setUpToggle();
 });
+
+function setUpToggle() {
+   document.getElementById("slider_button").onclick = function () {
+        location.href = "./developer.html";
+    };
+    document.getElementById("slider_button").checked = false;
+}
 
 // https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
 function clickHamburger() {

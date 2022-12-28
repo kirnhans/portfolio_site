@@ -1,3 +1,4 @@
+
 $('document').ready(function() {
    init();
 
@@ -10,24 +11,24 @@ $('document').ready(function() {
 });
 
 
-function butterfly_main() {
-   // randomly choose where to fly
-   // every [interval] landOnGlobe
-   let prev_i = -1; // impossible value, just so we have one
-   while (true) {
-      let i = getRandomArbitrary(0, landing_zones.length());
-      if (i === prev_i) {
-         continue; // don't "fly" to the same place twice in a row
-      }
+// function butterfly_main() {
+//    // randomly choose where to fly
+//    // every [interval] landOnGlobe
+//    let prev_i = -1; // impossible value, just so we have one
+//    while (true) {
+//       let i = getRandomArbitrary(0, landing_zones.length());
+//       if (i === prev_i) {
+//          continue; // don't "fly" to the same place twice in a row
+//       }
 
-      let dest_coords = landing_zones[i].split(",");
-      flyTo(dest_coords[0], dest_coords[1]);
-      landOn(dest_coords[0], dest_coords[1]);
-      // todo: wait a few seconds
+//       let dest_coords = landing_zones[i].split(",");
+//       flyTo(dest_coords[0], dest_coords[1]);
+//       landOn(dest_coords[0], dest_coords[1]);
+//       // todo: wait a few seconds
 
-      prev_i = i;
-   }
-}
+//       prev_i = i;
+//    }
+// }
 
 let butterflybody;
 let wing;
@@ -39,6 +40,8 @@ var wait = 1;
 var butterfly_is_flipped = false;
 
 function init() {
+   setUpToggle();
+
    butterflybody = document.getElementById("butterflybody");
    
    // https://stackoverflow.com/questions/1100503/how-to-get-just-numeric-part-of-css-property-with-jquery
@@ -52,6 +55,14 @@ function init() {
    wing = document.getElementById("butterflywing");
    syncUpWing();
 }
+
+function setUpToggle() {
+   document.getElementById("slider_button").onclick = function () {
+         location.href = "./index.html";
+    };
+   document.getElementById("slider_button").checked = true;
+}
+
 
 /* Helper functions */
 function getButterflyBodyLoc() {
