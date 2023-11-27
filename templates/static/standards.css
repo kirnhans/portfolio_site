@@ -166,6 +166,15 @@ img.intro_pic {
     top: -137%;
     position: absolute;
   }
+
+  .links_folder .dropdown-content {
+    /* top will get changed by intro.js
+     so that I can add more links here
+     and it'll still go the right amount up  */
+    top: -180%; 
+    position: absolute;
+  }
+
   div.intro_pic {
     float: right;
     position: relative;
