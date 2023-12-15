@@ -21,6 +21,7 @@ class SiteGenerator(object):
         self.render_standards_page()
         self.render_intro_page()
         self.render_dev_page()
+        self.render_bookmarks_page()
 
     def empty_public(self):
         """ Ensure the public directory is empty before generating. """
@@ -36,6 +37,11 @@ class SiteGenerator(object):
             shutil.copytree('templates/static', 'public/static')
         except:
             print("Error copying static files.")
+
+    # def get_text_from_file(self, path):
+    #     if os.path.exists(path):
+    #         print(intro_path)
+    #         intro_text = open(intro_path, "r").read()
 
     def render_standards_page(self):
         print("Rendering standards pages to static file.")
@@ -59,9 +65,27 @@ class SiteGenerator(object):
         if os.path.exists(intro_path):
             print(intro_path)
             intro_text = open(intro_path, "r").read()
+        my_resources_text = "Nil"
+        my_resources_path = "templates/static/written_content/my_resources.txt"
+        if os.path.exists(my_resources_path):
+            print(my_resources_path)
+            my_resources_text = open(my_resources_path, "r").read()
         with open(os.path.join("public", "index.html"), 'w+') as file:
             html = template.render(intro_content=markdown(intro_text),
-                standards_dict=standards_dict)
+                standards_dict=standards_dict,
+                my_resources=markdown(my_resources_text))
+            file.write(html)
+
+    def render_bookmarks_page(self):
+        print("Rendering bookmarks page to static file.")
+        template = self.env.get_template('bookmarks_template.html')
+        holder_text = "Hi! I'm Kirn."
+        bookmarks_path = "templates/static/written_content/bookmarks.txt"
+        if os.path.exists(bookmarks_path):
+            print(bookmarks_path)
+            intro_text = open(bookmarks_path, "r").read()
+        with open(os.path.join("public", "bookmarks.html"), 'w+') as file:
+            html = template.render(bookmarks_content=markdown(intro_text))
             file.write(html)
 
     def render_dev_page(self):
