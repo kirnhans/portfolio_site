@@ -18,7 +18,8 @@ function lessonPlanFolderLift() {
     var dropdown_element = document.getElementsByClassName("lesson-plan")[0];
     var a_elements = dropdown_element.children; 
     
-    var moveTopBy = -1 * 16 * a_elements.length;
+    var magic_number = 18;
+    var moveTopBy = -1 * magic_number * a_elements.length;
     dropdown_element.style.top = `${moveTopBy}%`;
 
     console.log(`${moveTopBy}%`);

@@ -4,13 +4,13 @@ from jinja2 import Template, Environment, FileSystemLoader
 from markdown import markdown
 
 
-standards_dict = { 1: ("Know students and how they learn","templates/static/written_content/standard1.txt"),
-2: ("Know the content and how to teach it", "templates/static/written_content/standard2.txt"),
-3: ("Plan for and implement effective teaching and learning", "templates/static/written_content/standard3.txt"),
-4: ("Create and maintain supportive and safe learning environments", "templates/static/written_content/standard4.txt"),
-5: ("Assess, provide feedback and report on student learning", "templates/static/written_content/standard5.txt"),
-6: ("Engage in professional learning", "templates/static/written_content/standard6.txt"),
-7: ("Engage professionally with colleagues, parents/carers and the community", "templates/static/written_content/standard7.txt"),
+standards_dict = { 1: ("Know students and how they learn","templates/static/written_content/standard1.md"),
+2: ("Know the content and how to teach it", "templates/static/written_content/standard2.md"),
+3: ("Plan for and implement effective teaching and learning", "templates/static/written_content/standard3.md"),
+4: ("Create and maintain supportive and safe learning environments", "templates/static/written_content/standard4.md"),
+5: ("Assess, provide feedback and report on student learning", "templates/static/written_content/standard5.md"),
+6: ("Engage in professional learning", "templates/static/written_content/standard6.md"),
+7: ("Engage professionally with colleagues, parents/carers and the community", "templates/static/written_content/standard7.md"),
 }
 
 class SiteGenerator(object):
@@ -63,22 +63,27 @@ class SiteGenerator(object):
         print("Rendering intro page to static file.")
         template = self.env.get_template('intro_template.html')
         intro_text = self.get_text_from_file(
-            "templates/static/written_content/intro.txt", "Hi! I'm Kirn.")
+            "templates/static/written_content/intro.md", "Hi! I'm Kirn.")
+
         my_resources_text = self.get_text_from_file(
-            "templates/static/written_content/my_resources.txt")
+            "templates/static/written_content/my_resources.md")
+        my_resources_text_html = markdown(my_resources_text)
+        my_resources_text_html = my_resources_text_html.replace("<p>", "")
+        my_resources_text_html = my_resources_text_html.replace("</p>", "")
+        
         with open(os.path.join("public", "index.html"), 'w+') as file:
             html = template.render(intro_content=markdown(intro_text),
                 standards_dict=standards_dict,
-                my_resources=markdown(my_resources_text))
+                my_resources=my_resources_text_html)
             file.write(html)
 
     def render_bookmarks_page(self):
         print("Rendering bookmarks page to static file.")
         template = self.env.get_template('bookmarks_template.html')
-        holder_text = self.get_text_from_file(
-            "templates/static/written_content/bookmarks.txt")
+        bookmarks_text = self.get_text_from_file(
+            "templates/static/written_content/bookmarks.md")
         with open(os.path.join("public", "bookmarks.html"), 'w+') as file:
-            html = template.render(bookmarks_content=markdown(intro_text))
+            html = template.render(bookmarks_content=markdown(bookmarks_text))
             file.write(html)
 
     def render_dev_page(self):

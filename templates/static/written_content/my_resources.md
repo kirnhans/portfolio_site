@@ -10,3 +10,4 @@
 [Community Outreach Strategies](static\pdfs\Outreach_strategies.pdf)
 [Behavioural Intervention Plan Part A](static\pdfs\student_bip.pdf)
 [Behavioural Intervention Plan Part B](static\pdfs\Proforma Part B filled.pdf)
+[Resources List](bookmarks.html)
