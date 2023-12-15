@@ -38,20 +38,22 @@ class SiteGenerator(object):
         except:
             print("Error copying static files.")
 
-    # def get_text_from_file(self, path):
-    #     if os.path.exists(path):
-    #         print(intro_path)
-    #         intro_text = open(intro_path, "r").read()
+    def get_text_from_file(self, filepath, placeholder = ""):
+        file_text = "Bad filepath: " + filepath # placeholder
+        if (placeholder):
+            file_text = placeholder
+        if os.path.exists(filepath):
+            print(filepath)
+            file_text = open(filepath, "r").read()
+        return file_text
 
     def render_standards_page(self):
         print("Rendering standards pages to static file.")
         template = self.env.get_template('standard_template.html')
         for num in standards_dict:
             (head, essay_path) = standards_dict[num]
-            essay_text = "This is an idea waiting to be explored in my journey as a teacher."
-            if os.path.exists(essay_path):
-                print(essay_path)
-                essay_text = open(essay_path, "r").read()
+            essay_text = self.get_text_from_file(essay_path,
+                "This is an idea waiting to be explored in my journey as a teacher.")
             with open(os.path.join("public", f"standard{num}.html"), 'w+') as file:
                 html = template.render(standard_num=num, standard_head=head,
                     standard_essay=markdown(essay_text))
@@ -60,16 +62,10 @@ class SiteGenerator(object):
     def render_intro_page(self):
         print("Rendering intro page to static file.")
         template = self.env.get_template('intro_template.html')
-        intro_text = "Hi! I'm Kirn."
-        intro_path = "templates/static/written_content/intro.txt"
-        if os.path.exists(intro_path):
-            print(intro_path)
-            intro_text = open(intro_path, "r").read()
-        my_resources_text = "Nil"
-        my_resources_path = "templates/static/written_content/my_resources.txt"
-        if os.path.exists(my_resources_path):
-            print(my_resources_path)
-            my_resources_text = open(my_resources_path, "r").read()
+        intro_text = self.get_text_from_file(
+            "templates/static/written_content/intro.txt", "Hi! I'm Kirn.")
+        my_resources_text = self.get_text_from_file(
+            "templates/static/written_content/my_resources.txt")
         with open(os.path.join("public", "index.html"), 'w+') as file:
             html = template.render(intro_content=markdown(intro_text),
                 standards_dict=standards_dict,
@@ -79,11 +75,8 @@ class SiteGenerator(object):
     def render_bookmarks_page(self):
         print("Rendering bookmarks page to static file.")
         template = self.env.get_template('bookmarks_template.html')
-        holder_text = "Hi! I'm Kirn."
-        bookmarks_path = "templates/static/written_content/bookmarks.txt"
-        if os.path.exists(bookmarks_path):
-            print(bookmarks_path)
-            intro_text = open(bookmarks_path, "r").read()
+        holder_text = self.get_text_from_file(
+            "templates/static/written_content/bookmarks.txt")
         with open(os.path.join("public", "bookmarks.html"), 'w+') as file:
             html = template.render(bookmarks_content=markdown(intro_text))
             file.write(html)
