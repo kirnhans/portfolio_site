@@ -40,7 +40,7 @@ var wait = 1;
 var butterfly_is_flipped = false;
 
 function init() {
-   setUpToggle();
+   // setUpToggle();
 
    butterflybody = document.getElementById("butterflybody");
    
@@ -56,12 +56,12 @@ function init() {
    syncUpWing();
 }
 
-function setUpToggle() {
-   document.getElementById("slider_button").onclick = function () {
-         location.href = "./index.html";
-    };
-   document.getElementById("slider_button").checked = true;
-}
+// function setUpToggle() {
+//    document.getElementById("slider_button").onclick = function () {
+//          location.href = "./index.html";
+//     };
+//    document.getElementById("slider_button").checked = true;
+// }
 
 
 /* Helper functions */

@@ -1,14 +1,14 @@
 $('document').ready(function() {
-    setUpToggle();
+    // setUpToggle();
     lessonPlanFolderLift();
 });
 
-function setUpToggle() {
-   document.getElementById("slider_button").onclick = function () {
-        location.href = "./developer.html";
-    };
-   document.getElementById("slider_button").checked = false;
-}
+// function setUpToggle() {
+//    document.getElementById("slider_button").onclick = function () {
+//         location.href = "./developer.html";
+//     };
+//    document.getElementById("slider_button").checked = false;
+// }
 
 /* this is for the lesson plan folder dropdown so that I can add more links
     and it'll still go the right amount up  */
