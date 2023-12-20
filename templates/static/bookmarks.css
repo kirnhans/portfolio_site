@@ -6,41 +6,6 @@
   position: relative;
   display: inline-block;
   
-  .drop {
-    padding: 1rem;
-    border-radius: 6px;
-    position: relative;
-    display: inline-block;
-  }
-  
-  > .dropdown-menu {
-    width: @base-size * 15;
-    list-style: none;
-    position: absolute;
-    float: left;
-    max-height: 0;
-    overflow: hidden;
-    transition: all .55s linear;
-    box-shadow: 0 0 3px rgba(0,0,0,.15);
-    
-    &.open {
-      max-height: 300px;
-      height: auto;
-      transition: all .25s linear;
-    }
-    
-    > li > a {
-      padding: .5rem 1rem;
-      display: block;
-      color: #555;
-      text-align: left;
-      transition: all .25s linear;
-      &:hover {
-        background-color: @base-blue;
-        color: @base-white;
-      }
-    }
-  }
 }
 
 .down-caret {
@@ -53,7 +18,7 @@
   margin-left: 6px;
   top: -3px;
   position: relative;
-  transform: rotate(0deg);
+  transform: rotate(0deg); /* this controls the rotation, fix this */
   transition: all .25s ease-in;
 }
 

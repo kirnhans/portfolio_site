@@ -21,6 +21,7 @@ $(document).ready(function(){
 		}
 	}
 
+	document.addEventListener('submit',handleSearch);
 
   $('.dropdown').click(function(e){
     $(this).find('.dropdown-menu').toggleClass('open');
@@ -51,4 +52,8 @@ function createCaret() {
 	let caret = document.createElement('span');
     caret.classList.add("down-caret");
     return caret;
+}
+
+function handleSearch() {
+	// body...
 }
