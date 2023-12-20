@@ -2,6 +2,26 @@
 /* Source: https://codepen.io/danmalarkey/pen/oNmEwm?editors=0110 */
 $(document).ready(function(){
 
+	CollapsiblePanesLogic();
+});
+
+// this func is dead code, I don't need an a href
+function createDropdownA() {
+	let a = document.createElement('a');
+	a.classList.add("drop");
+	$(a).attr("href", "javascript:void(0);");
+	return a;
+}
+
+function createCaret() {
+	let caret = document.createElement('span');
+    caret.classList.add("down-caret");
+    return caret;
+}
+
+function CollapsiblePanesLogic() {
+
+	// Add all the HTML elements to headers
 	const h_list = $( ":header" );
 	// first one will be my name at the top
 	for (let i = 1; i < h_list.length; i++) {
@@ -21,15 +41,14 @@ $(document).ready(function(){
 		}
 	}
 
-	document.addEventListener('submit',handleSearch);
-
+	// The functionality for the dropdown
+	// todo: change name from dropdown to collapsible panel
   $('.dropdown').click(function(e){
     $(this).find('.dropdown-menu').toggleClass('open');
     $($(e.target).find('.down-caret').toggleClass('open-caret'));
     e.preventDefault();
     e.stopPropagation();
     const ul = $(this).next();
-    console.log(ul);
     ul.toggleClass('hidden');
     $(document).click(function(){
       $('.dropdown-menu').removeClass('open');
@@ -38,22 +57,4 @@ $(document).ready(function(){
       // make child invisible
     });
   });
-});
-
-// this func is dead code, I don't need an a href
-function createDropdownA() {
-	let a = document.createElement('a');
-	a.classList.add("drop");
-	$(a).attr("href", "javascript:void(0);");
-	return a;
-}
-
-function createCaret() {
-	let caret = document.createElement('span');
-    caret.classList.add("down-caret");
-    return caret;
-}
-
-function handleSearch() {
-	// body...
 }
