@@ -2,15 +2,16 @@
 /* Source: https://codepen.io/danmalarkey/pen/oNmEwm?editors=0110 */
 $(document).ready(function(){
 
+	getPlainTextResources();
+
 	// search bar
 	const search_form = document.getElementById("search");
-	// if there is no search button, bookmarks.html should be ashamed of itself
+	// if there is no search button, resourcemarks.html should be ashamed of itself
 	search.addEventListener('submit',handleSearch);
-	console.log(search);
 
 // TODO: refactor this into a new FUNCTION
 	const h_list = $( ":header" );
-	// first one will be my name at the top
+	// first one is my name at the top
 	for (let i = 1; i < h_list.length; i++) {
 		let current_h = h_list[i];
 		current_h.classList.add("dropdown");
@@ -58,37 +59,46 @@ function createCaret() {
     return caret;
 }
 
-// Source: https://levelup.gitconnected.com/implement-search-feature-on-a-web-page-in-plain-javascript-adad27e48
+function getPlainTextResources() {
+	var resources = [];
+	// first, I need to flatten the html hierarchy into each resource
+	// then search each resources
+	// and figure out how to find what element it is
+	// 
+
+	// all resources are in the ul's
+	// ul's with li parents are the descriptions
+	// we only want the items of the top-level ul's
+	var unordered_lists = document.getElementsByTagName("ul");
+	var arr_ul = [].slice.call(unordered_lists); // tfw html collections aren't arrays :/
+	var filtered_uls = arr_ul.filter(function(list){
+		return list.parentNode.tagName != 'li';
+	});
+
+	var one_resource = flattenChildren(filtered_uls[0].children[0]);
+	// for (let i = 0; i < filtered_uls.length; i++){
+	// 	var current_ul = filtered_uls[i];
+	// 	// the children should be the li's
+	// 	for (let j = 0; j <current_ul.children.length; j++) {
+	// 		var current_resource = flattenChildren(current_ul.children[j]);
+	// 		if (Object.keys(current_resource).length === 0 &&
+	// 			current_resource.constructor === Object) {
+	// 			// console.log("wth");
+	// 			// console.log(current_ul.children[j]);
+	// 		}
+	// 		else {
+	// 			resources.push(current_resource);
+	// 		}
+	// 		// console.log("current_resource");
+	// 		// console.log(current_resource);
+	// 	}
+	// }
+	// // console.log(resources);
+}
+
 function handleSearch() {
+// Source: https://levelup.gitconnected.com/implement-search-feature-on-a-web-page-in-plain-javascript-adad27e48
 
-	//test material: REMOVE
-	var books = [
-    {
-      "title": "Cracking the coding interview",
-      "subtitle":"189 programming questions and solutions",
-      "author":"Gayle Laakmann McDowell",
-      "category":"Programming",
-      "publisher":"CareerCup, LLC"
-    },
-    {
-      "title": "No friend but the mountains",
-      "subtitle":"Writing from manu prison",
-      "author":"Behrouz Boochani",
-      "category":"Literature",
-      "publisher":"Pan Macmillan Australia"
-    },
-    {
-      "title": "Indian Harvest",
-      "subtitle":"Classic and contemporary vegetarian dishes",
-      "author":"Vikas Khanna",
-      "category":"Cuisine",
-      "publisher":"Bloomsbury USA"
-    },
-    // Check out the source code on github for a complete list
-  ]
-	// end test material
-
-	console.log("hi am pressed");
     event.preventDefault(); //don't reload page
     // Get the search terms from the input field
     var searchTerm = event.target.elements['search'].value;
@@ -102,16 +112,16 @@ function handleSearch() {
    if(tokens.length) {
     //  Create a regular expression of all the search terms
     var searchTermRegex = new RegExp(tokens.join('|'), 'gim');
-    var filteredList = books.filter(function(book){ //will need to change 'books' for my context
+    var filteredList = resources.filter(function(resource){
       // Create a string of all object values
-      var bookString = '';
-      for(var key in book) {
-        if(book.hasOwnProperty(key) && book[key] !== '') {
-          bookString += book[key].toString().toLowerCase().trim() + ' ';
+      var resourceString = '';
+      for(var key in resource) {
+        if(resource.hasOwnProperty(key) && resource[key] !== '') {
+          resourceString += resource[key].toString().toLowerCase().trim() + ' ';
         }
       }
-      // Return book objects where a match with the search regex if found
-      return bookString.match(searchTermRegex);
+      // Return resource objects where a match with the search regex if found
+      return resourceString.match(searchTermRegex);
     });
     // Render the search results
     renderSearchResults(filteredList);
@@ -120,18 +130,59 @@ function handleSearch() {
 
 function renderSearchResults(data) {
     var app = document.getElementById('app');
-    var booksHTMLString = '<ul>'+
-      data.map(function(book){
+    var resourcesHTMLString = '<ul>'+
+      data.map(function(resource){
         return '<li>'+
-                '<strong>Title: </strong>' + book.title + '<br/>' +
-                '<strong>Subtitle: </strong>' + book.subtitle + '<br/>' +
-                '<strong>Author: </strong>' + book.author + '<br/>' +
-                '<strong>Category: </strong>' + book.category + '<br/>' +
-                '<strong>Publisher: </strong>' + book.publisher + '<br/>' +
+                '<strong>Title: </strong>' + resource.title + '<br/>' +
+                '<strong>Subtitle: </strong>' + resource.subtitle + '<br/>' +
+                '<strong>Author: </strong>' + resource.author + '<br/>' +
+                '<strong>Category: </strong>' + resource.category + '<br/>' +
+                '<strong>Publisher: </strong>' + resource.publisher + '<br/>' +
               '</li>';
       }).join('');
       + '</ul>';
 
     var app = document.getElementsByTagName('ul')[0];
-    app.innerHTML = booksHTMLString;
+    app.innerHTML = resourcesHTMLString;
   }
+
+
+// okay this function is clearly broken
+  // TODO FIX THIS
+function flattenChildren(node) {
+	if (node.children.length) {
+		console.log("we have a family to feed");
+		var node_family = {
+				"node":node,
+				"text": ""
+			};
+			for (let i = 0; i < node.children.length; i++) {
+				console.log("let's flatten a child");
+				let child_node = flattenChildren(node.children[i]);
+				console.log("flatterened");
+				console.log(child_node);
+				if (node.tagName == "li") {
+					node_family.text += child_node.text;
+				}
+			}
+		return node_family;
+	}
+	else {
+		console.log("I'm just a kid");
+		// text or something
+		// if we manage to get a ul that's empty, that's goofed
+		if (node.tagName != "li") {
+			console.log(node.tagName);
+			return {};
+		}
+
+		// list item: either a resource or its extended description
+		var current = {
+			"node": node,
+			"text": node.innerHTML
+		};
+		console.log("kid current");
+		console.log(current);
+		return current;
+	}
+}
