@@ -126,6 +126,8 @@ function handleSearch() {
 
     if(tokens.length) {
     //  Create a regular expression of all the search terms
+    	// problem: this makes an OR expression out of the search terms
+    	// todo: fix
     	var searchTermRegex = new RegExp(tokens.join('|'), 'gim');
     	var filteredList = resources.filter(function(resource){
       // Create a string of all object values
@@ -153,6 +155,16 @@ function renderSearchResults(data) {
 
 	var content = document.getElementsByClassName('intro')[0];
 	content.innerHTML = resourcesHTMLString;
+
+
+	// for (let i = 0; i < data.length; i++) {
+	// 	let resource = data[i];
+	// 	console.log(resource);
+	// 	resource.text = '<li>' + resource.text + '</li>';
+	// 	var parent = resource.node.parentNode;
+	// 	console.log(resource.node);
+	// 	parent.innerHTML = resource.text;
+	// }
 }
 
 function getLiText(node) {
