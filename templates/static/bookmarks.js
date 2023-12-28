@@ -77,22 +77,39 @@ function getPlainTextResources() {
 		return list.parentNode.tagName != 'LI';
 	});
 
-	for (let i = 0; i < filtered_uls.length; i++) {
+	// last ul is my contact information in the footer, so we will leave it off this for loop
+	for (let i = 0; i < filtered_uls.length - 1; i++) {
 		// iterating through all the unordered lists, i.e. top level
 		var current_ul = filtered_uls[i];
 		// the children should be the li's
 		for (let j = 0; j <current_ul.children.length; j++) {
 			var current_resource = getLiText(current_ul.children[j]);
-			// TODO: add text of heading to this
 			if (Object.keys(current_resource).length === 0 &&
 				current_resource.constructor === Object) {
 				console.log("found an empty item");
 			}
 			else {
+				addHeadingToResourceListItem(current_ul, current_resource);
 				resources.push(current_resource);
 			}
 		}
 	}
+}
+
+function addHeadingToResourceListItem(ul, resource) {
+	var previous_sibling = ul;
+	do {
+		let current_sibling = previous_sibling;
+		new_prev = current_sibling.previousSibling;
+		previous_sibling = new_prev;
+		if (previous_sibling == null) {
+			console.log("we found a null sibling, current_sibling is:");
+			console.log(current_sibling);
+		}
+	}	while (previous_sibling.nodeName == ("#text"));
+	
+	let heading_text = previous_sibling.outerHTML;
+	resource.text = heading_text + resource.text;
 }
 
 function handleSearch() {
@@ -126,6 +143,7 @@ function handleSearch() {
     }
   } 
 
+// TODO: if common header, show data appropriately
 function renderSearchResults(data) {
 	var resourcesHTMLString = '<ul>' +
 	data.map(function(resource) {
@@ -143,46 +161,5 @@ function getLiText(node) {
 			"node":node,
 			"text": node.innerHTML
 		};
-	}
-}
-
-// fix: the babyiest tag was A, not LI
-// now the function works but idk how to get text that's not in the child tag
-// function is dead code, I'll figure out if it's useful later
-function flattenChildren(node) {
-	if (node.children.length) {
-		console.log("we have a family to feed");
-		var node_family = {
-			"node":node,
-			"text": ""
-		};
-		for (let i = 0; i < node.children.length; i++) {
-			console.log("let's flatten a child");
-			let child_node = flattenChildren(node.children[i]);
-			console.log("flatterened");
-			console.log(child_node);
-			if (node.tagName == "LI") {
-				node_family.text += child_node.text;
-			}
-		}
-		return node_family;
-	}
-	else {
-		console.log("I'm just a kid");
-	// text or something
-	// if we manage to get a ul that's empty, that's goofed
-		if (node.tagName != "LI" && node.tagName != "A") {
-			console.log(node.tagName);
-			return {};
-		}
-
-	// list item: either a resource or its extended description
-		var current = {
-			"node": node,
-			"text": node.innerHTML
-		};
-		console.log("kid current");
-		console.log(current);
-		return current;
 	}
 }
