@@ -9,6 +9,9 @@ $(document).ready(function(){
 	const search_form = document.getElementById("search");
 	// if there is no search button, resourcemarks.html should be ashamed of itself
 	search.addEventListener('submit',handleSearch);
+	document.addEventListener('reset', function(event){
+  	location.reload();
+	});
 
 // To make the caret rotate to show and hide the subsections
 /* Source: https://codepen.io/danmalarkey/pen/oNmEwm?editors=0110 */
@@ -126,10 +129,6 @@ function handleSearch() {
     });
 
     if(tokens.length) {
-    //  Create a regular expression of all the search terms
-    	// problem: this makes an OR expression out of the search terms
-    	// todo: fix
-    	// var searchTermRegex = new RegExp(tokens.join('|'), 'gim');
     	var filteredList = resources.filter(function(resource){
       // Create a string of all object values
     		var resourceString = '';
@@ -138,8 +137,8 @@ function handleSearch() {
     				resourceString += resource[key].toString().toLowerCase().trim() + ' ';
     			}
     		}
-      // Return resource objects where a match with the search regex if found
-    		// return resourceString.match(searchTermRegex);
+
+    		// return true only if resource has all search keywords in it
     		for (let i = 0; i < tokens.length; i++) {
     			if (!resourceString.match(tokens[i])) {
     				return false;
@@ -152,40 +151,24 @@ function handleSearch() {
     }
   } 
 
-// TODO: if common header, show data appropriately
 function renderSearchResults(data) {
-	// const resourceHashmap = new Map();
-	// for (let i = 0; i < data.length; i++) {
-	// 	let resource = data[i];
-	// 	if (resourceHashmap.has(resource.heading)) {
-	// 		let existing_text = resourceHashmap.get(resource.heading);
-	// 		resourceHashmap.set(resource.heading, existing_text + resource.text);
-	// 	}
-	// 	else {
-	// 		resourceHashmap.set(resource.heading, resource.text);
-	// 	}
-	// }
+	const resourceHashmap = new Map();
+	for (let i = 0; i < data.length; i++) {
+		let resource = data[i];
+		if (resourceHashmap.has(resource.heading)) {
+			let existing_text = resourceHashmap.get(resource.heading);
+			resourceHashmap.set(resource.heading, existing_text + resource.text);
+		}
+		else {
+			resourceHashmap.set(resource.heading, resource.text);
+		}
+	}
 
-	// resourceHashmap.forEach(function(resources_text, heading) {
-	// 	console.log(heading + resources_text);
-	// });
-	var resourcesHTMLString =
-	data.map(function(resource) {
-		return resource.heading + '<ul>' + resource.text  +	'</ul>';
-	}).join('');
-
-	var content = document.getElementsByClassName('intro')[0];
-	content.innerHTML = resourcesHTMLString;
-
-
-	// for (let i = 0; i < data.length; i++) {
-	// 	let resource = data[i];
-	// 	console.log(resource);
-	// 	resource.text = '<li>' + resource.text + '</li>';
-	// 	var parent = resource.node.parentNode;
-	// 	console.log(resource.node);
-	// 	parent.innerHTML = resource.text;
-	// }
+	var content = document.getElementsByClassName('bookmarks-content')[0];
+	content.innerHTML = '';
+	resourceHashmap.forEach(function(resources_text, heading) {
+		content.innerHTML += heading + '<ul>' + resources_text  +	'</ul>' + '<br>';
+	});
 }
 
 function getLiText(node) {
