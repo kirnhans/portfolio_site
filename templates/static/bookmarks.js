@@ -90,6 +90,7 @@ function getPlainTextResources() {
 			}
 			else {
 				addHeadingToResourceListItem(current_ul, current_resource);
+				current_resource.text = '<li>' + current_resource.text + '</li>';
 				resources.push(current_resource);
 			}
 		}
@@ -153,11 +154,25 @@ function handleSearch() {
 
 // TODO: if common header, show data appropriately
 function renderSearchResults(data) {
-	var resourcesHTMLString = '<ul>' +
+	// const resourceHashmap = new Map();
+	// for (let i = 0; i < data.length; i++) {
+	// 	let resource = data[i];
+	// 	if (resourceHashmap.has(resource.heading)) {
+	// 		let existing_text = resourceHashmap.get(resource.heading);
+	// 		resourceHashmap.set(resource.heading, existing_text + resource.text);
+	// 	}
+	// 	else {
+	// 		resourceHashmap.set(resource.heading, resource.text);
+	// 	}
+	// }
+
+	// resourceHashmap.forEach(function(resources_text, heading) {
+	// 	console.log(heading + resources_text);
+	// });
+	var resourcesHTMLString =
 	data.map(function(resource) {
-		return '<li>' + resource.heading + resource.text + '</li>';
-	}).join('') +
-	'</ul>';
+		return resource.heading + '<ul>' + resource.text  +	'</ul>';
+	}).join('');
 
 	var content = document.getElementsByClassName('intro')[0];
 	content.innerHTML = resourcesHTMLString;
