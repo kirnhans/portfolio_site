@@ -109,7 +109,7 @@ function addHeadingToResourceListItem(ul, resource) {
 	}	while (previous_sibling.nodeName == ("#text"));
 	
 	let heading_text = previous_sibling.outerHTML;
-	resource.text = heading_text + resource.text;
+	resource.heading = heading_text;
 }
 
 function handleSearch() {
@@ -128,7 +128,7 @@ function handleSearch() {
     //  Create a regular expression of all the search terms
     	// problem: this makes an OR expression out of the search terms
     	// todo: fix
-    	var searchTermRegex = new RegExp(tokens.join('|'), 'gim');
+    	// var searchTermRegex = new RegExp(tokens.join('|'), 'gim');
     	var filteredList = resources.filter(function(resource){
       // Create a string of all object values
     		var resourceString = '';
@@ -138,7 +138,13 @@ function handleSearch() {
     			}
     		}
       // Return resource objects where a match with the search regex if found
-    		return resourceString.match(searchTermRegex);
+    		// return resourceString.match(searchTermRegex);
+    		for (let i = 0; i < tokens.length; i++) {
+    			if (!resourceString.match(tokens[i])) {
+    				return false;
+    			}
+    		}
+    		return true;
     	});
     // Render the search results
     	renderSearchResults(filteredList);
@@ -149,7 +155,7 @@ function handleSearch() {
 function renderSearchResults(data) {
 	var resourcesHTMLString = '<ul>' +
 	data.map(function(resource) {
-		return '<li>' + resource.text + '</li>';
+		return '<li>' + resource.heading + resource.text + '</li>';
 	}).join('') +
 	'</ul>';
 
