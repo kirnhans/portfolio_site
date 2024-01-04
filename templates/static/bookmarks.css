@@ -36,6 +36,61 @@
 	display: none;
 }
 
-div.intro.manila > * {
+div.bookmarks-content > * {
 	font-family: Tahoma;
+}
+
+form#search {
+  display: flex;
+} 
+
+/* Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_searchbar2 */
+.topnav {
+  overflow: hidden;
+  margin-top: 1%;
+}
+
+
+.topnav input[type=text] {
+  padding: 6px;
+  padding-right: 0px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  width: 40%;
+}
+
+.topnav .search-container button[type=reset] {
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  background: #ffffff;
+}
+
+.topnav .search-container {
+ 	margin: auto;
+}
+
+.topnav .search-container button {
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 5px;
+  background: #f8d775;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #f4c025;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav input[type=text], .topnav .search-container button {
+    padding: 14px;
+  }
+}
+
+h2 {
+	margin: 0.5%;
 }

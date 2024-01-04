@@ -4,6 +4,7 @@
 <script src="static/bookmarks.js"></script>
 <!-- source: http://jlizanab.github.io/FFolders/ -->
 <link href="static/FFolders-master/css/ffolders.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="static/bookmarks.css">
 {% endblock %}
 
@@ -23,17 +24,22 @@
   <div class="back-manila">
     <div class="intro manila">
 
-    <!-- search bar -->
-    <!-- todo: center -->
-    <!-- <form id="search-books">
-    <label for="search"> Search </label>
-    <input type="text" name="search" id="search">
-    <button name="search_btn">Search</button>
-    <button name="reset" type="reset">Reset</button>
-  </form> -->
-
-        {{bookmarks_content}}
+        <!-- search bar -->
+        <div class="topnav">
+            <div class="search-container">
+                <form id="search">
+                    <!-- TODO: replace with search icon -->
+                    <input type="text" placeholder="Search.."    name="search" id="search_bar">
+                    <button name="reset_btn" type="reset"><i class="fa fa-close"></i></button>
+                    <button name="search_btn"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class = "bookmarks-content">
+            {{bookmarks_content}}
+        </div>
+        
     </div>
-  </div>
+</div>
 
 {% endblock %}
