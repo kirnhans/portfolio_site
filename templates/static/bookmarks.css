@@ -47,7 +47,8 @@ form#search {
 /* Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_searchbar2 */
 .topnav {
   overflow: hidden;
-  margin-top: 1%;
+  margin-top: 2%;
+  margin-bottom: 3%;
 }
 
 

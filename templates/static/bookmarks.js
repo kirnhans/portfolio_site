@@ -8,7 +8,13 @@ $(document).ready(function(){
 	// if there is no search button, resourcemarks.html should be ashamed of itself
 	// search.addEventListener('submit',handleSearch);
 	search.addEventListener('input', handleSearch);
-	document.addEventListener('reset', function(event){
+	search.addEventListener('keydown', function(event) {
+		// Ctrl + Backspace
+  	if(event.ctrlKey && event.keyCode === 8) {
+  		location.reload();
+  	}
+	});
+	document.addEventListener('reset', function(event) {
   	location.reload();
 	});
 
@@ -40,13 +46,6 @@ function CollapsiblePanesLogic() {
 		let caret = createCaret();
 		// a.appendChild(caret);
 		current_h.appendChild(caret);
-
-		// add br before h1s, after ul
-		// markdown() removes newlines after bullet lists
-		if (i != 0) {
-			let br = document.createElement('br');
-			current_h.parentNode.insertBefore(br, current_h);
-		}
 	}
 
 	$('.dropdown').click(function(e){
