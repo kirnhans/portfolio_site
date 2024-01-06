@@ -5,10 +5,9 @@ $(document).ready(function(){
 	CollapsiblePanesLogic();
 	getPlainTextResources();
 
-	// search bar
-	const search_form = document.getElementById("search");
 	// if there is no search button, resourcemarks.html should be ashamed of itself
-	search.addEventListener('submit',handleSearch);
+	// search.addEventListener('submit',handleSearch);
+	search.addEventListener('input', handleSearch);
 	document.addEventListener('reset', function(event){
   	location.reload();
 	});
@@ -131,11 +130,12 @@ function addHeadingToResourceListItem(ul, resource) {
 	resource.heading = heading_text;
 }
 
-function handleSearch() {
+function handleSearch(event) {
 // Source: https://levelup.gitconnected.com/implement-search-feature-on-a-web-page-in-plain-javascript-adad27e48
  event.preventDefault(); //don't reload page
     // Get the search terms from the input field
-    var searchTerm = event.target.elements['search'].value;
+    // var searchTerm = event.target.elements['search'].value;
+ 		var searchTerm = event.target.value;
 
     // Tokenize the search terms and remove empty spaces
     var tokens = searchTerm.toLowerCase().split(' ')
