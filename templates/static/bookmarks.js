@@ -13,6 +13,7 @@ $(document).ready(function(){
   	if(event.ctrlKey && event.keyCode === 8) {
   		location.reload();
   	}
+  	// TODO: manage shift+home, then del
 	});
 	document.addEventListener('reset', function(event) {
   	location.reload();
