@@ -1,6 +1,6 @@
-## Geometry
-* [Pythagoras Theorem](https://betterexplained.com/articles/surprising-uses-of-the-pythagorean-theorem/): Intuition and Applications
-* [Liquid Pythagoras Theorem](https://www.reddit.com/r/oddlysatisfying/comments/okry97/how_to_visually_prove_pythagoras_theorem_a%C2%B2_b%C2%B2_c%C2%B2/): Visual model of areas of right triangle sides
+## Hooks
+* [Transum](https://www.transum.org/Software/SW/Starter_of_the_day/index_page.asp) - This website is useful for starting lessons or, as breaks in between a lesson
+	* My colleague Cindy highly recommends Countdown and Ancient Mysteries for lower ability classes
 
 ## Multiple Topics
 * [Video tutorials, worked examples and exercises](https://corbettmaths.com/contents/)
@@ -11,6 +11,10 @@
 * [Calculator based activities](https://education.ti.com/en-au/seniornspiredcurriculum/aus-nz/nsw)
 	* Example: [this activity](https://education.ti.com/en-au/seniornspiredcurriculum/aus-nz/detail?id=0E575E989E17478696FCD9966760231E&t=4F3490A6B252453E9D603D8739C4309F#!) has students solve simultaneous equations to decide when to take a taxi vs. rideshare.
 	* Note: These activities require a programmable calculator, which students may lack. [Wolfram-Alpha](https://www.wolframalpha.com/) can provide an alternative to a handheld calculator for several of the activities.
+* [Maths Tasks](https://tasks.kylewebb.ca/)  and [BTC Curricular Math Task Sheet K-12](https://docs.google.com/spreadsheets/d/1-tJ2DzGJ0JXpmcRJoJxsVBA3d0_2ygxfjH3c1s2GqLM/edit#gid=427306543)
+	* Resources based on the pedagogy discussed in Peter Liljedahl's book, 'Building Thinking Classrooms in Mathematics'
+	* Activities to teach mathematics through a more critical thinking lens.
+	* These are aligned with Canadian and U.S. standards, so require a bit more searching.
 
 ## Old Faithfuls
 * [Mathspace](https://help.mathspace.co/en/collections/93682-using-mathspace-as-a-teacher): needs no introduction, used in most classrooms, provides individual-targeted exercises digitally
@@ -18,6 +22,10 @@
 * [Kahoot!](https://kahoot.com/files/2021/06/StarterGuide_0621.pdf): in-class competitive topic quizzes
 * [Freefall Mathematics](https://freefallmathematics.com/products.htm): worksheets and ebooks - many schools have a subscription
 * [Blooket](https://www.blooket.com/): Similar to Kahoot!, it gamifies the quiz process. Works well as a Friday afternoon activity
+
+## Geometry
+* [Pythagoras Theorem](https://betterexplained.com/articles/surprising-uses-of-the-pythagorean-theorem/): Intuition and Applications
+* [Liquid Pythagoras Theorem](https://www.reddit.com/r/oddlysatisfying/comments/okry97/how_to_visually_prove_pythagoras_theorem_a%C2%B2_b%C2%B2_c%C2%B2/): Visual model of areas of right triangle sides
 
 ## Miscellaneous
 * [Four Card Permutation](https://www.geogebra.org/m/gmqatpq7): interactive (GeoGebra)
@@ -27,3 +35,5 @@
 * [Place value columns](https://www.didax.com/apps/base-ten-blocks/): visual depiction of place value with blocks, mimicking a classical teaching prop for primary students
 	* can be used to support numeracy
 
+
+*Compiled with the help of Cindy Tran*
