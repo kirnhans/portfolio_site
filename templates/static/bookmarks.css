@@ -3,9 +3,7 @@
 /* and maybe compile it to css from less: https://www.cssportal.com/less-to-css/ */
 
 .dropdown {
-  position: relative;
-  display: inline-block;
-  
+  position: relative;  
 }
 
 .down-caret {
@@ -18,12 +16,12 @@
   margin-left: 6px;
   top: -3px;
   position: relative;
-  transform: rotate(0deg); /* this controls the rotation, fix this */
+  transform: rotate(-90deg); /* this controls the rotation, fix this */
   transition: all .25s ease-in;
 }
 
   .open-caret {
-    transform: rotate(90deg);
+    transform: rotate(180deg);
     transition: all .25s ease-out;
   }
 

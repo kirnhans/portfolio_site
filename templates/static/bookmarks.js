@@ -31,8 +31,8 @@ function createDropdownA() {
 
 function createCaret() {
 	let caret = document.createElement('span');
-    caret.classList.add("down-caret");
-    return caret;
+  caret.classList.add("down-caret");
+  return caret;
 }
 
 function CollapsiblePanesLogic() {
@@ -41,36 +41,37 @@ function CollapsiblePanesLogic() {
 	// first one is my name at the top
 	for (let i = 1; i < h_list.length; i++) {
 		let current_h = h_list[i];
-		current_h.classList.add("dropdown");
-		// let a = createDropdownA();
-		// current_h.appendChild(a);
+		current_h.classList.add("collapsible");
 		let caret = createCaret();
-		// a.appendChild(caret);
 		current_h.appendChild(caret);
+
+		var next_sibling = current_h.nextSibling;
+		while(next_sibling.nodeName != ("UL")) {
+			next_sibling = next_sibling.nextSibling;
+		}
+		next_sibling.classList.add("collapsible-list");
 	}
 
-	$('.dropdown').click(function(e){
-		$(this).find('.dropdown-menu').toggleClass('open');
-		$($(e.target).find('.down-caret').toggleClass('open-caret'));
+	$('.collapsible').click(function(e){
+		// $(this).find('.collapsible-list').toggleClass('open');
+		if (e.target.nodeName == "SPAN") {
+			$(e.target).toggleClass('open-caret');	
+		}
+		else {
+			$($(e.target).find('.down-caret').toggleClass('open-caret'));
+		}
+
 		e.preventDefault();
 		e.stopPropagation();
 		const ul = $(this).next();
 		ul.toggleClass('hidden');
-		$(document).click(function(){
-			$('.dropdown-menu').removeClass('open');
-			$('.down-caret').removeClass('open-caret');
+		// $('.collapsible').click(function(){
+		// 	$('.collapsible-list').removeClass('open');
+		// 	$('.down-caret').removeClass('open-caret');
 
-      // make child invisible
-		});
+    //   // make child invisible
+		// });
 	});
-}
-
-// this func is dead code, I don't need an a href
-function createDropdownA() {
-	let a = document.createElement('a');
-	a.classList.add("drop");
-	$(a).attr("href", "javascript:void(0);");
-	return a;
 }
 
 function createCaret() {

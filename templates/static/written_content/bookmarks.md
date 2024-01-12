@@ -23,6 +23,10 @@
 * [Freefall Mathematics](https://freefallmathematics.com/products.htm): worksheets and ebooks - many schools have a subscription
 * [Blooket](https://www.blooket.com/): Similar to Kahoot!, it gamifies the quiz process. Works well as a Friday afternoon activity
 
+## Games
+* [Combining Like Terms Uno](https://www.frontporchmath.com/wp-content/uploads/2017/10/like-terms-uno.pdf)
+	* Algebra card-game
+
 ## Geometry
 * [Pythagoras Theorem](https://betterexplained.com/articles/surprising-uses-of-the-pythagorean-theorem/): Intuition and Applications
 * [Liquid Pythagoras Theorem](https://www.reddit.com/r/oddlysatisfying/comments/okry97/how_to_visually_prove_pythagoras_theorem_a%C2%B2_b%C2%B2_c%C2%B2/): Visual model of areas of right triangle sides
