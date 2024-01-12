@@ -1,3 +1,5 @@
+[**Resources List**](bookmarks.html)
+
 [Stage 5 Introducing Exponents Lesson](static\pdfs\exponents-lesson-plan.pdf)
 [Stage 5.1 Complementary Probability Lesson](static\pdfs\complementary-probability-lesson-plan.pdf)
 [Quadratic Equations: Interactive activity](https://www.geogebra.org/m/yaeqy5u7)
@@ -10,4 +12,3 @@
 [Community Outreach Strategies](static\pdfs\Outreach_strategies.pdf)
 [Behavioural Intervention Plan Part A](static\pdfs\student_bip.pdf)
 [Behavioural Intervention Plan Part B](static\pdfs\Proforma Part B filled.pdf)
-[Resources List](bookmarks.html)

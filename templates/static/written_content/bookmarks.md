@@ -1,6 +1,10 @@
 ## Hooks
 * [Transum](https://www.transum.org/Software/SW/Starter_of_the_day/index_page.asp) - This website is useful for starting lessons or, as breaks in between a lesson
 	* My colleague Cindy highly recommends Countdown and Ancient Mysteries for lower ability classes
+* [Which One Doesn't Belong?](https://wodb.ca/)
+	* Each prompt features four objects (such as shapes or numbers)
+	* Any of the four objects could be said to not belong, providing room for discussion
+	* Encourages students to present mathematical arguments and demonstrate reasoning
 
 ## Multiple Topics
 * [Video tutorials, worked examples and exercises](https://corbettmaths.com/contents/)
@@ -40,4 +44,6 @@
 	* can be used to support numeracy
 
 
-*Compiled with the help of Cindy Tran*
+*Thanks to Cindy Tran and Hui Min Wang for sharing links!*
+
+If you'd also like to share a link, please do drop it in [this Google Form](https://forms.gle/pwA9GYhyVSiYDhS66)!
