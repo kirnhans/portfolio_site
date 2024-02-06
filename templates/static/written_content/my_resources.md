@@ -1,7 +1,6 @@
-[**Resources List**](bookmarks.html)
-
 [Stage 5 Introducing Exponents Lesson](static\pdfs\exponents-lesson-plan.pdf)
 [Stage 5.1 Complementary Probability Lesson](static\pdfs\complementary-probability-lesson-plan.pdf)
+[**My Bookmarks of Resources**](bookmarks.html)
 [Quadratic Equations: Interactive activity](https://www.geogebra.org/m/yaeqy5u7)
 [Stage 5: Income Tax Graph](https://www.geogebra.org/m/q59cepde)
 [Stage 5 Probability Lesson Plan](static\pdfs\mtm1-lesson_plan.pdf)
