@@ -8,11 +8,11 @@
 
 ## Multiple Topics
 * [Gerry Dear Resources for Maths Teachers](http://maths.gerrydear.id.au/)
-	* My colleague Hui Min found this helpful when planning lessons
+	* My colleague Hui Min found this helpful when planning lessons and provided the following descriptions.
 	* Contains PowerPoints for some topics in Stage 4 and 5
 	* Good starting point and inspiration as to how to teach some topics
-	* Hui Min particularly likes the transitions included and the design for student engagement
-	* Hui Min recommends: order of operations, angles of elevation and depression, rates and prime and composites.
+	* Particularly good are the transitions included and the design for student engagement
+	* Recommended: order of operations, angles of elevation and depression, rates and prime and composites.
 * [Corbett Maths](https://corbettmaths.com/contents/)
 	* Video tutorials, worked examples and exercises
 	* Topics covered: geometry, algebra, stats (averages), decimals + lots more

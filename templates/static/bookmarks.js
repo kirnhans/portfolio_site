@@ -4,6 +4,7 @@ var resources = [];
 $(document).ready(function(){
 	CollapsiblePanesLogic();
 	getPlainTextResources();
+	makeImagesTooltips();
 
 	// if there is no search button, resourcemarks.html should be ashamed of itself
 	// search.addEventListener('submit',handleSearch);
@@ -74,11 +75,28 @@ function CollapsiblePanesLogic() {
 	});
 }
 
-function createCaret() {
-	let caret = document.createElement('span');
-	caret.classList.add("down-caret");
-	return caret;
+function makeImagesTooltips() {
+	var images = document.getElementsByTagName("img");
+	for (let i = 0; i < images.length; i++) {
+		images[i].classList.add("tooltipimg");
+		// images[i].parentNode.classList.add("tooltip"); //needs to be the a tag specifically
+	}
+
+	// now we need to pick up the image and plop it into the a tag
+	// I hate this dom tree arrangement but this is what we need for the pseudo element hover to work
+	// because it won't play with the sibling combinator
+	// ![Liquid Pythagoras](static\images\bookmarks_screencaps\Liquid_Pythagoras.png)
+
+	// is it legal to just grab all the a tags and make them tooltip classed? who knows, let's try
+	var a_tags = document.getElementsByTagName("a");
+	// last two a tags are the GoogleForm and my LinkedIn
+	// WARNING: magic numbers
+	for (let i = 0; i < a_tags.length-2 ; i++) {
+		a_tags[i].classList.add("tooltip");
+		console.log(a_tags[i].classList);
+	}
 }
+
 
 function getPlainTextResources() {
 	// first, I need to flatten the html hierarchy into each resource
@@ -96,6 +114,7 @@ function getPlainTextResources() {
 	});
 
 	// last ul is my contact information in the footer, so we will leave it off this for loop
+	// WARNING: magic numbers
 	for (let i = 0; i < filtered_uls.length - 1; i++) {
 		// iterating through all the unordered lists, i.e. top level
 		var current_ul = filtered_uls[i];

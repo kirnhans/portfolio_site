@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltipimg {
+  visibility: hidden;
+  width: 120px;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  z-index: 100;
+/*  bottom: -125%;*/
+  left: 150%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltipimg::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+}
+
+.tooltip:hover .tooltipimg {
+  visibility: visible;
+  opacity: 1;
+}
+</style>
+<body style="text-align:center;">
+
+<h2>Tooltip</h2>
+<p>Move the mouse over the text below:</p>
+
+<div class="tooltip">Hover over me
+  <span class="tooltipimg"><img src = "/users/khofb/Desktop/Nature/orca-image-1333696524.jpeg" width=400></span>
+</div>
+
+</body>
+</html>

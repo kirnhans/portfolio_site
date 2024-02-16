@@ -93,3 +93,38 @@ form#search {
 h2 {
 	margin: 0.5%;
 }
+
+
+/* Tooltip image previews */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltipimg {
+  visibility: hidden;
+  width: 120px;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  z-index: 100;
+/*  bottom: -125%;*/
+  left: 150%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltipimg::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+}
+
+.tooltip:hover .tooltipimg {
+  visibility: visible;
+  opacity: 1;
+}
