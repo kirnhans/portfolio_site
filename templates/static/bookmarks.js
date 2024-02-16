@@ -3,10 +3,11 @@ var resources = [];
 
 $(document).ready(function(){
 	CollapsiblePanesLogic();
+	makeImagesTooltips(); // needs to be before getPlainTextResources call
+	// otherwise HTML for resources is out of date
 	getPlainTextResources();
-	makeImagesTooltips();
 
-	// if there is no search button, resourcemarks.html should be ashamed of itself
+	// if there is no search button, bookmarks.html should be ashamed of itself
 	// search.addEventListener('submit',handleSearch);
 	search.addEventListener('input', handleSearch);
 	search.addEventListener('keydown', function(event) {
@@ -22,13 +23,6 @@ $(document).ready(function(){
 
 });
 
-// this func is dead code, I don't need an a href
-function createDropdownA() {
-	let a = document.createElement('a');
-	a.classList.add("drop");
-	$(a).attr("href", "javascript:void(0);");
-	return a;
-}
 
 function createCaret() {
 	let caret = document.createElement('span');
@@ -98,6 +92,7 @@ function makeImagesTooltips() {
 	}
 }
 
+/* SEARCH code starts here */
 
 function getPlainTextResources() {
 	// first, I need to flatten the html hierarchy into each resource
@@ -215,3 +210,5 @@ function getLiText(node) {
 		};
 	}
 }
+
+/* SEARCH code ends here */
