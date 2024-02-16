@@ -104,13 +104,15 @@ h2 {
 
 .tooltip .tooltipimg {
   visibility: hidden;
-  width: 120px;
+/*  width: 500px;*/
+/*  width: 31.25em;*/
+  width: 30vw; /* viewport width, responsive to screens */
   color: #fff;
   text-align: center;
   position: absolute;
-  z-index: 100;
-/*  bottom: -125%;*/
-  left: 150%;
+  z-index: 200;
+  top: 100%; /* I've tinkered but this can be a WIP/TODO */
+  left: 100%;
   margin-left: -60px;
   opacity: 0;
   transition: opacity 0.3s;
@@ -128,3 +130,7 @@ h2 {
   visibility: visible;
   opacity: 1;
 }
+/*
+img {
+  width: 200px;
+}*/

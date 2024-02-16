@@ -76,24 +76,25 @@ function CollapsiblePanesLogic() {
 }
 
 function makeImagesTooltips() {
+	// is it legal to just grab all the image tags and make them tooltip classed? who knows, let's try
 	var images = document.getElementsByTagName("img");
 	for (let i = 0; i < images.length; i++) {
 		images[i].classList.add("tooltipimg");
-		// images[i].parentNode.classList.add("tooltip"); //needs to be the a tag specifically
-	}
+
+		// all a_tags right before an image, make them a tooltip
+		// those are the ones that are supposed to display the image
+		let a_tag = images[i].previousElementSibling;
+		console.log(a_tag);
+		if (a_tag.tagName != "A") {
+			console.log("Problem: Markdown isn't formatted properly");
+			console.log(images[i].src);
+		}
+		a_tag.classList.add("tooltip");
 
 	// now we need to pick up the image and plop it into the a tag
 	// I hate this dom tree arrangement but this is what we need for the pseudo element hover to work
 	// because it won't play with the sibling combinator
-	// ![Liquid Pythagoras](static\images\bookmarks_screencaps\Liquid_Pythagoras.png)
-
-	// is it legal to just grab all the a tags and make them tooltip classed? who knows, let's try
-	var a_tags = document.getElementsByTagName("a");
-	// last two a tags are the GoogleForm and my LinkedIn
-	// WARNING: magic numbers
-	for (let i = 0; i < a_tags.length-2 ; i++) {
-		a_tags[i].classList.add("tooltip");
-		console.log(a_tags[i].classList);
+		a_tag.appendChild(images[i]);
 	}
 }
 
