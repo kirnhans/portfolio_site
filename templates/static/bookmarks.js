@@ -1,7 +1,9 @@
 // plaintext array of resources, for searching purposes
 var resources = [];
+var whole_input_selected = false; // I have literally no idea where to put this, so here it goes
+// this is for when the search input is selected as a whole
 
-$(document).ready(function(){
+$(document).ready(function() {
 	CollapsiblePanesLogic();
 	makeImagesTooltips(); // needs to be before getPlainTextResources call
 	// otherwise HTML for resources is out of date
@@ -10,18 +12,59 @@ $(document).ready(function(){
 	// if there is no search button, bookmarks.html should be ashamed of itself
 	// search.addEventListener('submit',handleSearch);
 	search.addEventListener('input', handleSearch);
+
+	// look at what work we have to do to imitate a fraction of deleting
 	search.addEventListener('keydown', function(event) {
-		// Ctrl + Backspace
-  	if(event.ctrlKey && event.keyCode === 8) {
-  		location.reload();
+		var input = document.getElementById('search_input');
+
+		// Enter + dynamic typing = bad defaults
+  	if (event.keyCode === 13) { // Enter
+  		event.preventDefault(); // don't reload
   	}
-  	// TODO: manage shift+home, then del
+
+  		// ~~ Deletion cases time
+		// Check for deletion involving Ctrl
+  	if (event.ctrlKey) {
+  		console.log(event.target.selectionStart);
+  		if (event.target.selectionStart === 0) {
+				if (event.keyCode === 46) { // Ctrl + Delete
+						location.reload();
+				}
+  		}
+  		else if (event.target.selectionStart === input.value.length) {
+				if (event.keyCode === 8) { // Ctrl + Backspace
+					location.reload();
+	  		}
+  		}
+  		
+  	}
+
+  	// Check for Deletion by selecting everything + del/backspace
+  	whole_input_selected = isTextSelected(input);
+		if (whole_input_selected) {
+			if (event.keyCode === 8 || event.keyCode === 46) { // Backspace and Delete
+				whole_input_selected = false;
+				location.reload();
+				return;
+			}
+		}
 	});
+
 	document.addEventListener('reset', function(event) {
   	location.reload();
 	});
 
 });
+
+// Source: https://stackoverflow.com/questions/5001608/how-to-know-if-the-text-in-a-textbox-is-selected
+function isTextSelected(input) {
+    if (typeof input.selectionStart == "number") {
+        return input.selectionStart == 0 && input.selectionEnd == input.value.length;
+    } else if (typeof document.selection != "undefined") {
+        input.focus();
+        return document.selection.createRange().text == input.value;
+    }
+}
 
 
 function createCaret() {
@@ -47,7 +90,7 @@ function CollapsiblePanesLogic() {
 		next_sibling.classList.add("collapsible-list");
 	}
 
-	$('.collapsible').click(function(e){
+	$('.collapsible').click(function(e) {
 		// $(this).find('.collapsible-list').toggleClass('open');
 		if (e.target.nodeName == "SPAN") {
 			$(e.target).toggleClass('open-caret');	
@@ -60,7 +103,7 @@ function CollapsiblePanesLogic() {
 		e.stopPropagation();
 		const ul = $(this).next();
 		ul.toggleClass('hidden');
-		// $('.collapsible').click(function(){
+		// $('.collapsible').click(function() {
 		// 	$('.collapsible-list').removeClass('open');
 		// 	$('.down-caret').removeClass('open-caret');
 
@@ -78,7 +121,6 @@ function makeImagesTooltips() {
 		// all a_tags right before an image, make them a tooltip
 		// those are the ones that are supposed to display the image
 		let a_tag = images[i].previousElementSibling;
-		console.log(a_tag);
 		if (a_tag.tagName != "A") {
 			console.log("Problem: Markdown isn't formatted properly");
 			console.log(images[i].src);
@@ -105,7 +147,7 @@ function getPlainTextResources() {
 	// we only want the items of the top-level ul's
 	var unordered_lists = document.getElementsByTagName("ul");
 	var arr_ul = [].slice.call(unordered_lists); // tfw html collections aren't arrays :/
-	var filtered_uls = arr_ul.filter(function(list){
+	var filtered_uls = arr_ul.filter(function(list) {
 		return list.parentNode.tagName != 'LI';
 	});
 
@@ -148,39 +190,39 @@ function addHeadingToResourceListItem(ul, resource) {
 
 function handleSearch(event) {
 // Source: https://levelup.gitconnected.com/implement-search-feature-on-a-web-page-in-plain-javascript-adad27e48
- event.preventDefault(); //don't reload page
-    // Get the search terms from the input field
-    // var searchTerm = event.target.elements['search'].value;
- 		var searchTerm = event.target.value;
+ 	event.preventDefault(); //don't reload page
 
-    // Tokenize the search terms and remove empty spaces
-    var tokens = searchTerm.toLowerCase().split(' ')
-    .filter(function(token){
-    	return token.trim() !== '';
-    });
+  // Get the search terms from the input field
+  // var searchTerm = event.target.elements['search'].value;
+		var searchTerm = event.target.value;
 
-    if(tokens.length) {
-    	var filteredList = resources.filter(function(resource){
-      // Create a string of all object values
-    		var resourceString = '';
-    		for(var key in resource) {
-    			if(resource.hasOwnProperty(key) && resource[key] !== '') {
-    				resourceString += resource[key].toString().toLowerCase().trim() + ' ';
-    			}
-    		}
+  // Tokenize the search terms and remove empty spaces
+  var tokens = searchTerm.toLowerCase().split(' ').filter(function(token) {
+  	return token.trim() !== '';
+  });
 
-    		// return true only if resource has all search keywords in it
-    		for (let i = 0; i < tokens.length; i++) {
-    			if (!resourceString.match(tokens[i])) {
-    				return false;
-    			}
-    		}
-    		return true;
-    	});
-    // Render the search results
-    	renderSearchResults(filteredList);
-    }
-  } 
+  if (tokens.length) {
+  	var filteredList = resources.filter(function(resource) {
+    // Create a string of all object values
+  		var resourceString = '';
+  		for(var key in resource) {
+  			if (resource.hasOwnProperty(key) && resource[key] !== '') {
+  				resourceString += resource[key].toString().toLowerCase().trim() + ' ';
+  			}
+  		}
+
+  		// return true only if resource has all search keywords in it
+  		for (let i = 0; i < tokens.length; i++) {
+  			if (!resourceString.match(tokens[i])) {
+  				return false;
+  			}
+  		}
+  		return true;
+  	});
+  // Render the search results
+  	renderSearchResults(filteredList);
+  }
+} 
 
 function renderSearchResults(data) {
 	const resourceHashmap = new Map();

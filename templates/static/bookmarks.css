@@ -96,6 +96,10 @@ h2 {
 
 
 /* Tooltip image previews */
+a.tooltip {
+  font-size: large;
+}
+
 .tooltip {
   position: relative;
   display: inline-block;
