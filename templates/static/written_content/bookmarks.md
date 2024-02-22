@@ -12,6 +12,9 @@
 * [Mathspace](https://help.mathspace.co/en/collections/93682-using-mathspace-as-a-teacher): needs no introduction, used in most classrooms, provides individual-targeted exercises digitally
 	* I personally prefer Mathspace to [Education Perfect](https://www.educationperfect.com/), but to each their own
 * [Freefall Mathematics](https://freefallmathematics.com/products.htm): worksheets and ebooks - many schools have a subscription
+* [Numeracy Ninjas](https://www.numeracyninjas.org/): Practice questions for numeracy
+	* Builds on primary and Year 7 skills such as times tables, time telling, place value, etc.
+	* Recommended by my colleague Madushan
 
 ## Lesson Plans
 * [Supporting Australia Maths Project](https://www.amsi.org.au/ESA_middle_years/Year7/Year7_md/Year7main.html): Lesson Plans for Years 7-9
@@ -41,6 +44,11 @@
 	* Can be easily integrated in the Measurement topic
 	* One option is [python programming](https://groklearning.com/course/maths-yr7/), the [other option](https://groklearning.com/course/aca-dt-7-bk-geometry/) uses block-style click-and-drag programming.
 	* Note: this is a paid resource but can be shared by the whole school, including coding activities and some courses used by the DT department
+* [Dance Dance Traversal](static/pdfs/others_resources/mtm_reunion/Cindy-DanceDanceTransversal-Angles-activity.pdf): Game for Angle relationships
+	* Cindy made this activity to teach co-interior angles, corresponding angles, etc.
+	* Year 7-8
+	* Fun team activity, requires some open space
+	* Based on the popular game Dance Dance Revolution
 
 ## Manipulatives
 * [Four Card Permutation](https://www.geogebra.org/m/gmqatpq7): interactive (GeoGebra)
@@ -72,6 +80,6 @@
 	* These are aligned with Canadian and U.S. standards, so require a bit more searching.
 
 
-*Thanks to Cindy Tran, Hui Min Wang, Alex Oakes, Miriam Lees and Shaza El Hage for sharing links!*
+*Thanks to Cindy Tran, Madushan Bandara, Hui Min Wang, Alex Oakes, Miriam Lees and Shaza El Hage for sharing activities and links!*
 
 If you'd also like to share a link, please do drop it in [this Google Form](https://forms.gle/pwA9GYhyVSiYDhS66)!
