@@ -32,11 +32,19 @@
 * [Blooket](https://www.blooket.com/): Similar to Kahoot!, it gamifies the quiz process. Works well as a Friday afternoon activity
 	* My colleague Shaza recommends the crypto mode.
 * [Kahoot!](https://kahoot.com/files/2021/06/StarterGuide_0621.pdf): in-class competitive topic quizzes
+* [Greedy Pig](https://nzmaths.co.nz/resource/greedy-pig-0): game introducing probability and providing addition practice
+	* The NSW Department of Education provides a [simple lesson plan](static\pdfs\others_resources\mtm_reunion\det-nsw-greedy-pig.pdf).
+	* AAMT Maths 300 provides [Greedy Pig software](https://lessons.maths300.com/greedy-pig), which Denise Halliday recommends.
+	* The YouTube channel Numberphile has a video called [The Math of Being a Greedy Pig](https://www.youtube.com/watch?v=ULhRLGzoXQ0&ab_channel=Numberphile) (length 33:05 minutes).
+
 
 ## Geometry
 * [Pythagoras Theorem](https://betterexplained.com/articles/surprising-uses-of-the-pythagorean-theorem/): Intuition and Applications
 * [Liquid Pythagoras Theorem](https://www.reddit.com/r/oddlysatisfying/comments/okry97/how_to_visually_prove_pythagoras_theorem_a%C2%B2_b%C2%B2_c%C2%B2/): Visual model of areas of right triangle sides
 ![Liquid Pythagoras](static\images\bookmarks_screencaps\Liquid_Pythagoras.png)
+* [Pythagorean Stack](static\pdfs\others_resources\mtm_reunion\PythagoreanStack-PaigeNelson.pdf): Extension activity for Year 8
+	* This activity comes from [Equation Freak Blogspot](https://EquationFreakBlogspot.com)
+	* My colleague Paige notes: everyone had different answers to the final side value, including us teachers. It was great to see how using certain values at certain decimal points can have long-term effects on a final answer.
 * [Grok Learning](https://groklearning.com/): Programming with Python
 ![](static\images\bookmarks_screencaps\Grok_Learning.png)
 	* My colleague Alex recommends this resource with the following descriptors
@@ -75,11 +83,23 @@
 	* Topics covered: geometry, algebra, stats (averages), decimals + lots more
 	* Warning: Unsorted, long list
 * [Kyle Webb Maths Tasks](https://tasks.kylewebb.ca/) ![](static\images\bookmarks_screencaps\Kyle Webb Maths Tasks.png) and [BTC Curricular Math Task Sheet K-12](https://docs.google.com/spreadsheets/d/1-tJ2DzGJ0JXpmcRJoJxsVBA3d0_2ygxfjH3c1s2GqLM/edit#gid=427306543) ![](static\images\bookmarks_screencaps\BTC Curricular Math Task Sheet K-12.png)
-	* Resources based on the pedagogy discussed in Peter Liljedahl's book, 'Building Thinking Classrooms in Mathematics'
-	* Activities to teach mathematics through a more critical thinking lens.
+	* My colleague Cindy sent this link of resources based on the pedagogy discussed in Peter Liljedahl's book, 'Building Thinking Classrooms in Mathematics'
+	* Activities to teach mathematics through a more critical thinking lens
 	* These are aligned with Canadian and U.S. standards, so require a bit more searching.
+	* Relatedly: Jojo Ayao provided [this powerpoint](static\pdfs\others_resources\mtm_reunion\11MAA_Lesson_1_BTC_script.pdf) using the Building Thinking Classrooms model.
+
+## Miscellaneous
+* [Comparative Tables for Variables](static\pdfs\others_resources\mtm_reunion\Comparative-Tables-Graphs-PaigeNelsonSmith.pdf)
+ 	* Students fill out tables asking them to sketch how function output would change with smaller or bigger values.
+ 	* Prompts intuitive understanding of how change in variables changes functions
+ 	* Tables for Year 7 and Year 12 provided as examples
+ 	*  Idea can be used for any mathematical concept where two variables are compared into a graphical or physical representation
+ 	* Encourages students to visualise concepts
+ 	* Paige found this activity sometimes better in competitions, and sometimes in discussions
+* [Implicit Differentiation Worksheet](static\pdfs\others_resources\mtm_reunion\implicit_differentiation_worksheet.pdf)
+	* Andrew Huang made this worksheet for his Extension 2 class, as a refresher for related rates/differential equations
 
 
-*Thanks to Cindy Tran, Madushan Bandara, Hui Min Wang, Alex Oakes, Miriam Lees and Shaza El Hage for sharing activities and links!*
+*Thanks to Cindy Tran, Madushan Bandara, Jojo Ayao, Hui Min Wang, Alex Oakes, Paige Nelson Smith, Miriam Lees, Andrew Huang, and Shaza El Hage for sharing activities and links!*
 
 If you'd also like to share a link, please do drop it in [this Google Form](https://forms.gle/pwA9GYhyVSiYDhS66)!
