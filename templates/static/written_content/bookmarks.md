@@ -10,11 +10,16 @@
 
 ## Exercises
 * [Mathspace](https://help.mathspace.co/en/collections/93682-using-mathspace-as-a-teacher): needs no introduction, used in most classrooms, provides individual-targeted exercises digitally
+![](static\images\bookmarks_screencaps\mathspace.png)
 	* I personally prefer Mathspace to [Education Perfect](https://www.educationperfect.com/), but to each their own
 * [Freefall Mathematics](https://freefallmathematics.com/products.htm): worksheets and ebooks - many schools have a subscription
+![](static\images\bookmarks_screencaps\freefall_mathematics.png)
 * [Numeracy Ninjas](https://www.numeracyninjas.org/): Practice questions for numeracy
+![](static\images\bookmarks_screencaps\numeracy_ninjas.png)
 	* Builds on primary and Year 7 skills such as times tables, time telling, place value, etc.
 	* Recommended by my colleague Madushan
+* [MathsOnline](https://www.mathsonline.com.au/info-for-teachers): exercise sets and video tutorials
+![](static\images\bookmarks_screencaps\maths_online.png)
 
 ## Lesson Plans
 * [Supporting Australia Maths Project](https://www.amsi.org.au/ESA_middle_years/Year7/Year7_md/Year7main.html): Lesson Plans for Years 7-9
@@ -28,12 +33,16 @@
 
 ## Games
 * [Combining Like Terms Uno](https://www.frontporchmath.com/wp-content/uploads/2017/10/like-terms-uno.pdf)
+![](static\images\bookmarks_screencaps\like_terms_uno.png)
 	* Algebra card-game
 * [Blooket](https://www.blooket.com/): Similar to Kahoot!, it gamifies the quiz process. Works well as a Friday afternoon activity
+![](static\images\bookmarks_screencaps\blooket.png)
 	* My colleague Shaza recommends the crypto mode.
-* [Kahoot!](https://kahoot.com/files/2021/06/StarterGuide_0621.pdf): in-class competitive topic quizzes
-* [Greedy Pig](https://nzmaths.co.nz/resource/greedy-pig-0): game introducing probability and providing addition practice
-	* The NSW Department of Education provides a [simple lesson plan](static\pdfs\others_resources\mtm_reunion\det-nsw-greedy-pig.pdf).
+* [Kahoot!](https://kahoot.com/): in-class competitive topic quizzes
+![](static\images\bookmarks_screencaps\kahoot.png)
+	* This is a [guide](https://kahoot.com/files/2021/06/StarterGuide_0621.pdf) for teachers.
+* [Greedy Pig](static\pdfs\others_resources\mtm_reunion\det-nsw-greedy-pig.pdf): game introducing probability and providing addition practice (lesson plan by NSW Department of Education)
+![](static\images\bookmarks_screencaps\greedy_pig.png)
 	* AAMT Maths 300 provides [Greedy Pig software](https://lessons.maths300.com/greedy-pig), which Denise Halliday recommends.
 	* The YouTube channel Numberphile has a video called [The Math of Being a Greedy Pig](https://www.youtube.com/watch?v=ULhRLGzoXQ0&ab_channel=Numberphile) (length 33:05 minutes).
 
@@ -52,7 +61,7 @@
 	* Can be easily integrated in the Measurement topic
 	* One option is [python programming](https://groklearning.com/course/maths-yr7/), the [other option](https://groklearning.com/course/aca-dt-7-bk-geometry/) uses block-style click-and-drag programming.
 	* Note: this is a paid resource but can be shared by the whole school, including coding activities and some courses used by the DT department
-* [Dance Dance Traversal](static/pdfs/others_resources/mtm_reunion/Cindy-DanceDanceTransversal-Angles-activity.pdf): Game for Angle relationships
+* [Dance Dance Transversal](static/pdfs/others_resources/mtm_reunion/Cindy-DanceDanceTransversal-Angles-activity.pdf): Game for Angle relationships
 	* Cindy made this activity to teach co-interior angles, corresponding angles, etc.
 	* Year 7-8
 	* Fun team activity, requires some open space
