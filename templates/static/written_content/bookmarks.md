@@ -20,6 +20,11 @@
 	* Recommended by my colleague Madushan
 * [MathsOnline](https://www.mathsonline.com.au/info-for-teachers): exercise sets and video tutorials
 ![](static\images\bookmarks_screencaps\maths_online.png)
+* [Simultaneous Equations](https://www.dropbox.com/scl/fo/0dabbxzgf7q392yez6q6i/h?rlkey=dgp3xrwizy1octt6pvuz2an8o&dl=0)
+	* Topic: algebra, graphing
+	* My colleague Dennis describes the material as "the latest refinement of the lesson material I use for teaching simultaneous equations.
+	* "There is a PowerPoint which uses animations extensively, so it is best used with a remote clicker for slides shows.
+	* "There are some quick quiz worksheets and other resources."
 
 ## Lesson Plans
 * [Supporting Australia Maths Project](https://www.amsi.org.au/ESA_middle_years/Year7/Year7_md/Year7main.html): Lesson Plans for Years 7-9
@@ -45,6 +50,9 @@
 ![](static\images\bookmarks_screencaps\greedy_pig.png)
 	* AAMT Maths 300 provides [Greedy Pig software](https://lessons.maths300.com/greedy-pig), which Denise Halliday recommends.
 	* The YouTube channel Numberphile has a video called [The Math of Being a Greedy Pig](https://www.youtube.com/watch?v=ULhRLGzoXQ0&ab_channel=Numberphile) (length 33:05 minutes).
+* [Maths Bingo](https://mathsstarters.net/bingo)
+	* Topics included: rates and ratios, percentages, decimals, rounding, basic operations
+
 
 
 ## Geometry
@@ -61,11 +69,13 @@
 	* Can be easily integrated in the Measurement topic
 	* One option is [python programming](https://groklearning.com/course/maths-yr7/), the [other option](https://groklearning.com/course/aca-dt-7-bk-geometry/) uses block-style click-and-drag programming.
 	* Note: this is a paid resource but can be shared by the whole school, including coding activities and some courses used by the DT department
-* [Dance Dance Transversal](static/pdfs/others_resources/mtm_reunion/Cindy-DanceDanceTransversal-Angles-activity.pdf): Game for Angle relationships
+<!-- * [Dance Dance Transversal](static/pdfs/others_resources/mtm_reunion/Cindy-DanceDanceTransversal-Angles-activity.pdf): Game for Angle relationships
 	* Cindy made this activity to teach co-interior angles, corresponding angles, etc.
 	* Year 7-8
 	* Fun team activity, requires some open space
 	* Based on the popular game Dance Dance Revolution
+ ❤ Need to add ppt link instead of pdf, and need to put songs in folder. make zip file
+ -->
 
 ## Manipulatives
 * [Four Card Permutation](https://www.geogebra.org/m/gmqatpq7): interactive (GeoGebra)
@@ -107,6 +117,10 @@
  	* Paige found this activity sometimes better in competitions, and sometimes in discussions
 * [Implicit Differentiation Worksheet](static\pdfs\others_resources\mtm_reunion\implicit_differentiation_worksheet.pdf)
 	* Andrew Huang made this worksheet for his Extension 2 class, as a refresher for related rates/differential equations
+
+* [Statewide Staffrooms](https://education.nsw.gov.au/teaching-and-learning/curriculum/statewide-staffrooms)
+	* Microsoft Teams groups for different faculties, including Mathematics
+	* Has resources and text channels for different streams
 
 
 *Thanks to Cindy Tran, Madushan Bandara, Jojo Ayao, Hui Min Wang, Alex Oakes, Paige Nelson Smith, Miriam Lees, Andrew Huang, and Shaza El Hage for sharing activities and links!*
