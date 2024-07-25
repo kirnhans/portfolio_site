@@ -13,6 +13,8 @@ standards_dict = { 1: ("Know students and how they learn","templates/static/writ
 7: ("Engage professionally with colleagues, parents/carers and the community", "templates/static/written_content/standard7.md"),
 }
 
+year_units_dict = { 7: "templates/static/written_content/Year_7-slides+resources.md"}
+
 class SiteGenerator(object):
     def __init__(self):
         self.env = Environment(loader=FileSystemLoader('templates'))
@@ -22,6 +24,7 @@ class SiteGenerator(object):
         self.render_intro_page()
         self.render_dev_page()
         self.render_bookmarks_page()
+        self.render_units_page()
 
     def empty_public(self):
         """ Ensure the public directory is empty before generating. """
@@ -85,6 +88,17 @@ class SiteGenerator(object):
         with open(os.path.join("public", "bookmarks.html"), 'w+') as file:
             html = template.render(bookmarks_content=markdown(bookmarks_text))
             file.write(html)
+
+    def render_units_page(self):
+        print("Rendering units pages to static file.")
+        template = self.env.get_template('year_units_template.html')
+        for num in year_units_dict:
+            md_path = year_units_dict[num]
+            page_text = self.get_text_from_file(md_path,
+                "This is a unit waiting to be scoped.")
+            with open(os.path.join("public", f"Year{num}.html"), 'w+') as file:
+                html = template.render(year_num=num, materials_content=markdown(page_text))
+                file.write(html)
 
     def render_dev_page(self):
         print("Rendering dev page to static file.")

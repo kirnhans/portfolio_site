@@ -22,7 +22,7 @@ p {
 
 .in-manila {
   margin: auto;
-  max-width: 700px;
+  max-width: 43.75em;
 }
 
 .in-manila img[alt~="groupwork"] {
@@ -129,7 +129,7 @@ svg.bi-book {
   justify-items: center;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 31.25em) {
   .horizontally-centered {
     margin: auto;
     width: 70%;
@@ -139,7 +139,7 @@ svg.bi-book {
 .ffolder-container {
   margin: 1em;
   flex: 1;
-  max-width: 245px;
+  max-width: 15.25em;
   /*max-width: 40vmin;*/
   /*max-height: 40vmin;*/
 }
@@ -151,10 +151,10 @@ img.intro_pic {
 
 /* https://blogs.ntu.edu.sg/ntulibrary/2018/09/12/how-to-align-images-on-your-website/*/
 /*mobile*/
-@media (min-width: 600px) {
+@media (min-width: 37.5em) {
   img.intro_pic {
     float: right;
-    width: 200px;
+    width: 12.5em;
     transform: rotate(2deg);
   }
   .dropdown-content {
@@ -196,13 +196,13 @@ img.intro_pic {
   }
 }
 
-@media (max-width: 200px) {
+@media (max-width: 12.5em) {
   img.intro_pic {
     width: 100%;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 12.5em) {
   img.intro_pic {
     max-height: 75vh;
     max-width: 100%;
@@ -281,7 +281,7 @@ div.main {
     flex-direction: column;
 }
 
-@media (min-width: 70em) and (max-width: 1600px){
+@media (min-width: 50em) and (max-width: 100em){
   .below-nav {
       padding-right: 2em;
   }
@@ -292,7 +292,7 @@ div.main {
   }
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 100em) {
   div.main{
     display: flex;
     flex-direction: column;
@@ -312,7 +312,7 @@ div.main {
     flex: 3;
     display: block;
       margin: auto;
-      max-width: 1000px;
+      max-width: 62.5em;
   /*overflow: hidden;*/
   /*position: relative;*/
   width: 100%;
@@ -325,7 +325,7 @@ div.main {
   }
 }
 
-@media(min-width: 1800px) {
+@media(min-width: 112.5em) {
   .manila {
     border-left: 50px solid hsl(195, 100%, 90%);
     border-right: 50px solid hsl(195, 100%, 90%);
@@ -337,7 +337,7 @@ div.main {
   }
 }
 
-@media(max-width: 400px) {
+@media(max-width: 25em) {
   .manila {
     padding-left: 0.8em;
     padding-right: 0.5em;
@@ -385,7 +385,7 @@ footer address.contact-details {
   display: block;
   flex: 1;
   background-color: white;
-  max-width: 200px;
+  max-width: 12.5em;
 }
 
 footer .contact-details > ul {
@@ -404,13 +404,14 @@ footer .contact-details > ul {
 
 .history-acknowledgment {
   flex: 2;
-  max-width: 400px;
+  max-width: 25em;
 }
 
 /*everything nav bar related below*/
 .current-tab {
   color: #232a34;
   font-weight: bold;
+  translate: -1em;
 }
 
 #menu_nav_ul a {
@@ -424,7 +425,7 @@ nav ul > li a:hover, nav ul > li a:focus {
 
 
 /*mobile*/
-@media (max-width: 70em) {
+@media (max-width: 50em) {
   .menu_main_nav_area {
     display: none;
   }
@@ -433,9 +434,25 @@ nav ul > li a:hover, nav ul > li a:focus {
     padding-right: 2em;
   }
 
+
   nav ul > li {
     display: inherit;
-    padding-left: 0.25em
+    padding-left: 2.5em;
+    z-index: 2;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #f1f1f1;
+    border-top-width: 0.5em;
+    border-top-style: solid;
+    box-sizing: content-box;
+    min-height: 1em;
+    position: relative;
+/*    display: list-item;*/
+    float: none;
   }
 
   li > div {
@@ -560,10 +577,12 @@ nav ul > li a:hover, nav ul > li a:focus {
 
 
 /*desktop*/
-@media (min-width: 70em) {
+/*NOTE: Javascript is involved in this too*/
+@media (min-width: 50em) {
   .hamburger {
     display: none;
   }
+
   .menu_main_nav_area {
     display: block;
   }
@@ -608,7 +627,7 @@ nav ul > li a:hover, nav ul > li a:focus {
   }
 
   nav ul > li a {
-    padding: 2em;
+    padding: 1em;
     color: #a6a6a6;
     text-decoration: none;
     display: block;
@@ -756,15 +775,16 @@ nav ul > li a:hover, nav ul > li a:focus {
     color: #232a34;
   }
 
-  nav ul > li:nth-child(4n) {
-    border-top-color: #f0d001;
-  }
+  
+}
 
-  nav ul > li:nth-child(4n):hover, nav ul > li:nth-child(4n):focus {
-    background: #f0d001;
+@media(min-width: 70em) {
+  nav ul > li a {
+    padding: 2em;
   }
+}
 
-  nav ul > li:nth-child(2n+1) {
+nav ul > li:nth-child(2n+1) {
     border-top-color: #95c93d;
   }
 
@@ -789,6 +809,14 @@ nav ul > li a:hover, nav ul > li a:focus {
   nav ul > li:nth-child(2n+1):focus .curved-tabs-r:before,
   nav ul > li:nth-child(2n+1):focus .curved-tabs-r:after {
     border-color: transparent transparent transparent #95c93d;
+  }
+
+  nav ul > li:nth-child(4n) {
+    border-top-color: #f0d001;
+  }
+
+  nav ul > li:nth-child(4n):hover, nav ul > li:nth-child(4n):focus {
+    background: #f0d001;
   }
 
   nav ul > li:nth-child(4n):hover .curved-tabs-l,
@@ -854,4 +882,3 @@ nav ul > li a:hover, nav ul > li a:focus {
   nav ul > li:nth-child(4n+2):focus .curved-tabs-r:after {
     border-color: transparent transparent transparent #7cb5ec;
   }
-}

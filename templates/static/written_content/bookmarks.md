@@ -74,7 +74,7 @@
 	* Year 7-8
 	* Fun team activity, requires some open space
 	* Based on the popular game Dance Dance Revolution
- ❤ Need to add ppt link instead of pdf, and need to put songs in folder. make zip file
+ TODO: Need to add ppt link instead of pdf, and need to put songs in folder. make zip file
  -->
 
 ## Manipulatives

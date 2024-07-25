@@ -35,7 +35,7 @@ window.onresize = function() {
    var em_width = $(window).width() / parseFloat($("body").css("font-size"));
    console.log(em_width)
    var x = document.getElementById("menu_main_nav_area");
-   if (em_width > 70) {
+   if (em_width > 50) {
         x.style.display = "block";
    }
    else {
