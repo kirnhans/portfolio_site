@@ -70,10 +70,11 @@ center > p {
   width: 63%;
 }
 
-@media (max-width: 28em) {
+@media (max-width: 37.5em) {
   .history-acknowledgment {
     padding-top: 0.5em;
     text-align: justify;
+    margin-left: 1em;
   }
 
   footer {

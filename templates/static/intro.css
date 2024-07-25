@@ -171,7 +171,7 @@ img.intro_pic {
 }
 
 
-@media (max-width: 12.5em) {
+@media (max-width: 18.75em) {
   img.intro_pic {
     width: 100%;
   }
@@ -180,7 +180,7 @@ img.intro_pic {
 @media (max-width: 37.5em) {
   img.intro_pic {
     max-height: 75vh;
-    max-width: 100%;
+    max-width: 60%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
