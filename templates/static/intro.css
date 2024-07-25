@@ -1,0 +1,217 @@
+.centered > img, svg {
+  flex: 3;
+  margin: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+svg.bi-book {
+  width: 60px;
+  height: 60px;
+  fill: black;
+}
+
+/*https://www.javatpoint.com/how-to-make-a-dropdown-menu-in-html*/
+.dropbtn {
+    background-color: #F1A402;
+    color: black;
+    padding: 10px;
+    font-size: 16px; 
+    font-family: Calibri; 
+}
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+.dropdown-content {
+    position: initial;
+    background-color: #f8d775;
+    display: none;
+    z-index: 1;
+    box-shadow: 3px 3px rgba(0,0,0,0.2);
+}
+.standards_folder .dropdown-content {
+  text-align: start;
+  box-shadow: 3px -1px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 5px 12px;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: Calibri;
+}
+/*.lesson-plan a {
+  font-size: 13px;
+}
+*/
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+.dropdown:hover .dropbtn {
+    background-color: #FFBD00;
+}
+
+.dropdown-content > a:nth-child(n):hover {
+  background-color: orange;
+}
+
+.dropdown-content > a:nth-child(2n+1) {
+  background-color: #ffe9a2;
+}
+
+.dropdown-content > a:nth-child(2n) {
+  background-color: #f8d775;
+}
+
+/*hattip*/
+/*ordered above so the 6n+1 will be more specific for 1 and 7*/
+ .dropdown-content a.standard_link:nth-child(2n+1):hover {
+  background-color: #95c93d;
+}
+
+ .dropdown-content a.standard_link:nth-child(6n+1):hover {
+  background-color: #c768ff;
+}
+
+ .dropdown-content a.standard_link:nth-child(4n+2):hover {
+  background-color: #7cb5ec;
+}
+
+ .dropdown-content a.standard_link:nth-child(4n):hover {
+  background-color: #f0d001;
+}
+
+
+.intro {
+  padding-right: 2em;
+  box-shadow: -3px 4px 10px rgba(0,0,0,0.5);
+  margin-top: 16px;
+}
+
+.horizontally-centered {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  justify-items: center;
+}
+
+@media (min-width: 31.25em) {
+  .horizontally-centered {
+    margin: auto;
+    width: 70%;
+  }
+}
+
+.ffolder-container {
+  margin: 1em;
+  flex: 1;
+  max-width: 15.25em;
+  /*max-width: 40vmin;*/
+  /*max-height: 40vmin;*/
+}
+
+img.intro_pic {
+  border: 1px solid #6666ff;
+  box-shadow: 3px 3px rgba(0,0,0,0.2);
+}
+
+/* https://blogs.ntu.edu.sg/ntulibrary/2018/09/12/how-to-align-images-on-your-website/*/
+/*mobile*/
+@media (min-width: 37.5em) {
+  img.intro_pic {
+    float: right;
+    width: 12.5em;
+    transform: rotate(2deg);
+  }
+  .dropdown-content {
+    width: 190%;
+    margin-left: -45%;
+  }
+  .standards_folder .dropdown-content {
+    /*transform: translateY(-325px);*/
+    top: -137%;
+    position: absolute;
+  }
+
+  .links_folder .dropdown-content {
+    /* top will get changed by intro.js
+     so that I can add more links here
+     and it'll still go the right amount up  */
+    top: -180%; 
+    position: absolute;
+  }
+
+  div.intro_pic {
+    float: right;
+    position: relative;
+    width: 200px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+  }
+    #paperclip {
+      position: absolute;
+      left: -6px;
+      top: -12px;
+      transform: rotate(-20deg);
+      width: 30px;
+      z-index: 2;
+  }
+
+  .intro_content .manila {
+    border-radius: 15px 0px 0px 15px;
+  }
+}
+
+.intro_content > .horizontally-centered {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+
+@media (max-width: 12.5em) {
+  img.intro_pic {
+    width: 100%;
+  }
+
+
+  .horizontally-centered {
+    flex-direction: column;
+    margin: auto;
+  }
+}
+
+@media (max-width: 12.5em) {
+  img.intro_pic {
+    max-height: 75vh;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+  }
+  div.intro_pic{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img {
+    max-width: 90vw;
+  }
+
+  #paperclip {
+    display: none;
+  }
+
+  .intro_content .manila {
+    border-radius: 8px 8px 8px 8px;
+  }
+
+  .dropdown-content {
+    width: 150%;
+    margin-left: -25%;
+  }
+
+}

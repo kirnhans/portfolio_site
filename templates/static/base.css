@@ -1,3 +1,230 @@
+/*html {
+  display: flex;
+  margin: 0px;
+}*/
+
+/*from https://codepen.io/Kerruba/pen/MXNoeG */
+:root {
+  /*--bhue: 195; 
+  --bsat: 100;
+  --blig: 80;*/
+  --bhue: 190; 
+  --bsat: 100;
+  --blig: 60;
+  --light:hsl(var(--bhue), calc(var(--bsat)*1%), calc(var(--blig)*1%));
+  --dark:hsl(var(--bhue), calc(var(--bsat)*1%), calc(var(--blig)*1% - 5%));
+  --darkest:hsl(var(--bhue), calc(var(--bsat)*1%), calc(var(--blig)*1% - 20%));
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+  font-family:Georgia, serif;
+  font-style:normal;
+  font-weight:normal;
+  color:#000000;
+}
+
+p {
+  font-family: Calibri;
+}
+
+
+a {
+  color: black;
+  /*don't overflow the parent div:*/
+  word-wrap: break-word;
+}
+
+/* from https://www.w3schools.com/howto/howto_css_center-vertical.asp
+it should be illegal to make vertical centering this complicated */
+.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.centered > a {
+  flex: 1;
+}
+
+h3 {
+  font-family: Cambria;
+}
+
+img {
+  max-width: 50vw;
+}
+
+center > p {
+  margin: 0;
+}
+
+
+
+.centered > img {
+  width: 63%;
+}
+
+@media (max-width: 12.5em) {
+  .history-acknowledgment {
+    padding-top: 0.5em;
+    text-align: justify;
+  }
+
+footer {
+  flex-direction: column;
+}
+}
+
+.manila {
+/* color referenced from https://www.schemecolor.com/windows-10-folder-yellow-colors.php*/
+  /*background-color:#ffe9a2;*/
+  background-color: #ffefad;
+  background-image: url("images/ecailles.png");
+  padding-left: 2em;
+  padding-right: 2em;
+  border-top: 4px solid #f8d775;
+}
+
+.back-manila {
+  display: flex;
+  flex-direction: column;
+}
+
+/*main {
+  max-width: 1000px;
+}
+
+@media (min-width: 1000px) {
+  body {
+    align-items: center;
+  }
+}*/
+div.main {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 50em) and (max-width: 100em){
+  .below-nav {
+      padding-right: 2em;
+  }
+
+}
+
+.manila {
+    box-shadow: 3px 4px 10px rgb(0 0 0 / 50%);
+    border-radius: 0px 15px 15px 0px;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 100em) {
+  div.main{
+    display: flex;
+    flex-direction: column;
+  }
+  #menu_main_nav_area {
+    margin: auto;
+  }
+  h1 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .below-nav {
+    display: flex;
+    flex-direction: row;
+  }
+  .manila {
+    flex: 3;
+    display: block;
+      margin: auto;
+      max-width: 62.5em;
+  /*overflow: hidden;*/
+  /*position: relative;*/
+  width: 100%;
+  }
+  .back-manila {
+    margin-left: 10%;
+    z-index: -1;
+    width: 80%;
+    max-height: 100%;
+  }
+}
+
+@media(min-width: 112.5em) {
+  .manila {
+    border-left: 50px solid hsl(195, 100%, 90%);
+    border-right: 50px solid hsl(195, 100%, 90%);
+  }
+
+  .back-manila {
+    background-image: url("images/Kirn_photos.png");
+    background-repeat: repeat;
+  }
+}
+
+@media(max-width: 25em) {
+  .manila {
+    padding-left: 0.8em;
+    padding-right: 0.5em;
+  }
+  .intro-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    align-content: center;
+  }
+}
+
+footer {
+  padding-left: 10vw;
+  padding-right: 10vw;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+
+.ribbon-color {
+  background: linear-gradient(90deg, var(--dark) 0%, var(--light) 10%, var(--dark) 20%, var(--darkest) 50%, var(--dark) 80%, var(--light) 90%, var(--dark) 100%); /* w3c */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  border-top: 1px solid var(--light);
+  border-bottom: 1px solid var(--dark);
+}
+
+footer address.contact-details {
+  border: 2px double navy;
+  display: block;
+  flex: 1;
+  background-color: white;
+  max-width: 12.5em;
+}
+
+footer .contact-details > ul {
+  font-family: Calibri;
+  padding-inline-start: 1em;
+  padding-inline-end: 1em;
+  font-style: normal;
+}
+
+.contact-details > li  {
+  display: block;
+  margin: auto;
+  border-bottom: 1px dashed #7777c7;
+  text-align: end;
+}
+
+.history-acknowledgment {
+  flex: 2;
+  max-width: 25em;
+}
+
 h1 {
   padding-left: 1em;
   font-family:Calibri, sans-serif;

@@ -1,0 +1,397 @@
+
+/*everything nav bar related below*/
+.current-tab {
+  color: #232a34;
+  font-weight: bold;
+}
+
+#menu_nav_ul a {
+  font-family: Georgia;
+  text-shadow: white 0 2px 1px;
+}
+
+nav ul > li a:hover, nav ul > li a:focus {
+    color: #232a34;
+}
+
+@media (max-width: 55em) {
+
+  .menu_main_nav_area {
+    display: none;
+  }
+  nav ul {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+.current-tab {
+  translate: -1em;
+}
+
+/*li:has(> .current-tab) {
+  translate: 0 15em;
+}*/
+
+  nav ul > li {
+    display: inherit;
+    padding-left: 2.5em;
+    z-index: 2;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #f1f1f1;
+    border-top-width: 0.5em;
+    border-top-style: solid;
+    box-sizing: content-box;
+    min-height: 1em;
+    position: relative;
+/*    display: list-item;*/
+    float: none;
+  }
+
+  li > div {
+    display: inherit;
+  }
+
+  nav ul > li a {
+    color: #a6a6a6;
+    text-decoration: none;
+    display: inherit;
+    font-size: 150%;
+  }
+
+  .hamburger {
+    display: block;
+    padding-left: 2em;
+    padding-bottom: 1em;
+  }
+
+  nav ul > li a:hover, nav ul > li a:focus {
+    border-left: 1px solid black;
+  }
+
+  nav ul > li:nth-child(4n) {
+    border-left: solid #f0d001;
+  }
+
+  nav ul > li:nth-child(2n+1) {
+    border-left: solid #95c93d;
+  }
+  nav ul > li:nth-child(6n+1) {
+    border-left: solid #c768ff;
+  }
+
+  nav ul > li:nth-child(4n+2) {
+    border-left: solid #7cb5ec;
+  }
+
+}
+
+/*desktop*/
+/*NOTE: Javascript is involved in this too*/
+@media (min-width: 55em) {
+  .hamburger {
+    display: none;
+  }
+
+  .menu_main_nav_area {
+    display: block;
+  }
+  .intro_content {
+    padding-left: 2em;
+  }
+
+ /* .below-nav {
+   padding: https://stackoverflow.com/questions/26402156/put-div-below-navigation-bar-and-dont-overlap-content
+    padding-top: 90px;
+  }*/
+  /* style from https://phoenixweb.com.au/rounded-manila-folder-style-menu-tabs-using-css-triangles/ */
+  /* converted using https://sass.js.org/ */
+  /* I've edited this to have the color scheme I want */
+  nav {
+    display: block;
+    margin-left: 30px;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  nav ul > li {
+    z-index: 2;
+    -webkit-border-top-left-radius: 30px;
+    -webkit-border-top-right-radius: 30px;
+    -moz-border-radius-topleft: 30px;
+    -moz-border-radius-topright: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: #f1f1f1;
+    border-top-width: 0.5em;
+    border-top-style: solid;
+    box-sizing: content-box;
+    min-height: 4em;
+    position: relative;
+    display: block;
+    float: left;
+  }
+
+  nav ul > li a {
+    padding: 1em;
+    color: #a6a6a6;
+    text-decoration: none;
+    display: block;
+  }
+
+  nav ul > li .curved-tabs,
+  nav ul > li .curved-tabs:before,
+  nav ul > li .curved-tabs:after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    bottom: 0;
+    border-style: solid;
+  }
+
+  nav ul > li .curved-tabs-l,
+  nav ul > li .curved-tabs-l:before,
+  nav ul > li .curved-tabs-l:after {
+    border-color: transparent transparent #f1f1f1 transparent;
+  }
+
+  nav ul > li .curved-tabs-r,
+  nav ul > li .curved-tabs-r:before,
+  nav ul > li .curved-tabs-r:after {
+    border-color: transparent transparent transparent #f1f1f1;
+  }
+
+  nav ul > li .curved-tabs-1 {
+    border-width: 0 0 27px 5px;
+    left: -4.5px;
+  }
+
+  nav ul > li .curved-tabs-1:before {
+    border-width: 0 0 5px 27px;
+    right: 0;
+    bottom: -27px;
+  }
+
+  nav ul > li .curved-tabs-1:after {
+    border-width: 0 0 12px 22px;
+    right: 0;
+    bottom: -27px;
+  }
+
+  nav ul > li .curved-tabs-2 {
+    border-width: 0 0 22px 12px;
+    left: -11.5px;
+  }
+
+  nav ul > li .curved-tabs-2:before {
+    border-width: 0 0 24px 10px;
+    right: 0;
+    bottom: -22px;
+  }
+
+  nav ul > li .curved-tabs-2:after {
+    border-width: 0 0 10px 24px;
+    right: 0;
+    bottom: -22px;
+  }
+
+  nav ul > li .curved-tabs-3 {
+    border-width: 0 0 20px 15px;
+    left: -14.5px;
+  }
+
+  nav ul > li .curved-tabs-3:before {
+    border-width: 0 0 15px 20px;
+    right: 0;
+    bottom: -20px;
+  }
+
+  nav ul > li .curved-tabs-3:after {
+    border-width: 0 0 17px 17px;
+    right: 0;
+    bottom: -20px;
+  }
+
+  nav ul > li .curved-tabs-4 {
+    border-width: 27px 0 0 5px;
+    right: -4.5px;
+  }
+
+  nav ul > li .curved-tabs-4:before {
+    border-width: 5px 0 0 27px;
+    left: -5px;
+  }
+
+  nav ul > li .curved-tabs-4:after {
+    border-width: 12px 0 0 22px;
+    left: -5px;
+  }
+
+  nav ul > li .curved-tabs-5 {
+    border-width: 22px 0 0 12px;
+    right: -11.5px;
+  }
+
+  nav ul > li .curved-tabs-5:before {
+    border-width: 24px 0 0 10px;
+    left: -12px;
+  }
+
+  nav ul > li .curved-tabs-5:after {
+    border-width: 10px 0 0 24px;
+    left: -12px;
+  }
+
+  nav ul > li .curved-tabs-6 {
+    border-width: 20px 0 0 15px;
+    right: -14.5px;
+  }
+
+  nav ul > li .curved-tabs-6:before {
+    border-width: 15px 0 0 20px;
+    left: -15px;
+  }
+
+  nav ul > li .curved-tabs-6:after {
+    border-width: 17px 0 0 17px;
+    left: -15px;
+  }
+
+  nav ul > li:nth-child(2n) {
+    background-color: #e1e1e1;
+    z-index: 1;
+  }
+
+  nav ul > li:nth-child(2n) .curved-tabs-l,
+  nav ul > li:nth-child(2n) .curved-tabs-l:before,
+  nav ul > li:nth-child(2n) .curved-tabs-l:after {
+    border-color: transparent transparent #e1e1e1 transparent;
+  }
+
+  nav ul > li:nth-child(2n) .curved-tabs-r,
+  nav ul > li:nth-child(2n) .curved-tabs-r:before,
+  nav ul > li:nth-child(2n) .curved-tabs-r:after {
+    border-color: transparent transparent transparent #e1e1e1;
+  }
+
+  nav ul > li:hover,
+  nav ul > li:focus {
+    z-index: 3;
+    color: #232a34;
+  }  
+}
+
+
+@media(min-width: 70em) {
+  nav ul > li a {
+    padding: 2em;
+  }
+}
+
+nav ul > li:nth-child(2n+1) {
+    border-top-color: #95c93d;
+  }
+
+  /* 2n+1 needs to be on top because this is only meant to apply to tabs 3 and 5*/
+  /* but I can't find a mathematical pattern that will apply to only those*/
+  /* So 1,7 are defined more below */
+  nav ul > li:nth-child(2n+1):hover, nav ul > li:nth-child(2n+1):focus {
+    background: #95c93d;
+  }
+
+  nav ul > li:nth-child(2n+1):hover .curved-tabs-l,
+  nav ul > li:nth-child(2n+1):hover .curved-tabs-l:before,
+  nav ul > li:nth-child(2n+1):hover .curved-tabs-l:after, nav ul > li:nth-child(2n+1):focus .curved-tabs-l,
+  nav ul > li:nth-child(2n+1):focus .curved-tabs-l:before,
+  nav ul > li:nth-child(2n+1):focus .curved-tabs-l:after {
+    border-color: transparent transparent #95c93d transparent;
+  }
+
+  nav ul > li:nth-child(2n+1):hover .curved-tabs-r,
+  nav ul > li:nth-child(2n+1):hover .curved-tabs-r:before,
+  nav ul > li:nth-child(2n+1):hover .curved-tabs-r:after, nav ul > li:nth-child(2n+1):focus .curved-tabs-r,
+  nav ul > li:nth-child(2n+1):focus .curved-tabs-r:before,
+  nav ul > li:nth-child(2n+1):focus .curved-tabs-r:after {
+    border-color: transparent transparent transparent #95c93d;
+  }
+
+  nav ul > li:nth-child(4n) {
+    border-top-color: #f0d001;
+  }
+
+  nav ul > li:nth-child(4n):hover, nav ul > li:nth-child(4n):focus {
+    background: #f0d001;
+  }
+
+  nav ul > li:nth-child(4n):hover .curved-tabs-l,
+  nav ul > li:nth-child(4n):hover .curved-tabs-l:before,
+  nav ul > li:nth-child(4n):hover .curved-tabs-l:after, nav ul > li:nth-child(4n):focus .curved-tabs-l,
+  nav ul > li:nth-child(4n):focus .curved-tabs-l:before,
+  nav ul > li:nth-child(4n):focus .curved-tabs-l:after {
+    border-color: transparent transparent #f0d001 transparent;
+  }
+
+  nav ul > li:nth-child(4n):hover .curved-tabs-r,
+  nav ul > li:nth-child(4n):hover .curved-tabs-r:before,
+  nav ul > li:nth-child(4n):hover .curved-tabs-r:after, nav ul > li:nth-child(4n):focus .curved-tabs-r,
+  nav ul > li:nth-child(4n):focus .curved-tabs-r:before,
+  nav ul > li:nth-child(4n):focus .curved-tabs-r:after {
+    border-color: transparent transparent transparent #f0d001;
+  }
+
+  nav ul > li:nth-child(6n+1) {
+    border-top-color: #c768ff;
+  }
+
+  nav ul > li:nth-child(6n+1):hover, nav ul > li:nth-child(6n+1):focus {
+    background: #c768ff;
+  }
+
+  nav ul > li:nth-child(6n+1):hover .curved-tabs-l,
+  nav ul > li:nth-child(6n+1):hover .curved-tabs-l:before,
+  nav ul > li:nth-child(6n+1):hover .curved-tabs-l:after, nav ul > li:nth-child(6n+1):focus .curved-tabs-l,
+  nav ul > li:nth-child(6n+1):focus .curved-tabs-l:before,
+  nav ul > li:nth-child(6n+1):focus .curved-tabs-l:after {
+    border-color: transparent transparent #c768ff transparent;
+  }
+
+  nav ul > li:nth-child(6n+1):hover .curved-tabs-r,
+  nav ul > li:nth-child(6n+1):hover .curved-tabs-r:before,
+  nav ul > li:nth-child(6n+1):hover .curved-tabs-r:after, nav ul > li:nth-child(6n+1):focus .curved-tabs-r,
+  nav ul > li:nth-child(6n+1):focus .curved-tabs-r:before,
+  nav ul > li:nth-child(6n+1):focus .curved-tabs-r:after {
+    border-color: transparent transparent transparent #c768ff;
+  }
+
+  nav ul > li:nth-child(4n+2) {
+    border-top-color: #7cb5ec;
+  }
+
+  nav ul > li:nth-child(4n+2):hover, nav ul > li:nth-child(4n+2):focus {
+    background: #7cb5ec;
+  }
+
+  nav ul > li:nth-child(4n+2):hover .curved-tabs-l,
+  nav ul > li:nth-child(4n+2):hover .curved-tabs-l:before,
+  nav ul > li:nth-child(4n+2):hover .curved-tabs-l:after, nav ul > li:nth-child(4n+2):focus .curved-tabs-l,
+  nav ul > li:nth-child(4n+2):focus .curved-tabs-l:before,
+  nav ul > li:nth-child(4n+2):focus .curved-tabs-l:after {
+    border-color: transparent transparent #7cb5ec transparent;
+  }
+
+  nav ul > li:nth-child(4n+2):hover .curved-tabs-r,
+  nav ul > li:nth-child(4n+2):hover .curved-tabs-r:before,
+  nav ul > li:nth-child(4n+2):hover .curved-tabs-r:after, nav ul > li:nth-child(4n+2):focus .curved-tabs-r,
+  nav ul > li:nth-child(4n+2):focus .curved-tabs-r:before,
+  nav ul > li:nth-child(4n+2):focus .curved-tabs-r:after {
+    border-color: transparent transparent transparent #7cb5ec;
+  }
