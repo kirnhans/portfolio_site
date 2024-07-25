@@ -175,15 +175,9 @@ img.intro_pic {
   img.intro_pic {
     width: 100%;
   }
-
-
-  .horizontally-centered {
-    flex-direction: column;
-    margin: auto;
-  }
 }
 
-@media (max-width: 12.5em) {
+@media (max-width: 37.5em) {
   img.intro_pic {
     max-height: 75vh;
     max-width: 100%;
