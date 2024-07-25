@@ -70,15 +70,18 @@ center > p {
   width: 63%;
 }
 
-@media (max-width: 12.5em) {
+@media (max-width: 28em) {
   .history-acknowledgment {
     padding-top: 0.5em;
     text-align: justify;
   }
 
-footer {
-  flex-direction: column;
-}
+  footer {
+    flex-direction: column;
+  }
+  footer > li {
+    word-wrap: break-word;
+  }
 }
 
 .manila {
