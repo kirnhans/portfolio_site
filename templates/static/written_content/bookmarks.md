@@ -25,6 +25,10 @@
 	* My colleague Dennis describes the material as "the latest refinement of the lesson material I use for teaching simultaneous equations.
 	* "There is a PowerPoint which uses animations extensively, so it is best used with a remote clicker for slides shows.
 	* "There are some quick quiz worksheets and other resources."
+* [MATHSprint.com](https://mathsprint.wordpress.com/algebra/): Worksheets for Number, Algebra, Graphs, Shape & Space, Stats & Probability
+* [Dr Austin Maths](https://www.draustinmaths.com/algebraic-fractions): Scaffolded exercises
+	* Covers Number, Algebra, Geometry, Statistics Probability
+	* Types of exercises: fill in the blanks, true/false, odd one out and practice strips
 
 ## Lesson Plans
 * [Supporting Australia Maths Project](https://www.amsi.org.au/ESA_middle_years/Year7/Year7_md/Year7main.html): Lesson Plans for Years 7-9
