@@ -1,6 +1,6 @@
 # Year 7
 ## Algebra
-These are the [slides](static/pdfs/slides/yr7-algebra.pdf) I made, inspired by Macquarie Fields High School content.
+These are the [slides](static/pdfs/slides/Year_7/yr7-algebra.pdf) I made, inspired by Macquarie Fields High School content.
 
 ### Substitution
 * [Substitution Game](https://www.math-salamanders.com/algebra-math-games.html)
@@ -45,7 +45,7 @@ Activity: [Expanding Brackets Bingo](https://www.interactive-maths.com/expanding
 
 
 ### Extension: Factoring and Algebraic Fractions
-Slides for linking finding the Highest Common Factor with factoring algebraic expressions are [here](static\pdfs\slides\7-matd-factorization.pdf)
+Slides for linking finding the Highest Common Factor with factoring algebraic expressions are [here](static/pdfs/slides/Year_7/7-matd-factorization.pdf)
 #### Factorisng worksheets
 * [Corbett Maths Factorising](https://corbettmaths.com/wp-content/uploads/2020/05/Factorisation.pdf)
 * [MathDrills.com Factorising](https://math-drills.com/algebra/expressions_factoring_nosquares_xcoef_posmult_001.php)
@@ -62,5 +62,28 @@ Slides for linking finding the Highest Common Factor with factoring algebraic ex
 
 
 ## Decimals
+These are the [slides](static/pdfs/slides/Year_7/yr7-decimals.pdf) I made, inspired by Macquarie Fields High School content.   
+This is a [diagnostic test](static/pdfs/my_resources/Year7-Decimals-Diagnostic.pdf) I assembled from different sources of questions.
+
+### Place Value and Ordering Decimals
++ [MathWorksheets4Kids Place Value](https://www.mathworksheets4kids.com/decimal-place-value.php)
++ [Math Monks Comparing and Ordering Decimals](https://mathmonks.com/worksheets/comparing-and-ordering-decimals-worksheets)
++ [Math Salamanders Ordering Decimals](https://www.math-salamanders.com/ordering-decimals.html)
++ [Increasingly Difficult Ordering](https://taylorda01.weebly.com/uploads/4/2/3/8/42387051/ordering_numbers_01.pdf)
+
+### Rounding Decimals
++ [Corbett Rounding Decimals](https://corbettmaths.com/wp-content/uploads/2019/01/Rounding-decimal-places-pdf.pdf)
++ A rounding game I created, inspired by Math-Salamanders
++ [Math Drills Round Various Places](https://math-drills.com/decimal/decround_various_various_001.php)
++ [Math Salamanders Rounding Decimal Challenges](https://www.math-salamanders.com/rounding-decimals-worksheet.html)
+
+
+### Adding and Subtracting Decimals
+
+### Multiplying and Dividing by Powers of Ten
+
+### Multiplying and Dividing by Decimals
+
+### Proportions with Decimals, Fractions and Percentages
 
 ## Negative Numbers
