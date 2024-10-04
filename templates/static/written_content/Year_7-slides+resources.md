@@ -112,3 +112,31 @@ Ascending order of difficulty:
 + [A Blooket I assembled for Ratios to Decimals, Fractions and Percentages](https://dashboard.blooket.com/set/6667bddd9096eedecf98ece2)
 
 ## Negative Numbers
+These are the [slides](static/pdfs/slides/Year_7/yr7-negative-numbers.pdf) I made, inspired by Macquarie Fields High School content.
+
+### Introduction to Negative Numbers
++ [Integer War](https://www.teacherspayteachers.com/Product/Integer-War-Quick-Game-to-Remediate-Number-Sense-with-Negative-and-Positive-Num-5067084)
+
+### Addition and Subtraction
++ A [5 minute subtraction drill](static/pdfs/my_resources/5-Min-Frenzy-Subtract-Integers.pdf) I made in the style of 5 minute Frenzies from [MathDrills.com](https://math-drills.com/search.php?s=frenzy&page=1&sort=weekly)
++ A [Subtraction/Addition Blooket](https://dashboard.blooket.com/set/667385134ec37ac0306320b0) I created and assembled
++ [MathDrills.com Adding and Subtracting Integers](https://math-drills.com/integers/integers_addition_and_subtraction_easy_001.php) worksheet
++ [Story Problems With Integers](https://hanlonmath.com/pdfFiles/resource_985.pdf)
++ [Codebreaker by Andy Lutwyche](https://www.tes.com/en-au/teaching-resource/negative-numbers-codebreakers-11220719)
+
+### Multiplication and Division
++ [Codebreaker by Andy Lutwyche](https://www.tes.com/en-au/teaching-resource/negative-numbers-codebreakers-11220719)
++ [Corbett Maths Worksheet](https://corbettmaths.com/wp-content/uploads/2018/11/Negatives-multiplication-and-division-pdf.pdf)
++ Multi-Step Order of Operations with Negative Numbers [MathDrills.com worksheet](https://math-drills.com/orderofoperations/ooo_integers_foursteps_negative_pemdas_001.php)
++ [Maze Activity](https://www.teacherspayteachers.com/Product/Multiplying-and-Dividing-Integers-Math-Maze-Activity-4107250)
++ [MathAids.com Advanced Order of Operations](https://www.math-aids.com/Order_of_Operations/Advanced_Order_of_Operations.html)
+
+### Algebraic Substitution with Negative Numbers
++ A short [4-Across activity](static/pdfs/my_resources/4-Across-integer-algebra.pdf) I made
++ [DoingMaths.co.uk Substitution Worksheet](https://www.doingmaths.co.uk/substitution.html)
++ [Increasingly Difficult Negative Substitution](https://startingpointsmaths.com/2022/10/01/negative-substitution/) by Starting Point Maths
++ [Substitution worksheet](https://www.maths4everyone.com/resources/downloads/substitution-negatives-of-negatives-20273.pdf) including real-life formulae by Maths 4 Everyone
++ [Flow Mathematics worksheet](https://www.tes.com/en-au/teaching-resource/substituting-negative-numbers-12482161)
++ [Tutoring Hour Worksheet](https://www.tutoringhour.com/preview/algebraic-expressions/evaluate/add-sub.pdf)
+
+
