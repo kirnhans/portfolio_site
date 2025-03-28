@@ -13,7 +13,8 @@ standards_dict = { 1: ("Know students and how they learn","templates/static/writ
 7: ("Engage professionally with colleagues, parents/carers and the community", "templates/static/written_content/standard7.md"),
 }
 
-year_units_dict = { 7: "templates/static/written_content/Year_7-slides+resources.md"}
+year_units_dict = { 7: "templates/static/written_content/Year_7-slides+resources.md",
+8: "templates/static/written_content/Year_8-slides+resources.md"}
 
 class SiteGenerator(object):
     def __init__(self):
