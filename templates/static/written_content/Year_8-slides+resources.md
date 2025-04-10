@@ -34,7 +34,6 @@
 +  [Corbett Exercises on Rotational Symmetry](https://corbettmaths.com/wp-content/uploads/2022/01/Rotational-Symmetry.pdf)
 +  [Corbett Line And Rotation Symmetry Exam Questions (Hard)](https://corbettmaths.com/wp-content/uploads/2013/02/symmetry-pdf.pdf)
 +  [Linear And Rotational Symmetry Questions (Hard)](https://mmefournier.weebly.com/uploads/9/1/4/5/91456912/linear_and_rotational_symmetry_qs.pdf)
-<!-- +  Many Image Rotationalsymmetry   Worksheet A -->
 + [Line Symmetry worksheets](https://www.goteachmaths.co.uk/line-symmetry/)
 + Foldables: Images for Students (In-Class Activity)
 	+ [butterfly](https://en.wikipedia.org/wiki/Symmetry_%28geometry%29#/media/File:Simetria-bilateria.svg)
@@ -70,23 +69,39 @@
 ## Area and Volume
 
 ### Perimeter and Area of Rectangles
+* [nrich Perimeter Challenge](https://nrich.maths.org/problems/perimeter-challenge)
+* [CorbettMaths Perimeter](https://corbettmaths.com/wp-content/uploads/2013/02/perimeter-pdf2.pdf)
+* [CorbettMaths Area of Rectangle](https://corbettmaths.com/wp-content/uploads/2013/02/area-of-a-rectangle-pdf1.pdf)
+* [nrich Dicey Perimeter, Dicey Area Game](https://nrich.maths.org/games/dicey-perimeter-dicey-area)
 
 ### Area of Triangles and Parallelograms
-<!-- * Area-of-triangles---parallelograms.docx
-* area-parallelogram-triangles-worksheet.html
-* area-parallelogram-triangles-worksheet.md
-* area-parallelogram-triangles-worksheet.pdf
-* area-triangles-parallelograms.zip
-* compound-triangles_rectangles-Math-Aids.Com.pdf
-* mathmonks-Area-of-Triangles-and-Parallelograms-Worksheet.pdf
-* triangles-bases.pdf
-* word-search-area.pdf -->
+* [Triangles, Parallelograms and Compound Areas by fdh15](https://www.tes.com/teaching-resource/area-of-triangles-parallelograms-and-compound-shapes-11785833)
+* [Mathspace Compound Areas](https://mathspace.co/textbooks/syllabuses/Syllabus-1081/topics/Topic-21100/subtopics/Subtopic-273016/?activeTab=theory)
+* [Math-Aids.Com (Dynamically Created)](https://www.math-aids.com/Geometry/Perimeter/Compound_Shapes_Area_Adding.html)
+* [MathMonks (mixed units)](https://mathmonks.com/wp-content/uploads/2020/12/Area-of-Triangles-and-Parallelograms-Worksheet.pdf)
+* [Triangles with bases and heights marked](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4_3d-ton_JUu7Jl6b2upRMkDLKFeNry34ZQ&s)
 
-### Area of Kites & Rhombus
-
-### Area of Circles
-
+### Area of Kites, Trapezium and Rhombuses
+* [Math Monks](https://mathmonks.com/wp-content/uploads/2021/03/Area-of-Rhombus-and-Kite-Worksheet.pdf)
+* [Area of Trapezium, Kite and Rhombus Riddle by Mr Hansell Math](https://www.teacherspayteachers.com/Product/Riddle-Worksheet-Area-of-a-Trapezoid-Rhombus-and-Kite-9452970)
+* [Trapeziums by MathWorksheets4Kids](https://www.mathworksheets4kids.com/area-trapezoids.php)
 
 ### Parts of Circle & Circumference
+* [Math Salamanders Fill in the Blanks](https://www.math-salamanders.com/parts-of-a-circle-worksheet.html)
+* [Perimeter of Arcs](https://worksheetmath.com/ShapeAndSpace/Circles/ArclengthPerimeter)
+* [CorbettMath Circumference](https://corbettmaths.com/wp-content/uploads/2013/02/circumference-pdf2.pdf)
+
+### Area of Circles
+* [Composite Shapes: Rectangles and Circles by David T](https://www.tes.com/teaching-resource/composite-shapes-circles-11835646)
+* [MathWorksheets4Kids: Area and Circumference](https://www.mathworksheets4kids.com/area-circumference.php)
+* [Worksheetmath.com: Area of sectors and circles](https://worksheetmath.com/ShapeAndSpace/Circles)
+* [Concentric circles / Annulus](https://www.mathworksheets4kids.com/circles/area-circumference/concentric-easy-all.pdf)
+
 
 ### Volume of Cylinders
+* [Word Search](https://wordmint.com/public_puzzles/1136919)
+* [CorbettMaths](https://corbettmaths.com/wp-content/uploads/2013/02/volume-of-a-cylinder-pdf1.pdf)
+* [Math-Aids (Dynamically Created)](https://www.math-aids.com/Geometry/Volume/Cylinders_Cones_Volume.html)
+* [Super Teacher Worksheets: Cylinder Volume](https://www.superteacherworksheets.com/volume/volume-of-a-cylinder_VUJOP.pdf)
+* [MathWorksheets4kids: Extra Practice](https://www.mathworksheets4kids.com/volume-cylinders.php)
+* [Challenge: Compound Volumes](https://mrursulak.weebly.com/uploads/1/1/7/9/11798462/volume_worksheet.pdf)
