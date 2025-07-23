@@ -14,7 +14,7 @@ These are strategies I have used in the classroom, from a unit I taught on Indic
 - Students work an example of factorisation in index form
 This structure accommodated the large amount of material in the first topic, focusing on skill review.
 ### Strategies
-* **Connecting learning**: I reference past concepts when introducing the concept. This demonstration of a progression helps students develop a big-picture view (NSW Department of Education, 2025b). Contextualising a topic in this way helps develop relational knowledge, for future use of the material in different topics.
+* **Connecting learning**: I reference past concepts when introducing the concept. This demonstration of a progression helps students develop a big-picture view. Contextualising a topic in this way helps develop relational knowledge, for future use of the material in different topics.
 * I used images of number lines and graphs in my slides to connect the concept of exponentiation to previous concepts of repeated counting, addition, and multiplication. I also included images of place value blocks, to link the concept of powers of ten to the more general idea of powers of different numbers. These images provide a more concrete conceptualisation of an abstract idea. They also make the slides more visually appealing, which improves engagement over 'walls' of text/math.
 
 
@@ -42,7 +42,7 @@ The smaller topic allowed space for an activity chosen to boost engagement, whic
 The structure front-loaded more complex material, with the visualisation providing a break in a wall of numbers. The activity linked the previous class with the new material.
 ### Strategies
 * **Multiple Exposures**: When teaching the concept of a zero index, I draw upon the multiplication and division laws taught previously. The approach I take in connecting the concepts through specific examples is differentiated, as I varied the depth of my review the previous laws depending on the ability of the student I am interacting with (through questioning or support during seatwork).
-* **Visualisation**: I used a visualisation which provides a multimodal learning experience. GeoGebra specifically has demonstrated increased student engagement (Kusnadi & Asih, 2023). This strategy also supports learners who prefer visuals, as many students struggle with a notation-dominated lesson.
+* **Visualisation**: I used a visualisation which provides a multimodal learning experience. GeoGebra specifically has demonstrated increased student engagement. This strategy also supports learners who prefer visuals, as many students struggle with a notation-dominated lesson.
 
 
 ## Lesson 4
@@ -54,8 +54,8 @@ The structure front-loaded more complex material, with the visualisation providi
 - Students attempt differentiated exercises
 This structure allowed students to consolidate knowledge through the index laws reference being provided in advance of the examples and exercises, which combined multiple index laws.
 ### Strategies
-* **Worked Examples**:  I work an example problem on the board, using questioning for engagement, e.g. "What are a and b here?" when expanding (ab)^n. This specifically aids students with mathematics difficulties (Doabler & Fien, 2013). I differentiate by providing more or fewer hints when asking questions, allowing lower ability students to experience success.
-* Students practiced questions from the textbook, printed out in a booklet format. The use of exercises in mathematics is a key strategy for developing fluency and confidence. An iterative approach which alternates practice with conceptual explanations has been shown to be most beneficial (Rittle-Johnson et al., 2001) and has been employed in the booklet design, suiting it well for classroom use. 
+* **Worked Examples**:  I work an example problem on the board, using questioning for engagement, e.g. "What are a and b here?" when expanding (ab)^n. This specifically aids students with mathematics difficulties. I differentiate by providing more or fewer hints when asking questions, allowing lower ability students to experience success.
+* Students practiced questions from the textbook, printed out in a booklet format. The use of exercises in mathematics is a key strategy for developing fluency and confidence. An iterative approach which alternates practice with conceptual explanations has been shown to be most beneficial and has been employed in the booklet design, suiting it well for classroom use. 
 
 
 

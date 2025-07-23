@@ -1,0 +1,13 @@
+These are strategies I have used in the classroom for consistent assessment and timely feedback.
+
+* **Diagnostic testing**: I begin units with a test with questions from each exercise in the chapter, with an emphasis on foundational skills, in the absence of previous assessments to judge from.
+* **Formative assessment**: Each lesson includes independent work (e.g. a worksheet) during which I circulate and check student work and confidence in their conceptual understanding. I commend where they demonstrate sound understanding and clarify concepts where they show uncertainty or misconceptions.
+* **Summative assessment**: I have in the past marked unit tests and mid-yearly exams. These included simpler multiple choice questions, short answer questions with minimal calculation involved, to more detailed questions which require working. While marking, I analyse student mistakes (Newman Error Analysis). After returning the test, I discuss common mistakes.
+    * When I was a teaching assistant in undergrad, my professor had a method of grading that I admire and wish to implement. While grading, instructors took quick notes on the side regarding common mistakes. A document was compiled cataloguing these mistakes and explaining them. The document was distributed to students with their test papers. Say that a student made a common mistake in Q2 a). Then their feedback would include "See 2a.1" which in the document explained the misconception for that particular type of mistake. Thus, students all got detailed feedback without an excessive burden on staff.
+
+While completing my Assessment for Graduate Teachers, I marked and analysed the outcomes demonstrated by students. This is my analysis of the resulting chart.
+> There is a low attempt rate of questions towards the end of the exam, particularly long response questions. I suspect this is indicative of student confidence waning throughout the exam. This is reflected in other trends that I explain below.
+
+> Students showed higher marks on algebraic concepts that were covered in prior years, showing the benefit of repeated exposures. Their marks dropped off the more complex the topic became, with the lowest marks on the last topics of the chapter. Many students missed one or several of the classes covering one of these topics, which also seems a likely cause.
+
+> I paid particular attention to expanding brackets, covering the common mistakes and revisiting the concept when solving equations. This is reflected in their marks when expanding brackets in a multiple choice question, but many did not attempt to solve the later equation with brackets.
