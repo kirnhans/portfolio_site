@@ -1,12 +1,15 @@
 # Year 8
 
 ## Geometry
+My slides for the whole chapter are [here](static\pdfs\my_resources\Slides\Year_8\8mat-geometry.pdf).
+Revision slides summarising the chapter are [here](static\pdfs\my_resources\Slides\Year_8\8-mata-geometry-revision.pdf).
+
 ### Classifying Angles
 * [CueMaths.com Classifying Angles (Obtuse, Acute, etc.)](https://www.cuemath.com/worksheets/classifying-angles-worksheets/)
 * [Complementary and Supplementary Angles in Shapes](https://www.teacherspayteachers.com/Product/Complementary-and-Supplementary-Angles-FREE-Worksheet-9188072)
 * [Math-Aids.Com Complementary, Supplementary, Vertically Opposite Angles](https://www.math-aids.com/Geometry/Angles/)
 * [Identifying Angles: Acute, Right, Obtuse, Straight](https://www.teacherspayteachers.com/Product/Identifying-Angles-Acute-Right-Obtuse-and-Straight-FREE-5480024)
-* [An Identifying angles in Art activity I made](static/pdfs/my_resources/Identifying_angles_in_art-no-answers.pdf) and the [answers](static\pdfs\my_resources\Identifying_angles_in_art-answers.pdf)
+* [An Identifying angles in Art activity I made](static/pdfs/my_resources/Activities/Identifying_angles_in_art-no-answers.pdf) and the [answers](static\pdfs\my_resources\Identifying_angles_in_art-answers.pdf)
 * [Angle Pairs Worksheet](https://www.teacherspayteachers.com/Product/Angle-Pairs-Worksheet-7243463): One diagram, fourteen angles
 
 
@@ -65,8 +68,14 @@
 * [Mathworksheets4Kids Calculate Angles](https://www.mathworksheets4kids.com/angles-quadrilateral.php)
 * [Medium and Hard Calculating Angles in Quadrilaterals](https://www.tes.com/teaching-resource/angles-in-quadrilaterals-worksheets-with-solutions-12208149)
 * [MathAids.com Interior Angles in Quadrilaterals](https://www.math-aids.com/Geometry/Polygons/Angles_Quadrilaterals.html)
+* [Summary page](static\pdfs\my_resources\Slides\Year_8\quadrilaterals-summary.pdf)
+
+
 
 ## Area and Volume
+My slides for the whole chapter are [here](static\pdfs\my_resources\Slides\Year_8\8mata-area-volume.pdf).
+Revision slides summarising the chapter are [here](static\pdfs\my_resources\Slides\Year_8\8mata-revision-area-volume.pdf).
+
 
 ### Perimeter and Area of Rectangles
 * [nrich Perimeter Challenge](https://nrich.maths.org/problems/perimeter-challenge)
@@ -105,3 +114,18 @@
 * [Super Teacher Worksheets: Cylinder Volume](https://www.superteacherworksheets.com/volume/volume-of-a-cylinder_VUJOP.pdf)
 * [MathWorksheets4kids: Extra Practice](https://www.mathworksheets4kids.com/volume-cylinders.php)
 * [Challenge: Compound Volumes](https://mrursulak.weebly.com/uploads/1/1/7/9/11798462/volume_worksheet.pdf)
+
+
+
+## Revision
+[Here](static\pdfs\my_resources\Slides\Year_8\8-mat-revision-pyth-percent-factoring.pdf) are slides revising Pythagoras, percentages and factorising.
+
+* [Pythagoras Codebreaker](https://www.tes.com/teaching-resource/pythagoras-codebreaker-11256823)
+* [Percentage of a Number Codebreaker](https://www.tes.com/teaching-resource/percentage-of-a-number-codebreaker-11141328)
+
+
+### Factorising
+My slides revising how to factorise expression are [here](static\pdfs\my_resources\Slides\Year_8\8-mata-factorization.pdf).
+
+* [Math Drills Factoring Expressions](https://math-drills.com/algebra/expressions_factoring_nosquares_xcoef_posmult_001.php)
+* [Homeschooling Maths Distributive Property](https://www.homeschoolmath.net/worksheets/table-factoring-distributive.php?col=2&row=10&coeffmin=2&coeffmax=12&constmin=1&constmax=12&decimals=0&workspace=3&problemtype=1&type1=1&type2=1&font=Arial&FontSize=11pt&pad=10&border=on&color=green&ptitle=&html_worksheet=Html+worksheet)

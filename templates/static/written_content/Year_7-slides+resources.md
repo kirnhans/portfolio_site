@@ -1,6 +1,6 @@
 # Year 7
 ## Algebra
-These are the [slides](static/pdfs/slides/Year_7/yr7-algebra.pdf) I made, inspired by Macquarie Fields High School content.
+These are the [slides](static/pdfs/my_resources/Slides/Year_7/yr7-algebra.pdf) I made, inspired by Macquarie Fields High School content.
 
 ### Substitution
 * [Substitution Game](https://www.math-salamanders.com/algebra-math-games.html)
@@ -45,7 +45,7 @@ Activity: [Expanding Brackets Bingo](https://www.interactive-maths.com/expanding
 
 
 ### Extension: Factorising and Algebraic Fractions
-Slides for linking finding the Highest Common Factor with factoring algebraic expressions are [here](static/pdfs/slides/Year_7/7-matd-factorization.pdf)
+Slides for linking finding the Highest Common Factor with factoring algebraic expressions are [here](static/pdfs/my_resources/Slides/Year_7/7-matd-factorization.pdf)
 #### Factorising worksheets
 * [Corbett Maths Factorising](https://corbettmaths.com/wp-content/uploads/2020/05/Factorisation.pdf)
 * [MathDrills.com Factorising](https://math-drills.com/algebra/expressions_factoring_nosquares_xcoef_posmult_001.php)
@@ -62,7 +62,7 @@ Slides for linking finding the Highest Common Factor with factoring algebraic ex
 
 
 ## Decimals
-These are the [slides](static/pdfs/slides/Year_7/yr7-decimals.pdf) I made, inspired by Macquarie Fields High School content.   
+These are the [slides](static/pdfs/my_resources/Slides/Year_7/yr7-decimals.pdf) I made, inspired by Macquarie Fields High School content.   
 This is a [diagnostic test](static/pdfs/my_resources/Year7-Decimals-Diagnostic.pdf) I assembled from different sources of questions.
 
 ### Place Value and Ordering Decimals
@@ -73,7 +73,7 @@ This is a [diagnostic test](static/pdfs/my_resources/Year7-Decimals-Diagnostic.p
 
 ### Rounding Decimals
 + [Corbett Rounding Decimals](https://corbettmaths.com/wp-content/uploads/2019/01/Rounding-decimal-places-pdf.pdf)
-+ A [rounding game](static\pdfs\my_resources\Decimal-Rounders-instructions+board.pdf) I created, inspired by Math-Salamanders
++ A [rounding game](static\pdfs\my_resources\Activities\Decimal-Rounders-instructions+board.pdf) I created, inspired by Math-Salamanders
 + [MathDrills Round Various Places](https://math-drills.com/decimal/decround_various_various_001.php)
 + [Math Salamanders Rounding Decimal Challenges](https://www.math-salamanders.com/rounding-decimals-worksheet.html)
 
@@ -97,7 +97,7 @@ Ascending order of difficulty:
 + [MathAids.com Multiplying Decimals](https://www.math-aids.com/Decimals/Multiplication_Worksheets.html)
 + [MathDrills.com Dividing Decimals by 1-Digit]
 + [MathDrills.com Dividing Various Decimals](https://math-drills.com/decimal/decimals_division_various_various_001.php)
-+ A [Snakes and Ladders](static\pdfs\my_resources\Decimal-Snakes_and_Ladders-instructions+board.pdf) game I created
++ A [Snakes and Ladders](static\pdfs\my_resources\Activities\Decimal-Snakes_and_Ladders-instructions+board.pdf) game I created
 + [Mathdrills.com Dividing with Random Numbers of Digits and Decimal Places](https://math-drills.com/decimal/decdiv_randig_ranplc_001.php)
 + [Codebreaker by mercbenzon](https://www.tes.com/en-au/teaching-resource/multiplying-and-dividing-decimals-code-breaker-11395983)
 
@@ -112,13 +112,13 @@ Ascending order of difficulty:
 + [A Blooket I assembled for Ratios to Decimals, Fractions and Percentages](https://dashboard.blooket.com/set/6667bddd9096eedecf98ece2)
 
 ## Negative Numbers
-These are the [slides](static/pdfs/slides/Year_7/yr7-negative-numbers.pdf) I made, inspired by Macquarie Fields High School content.
+These are the [slides](static/pdfs/my_resources/Slides/Year_7/yr7-negative-numbers.pdf) I made, inspired by Macquarie Fields High School content.
 
 ### Introduction to Negative Numbers
 + [Integer War](https://www.teacherspayteachers.com/Product/Integer-War-Quick-Game-to-Remediate-Number-Sense-with-Negative-and-Positive-Num-5067084)
 
 ### Addition and Subtraction
-+ A [5 minute subtraction drill](static/pdfs/my_resources/5-Min-Frenzy-Subtract-Integers.pdf) I made in the style of 5 minute Frenzies from [MathDrills.com](https://math-drills.com/search.php?s=frenzy&page=1&sort=weekly)
++ A [5 minute subtraction drill](static/pdfs/my_resources/Activities/5-Min-Frenzy-Subtract-Integers.pdf) I made in the style of 5 minute Frenzies from [MathDrills.com](https://math-drills.com/search.php?s=frenzy&page=1&sort=weekly)
 + A [Subtraction/Addition Blooket](https://dashboard.blooket.com/set/667385134ec37ac0306320b0) I created and assembled
 + [MathDrills.com Adding and Subtracting Integers](https://math-drills.com/integers/integers_addition_and_subtraction_easy_001.php) worksheet
 + [Story Problems With Integers](https://hanlonmath.com/pdfFiles/resource_985.pdf)
@@ -130,13 +130,13 @@ These are the [slides](static/pdfs/slides/Year_7/yr7-negative-numbers.pdf) I mad
 + Multi-Step Order of Operations with Negative Numbers [MathDrills.com worksheet](https://math-drills.com/orderofoperations/ooo_integers_foursteps_negative_pemdas_001.php)
 + [Maze Activity](https://www.teacherspayteachers.com/Product/Multiplying-and-Dividing-Integers-Math-Maze-Activity-4107250)
 + [MathAids.com Advanced Order of Operations](https://www.math-aids.com/Order_of_Operations/Advanced_Order_of_Operations.html)
-+ [Integer Race](static/pdfs/my_resources/Integer-Race-Activity_Negative-Numbers_Year7.pdf)
++ [Integer Race](static/pdfs/my_resources/Activities/Integer-Race-Activity_Negative-Numbers_Year7.pdf)
 	+ A game I made where students apply order of operations to try to reach +47 or -47 first
 + [Tug Harder!](https://nrich.maths.org/problems/tug-harder)
 	+ A tug of war game where one student tries to reach +13 and the other -13
 
 ### Algebraic Substitution with Negative Numbers
-+ A short [4-Across activity](static/pdfs/my_resources/4-Across-integer-algebra.pdf) I made
++ A short [4-Across activity](static/pdfs/my_resources/Activities/4-Across-integer-algebra.pdf) I made
 + [DoingMaths.co.uk Substitution Worksheet](https://www.doingmaths.co.uk/substitution.html)
 + [Increasingly Difficult Negative Substitution](https://startingpointsmaths.com/2022/10/01/negative-substitution/) by Starting Point Maths
 + [Substitution worksheet](https://www.maths4everyone.com/resources/downloads/substitution-negatives-of-negatives-20273.pdf) including real-life formulae by Maths 4 Everyone
