@@ -13,13 +13,14 @@ My slides for the whole chapter are [here](static\pdfs\my_resources\Slides\Year_
 ## Indices
 My slides for the whole chapter are [here](static\pdfs\my_resources\Slides\Year_9\year9-indices-slides.pdf). I largely used textbook exercises for this chapter.
 
+* [Diagnostic test](static\pdfs\my_resources\year-9-Diagnostic-Indices.pdf) that I put together
 * [Index Notation Tarsia](static\pdfs\my_resources\Activities\indices-notation-tarsia.pdf)
 * [Blooket revising first half of chapter](https://dashboard.blooket.com/set/683e299c46fe0cb8b31dd131)
 * [Scientific Notation Tarsia](https://web.archive.org/web/20161229182934/https://dpsmsmath.wikispaces.com/file/view/1.06-scientificsquare.pdf)
 
 
 ## Miscellaneous
-* My [slides](static\pdfs\my_resources\Slides\Year_9\measurement.pdf) for the chapter of Length, Area and Volume
+* My [slides](static\pdfs\my_resources\Slides\Year_9\year9-measurement.pdf) for the chapter of Length, Area and Volume
 * [Introducing Complementary Probability](static\pdfs\my_resources\Slides\Year_9\complementary-probability-lesson-plan.pdf): this is very rough please don't judge
 * [Income Tax Graph](https://www.geogebra.org/m/q59cepde), explaining marginal tax visually
 
